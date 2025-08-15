@@ -1,0 +1,12 @@
+langchain
+llama-index
+openai
+voyageai
+pymongo
+rdkit
+fastapi
+uvicorn
+crewai
+python-dotenv
+unsloth
+pytest
