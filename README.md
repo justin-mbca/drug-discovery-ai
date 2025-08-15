@@ -51,11 +51,30 @@ An end-to-end AI system for accelerating pharmaceutical research, demonstrating:
 ✅ **Production API** (FastAPI/Pydantic)  
 ✅ **Multi-Agent Systems**  
 
+
 ## 🏗️ Architecture
 
 The following diagram shows the high-level architecture of the Drug Discovery AI Assistant:
 
-![Architecture Diagram](assets/architecture_diagram.md)
+```mermaid
+graph TD;
+	User[User/API Client]
+	subgraph FastAPI App
+		Main[main.py]
+		Crew[agents/multi_agent.py]
+		PubMedTool[tools/pubmed.py]
+		PubChemTool[tools/pubchem.py]
+	end
+	PubMed["PubMed (Online Database)"]
+	PubChem["PubChem (Online Database)"]
+
+	User -->|POST /analyze| Main
+	Main --> Crew
+	Crew --> PubMedTool
+	Crew --> PubChemTool
+	PubMedTool --> PubMed
+	PubChemTool --> PubChem
+```
 
 * User/API Client sends a request to the FastAPI app.
 * The app orchestrates agents and tools (CrewAI).
