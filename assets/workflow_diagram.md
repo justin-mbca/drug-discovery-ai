@@ -16,7 +16,7 @@ graph TD;
         DataProcessed[data/processed/]
     end
     subgraph Utils
-        Utils[app/utils/]
+        UtilsNode[app/utils/]
     end
     Main --> Crew
     Crew --> PubMedTool
@@ -24,7 +24,7 @@ graph TD;
     PubMedTool -->|fetches| DataRaw
     PubChemTool -->|fetches| DataRaw
     Crew --> DB
-    Main --> Utils
-    Crew --> Utils
+    Main --> UtilsNode
+    Crew --> UtilsNode
     Main -->|returns| Main
 ```
