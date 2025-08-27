@@ -1,4 +1,3 @@
-
 ## 🧩 Modular Workflow
 
 The following diagram shows the modular structure and workflow of the project:
@@ -14,9 +13,13 @@ graph TD;
 	subgraph Tool Layer
 		PubMedTool[tools/pubmed.py]
 		PubChemTool[tools/pubchem.py]
+		PredictiveModeling[predictive_modeling.py]
+		DoE[doe_example.py]
+		RegulatoryNLP[regulatory_nlp.py]
 	end
 	subgraph Data Layer
 		DB[db/mongodb.py]
+		SQLDB[drug_discovery.db]
 		DataRaw[data/raw/]
 		DataProcessed[data/processed/]
 	end
@@ -26,9 +29,13 @@ graph TD;
 	Main --> Crew
 	Crew --> PubMedTool
 	Crew --> PubChemTool
+	Crew --> PredictiveModeling
+	Crew --> DoE
+	Crew --> RegulatoryNLP
 	PubMedTool -->|fetches| DataRaw
 	PubChemTool -->|fetches| DataRaw
 	Crew --> DB
+	Crew --> SQLDB
 	Main --> UtilsNode
 	Crew --> UtilsNode
 	Main -->|returns| Main
@@ -183,16 +190,26 @@ graph TD;
 		Crew[agents/multi_agent.py]
 		PubMedTool[tools/pubmed.py]
 		PubChemTool[tools/pubchem.py]
+		PredictiveModeling[predictive_modeling.py]
+		DoE[doe_example.py]
+		RegulatoryNLP[regulatory_nlp.py]
 	end
 	PubMed["PubMed (Online Database)"]
 	PubChem["PubChem (Online Database)"]
+	SQLDB["SQLite DB"]
+	MongoDB["MongoDB"]
 
 	User -->|POST /analyze| Main
 	Main --> Crew
 	Crew --> PubMedTool
 	Crew --> PubChemTool
+	Crew --> PredictiveModeling
+	Crew --> DoE
+	Crew --> RegulatoryNLP
 	PubMedTool --> PubMed
 	PubChemTool --> PubChem
+	Crew --> SQLDB
+	Crew --> MongoDB
 ```
 
 * User/API Client sends a request to the FastAPI app.
@@ -201,7 +218,66 @@ graph TD;
 
 ---
 
-## 🚀 Quick Start
-```bash
-pip install -r requirements.txt
-python app/main.py
+## 🆕 Additional Features
+
+### 1. Predictive Modeling (scikit-learn)
+Train a machine learning model to predict compound properties (e.g., solubility) from features.
+
+**Example:**
+```python
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+import pandas as pd
+
+df = pd.read_csv('data/compound_features.csv')
+X = df.drop('solubility', axis=1)
+y = df['solubility']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+preds = model.predict(X_test)
+print("MSE:", mean_squared_error(y_test, preds))
+```
+
+### 2. SQL/Database Integration (SQLite)
+Store and query compound or experiment data using SQLite.
+
+**Example:**
+```python
+import sqlite3
+conn = sqlite3.connect('drug_discovery.db')
+c = conn.cursor()
+c.execute('''CREATE TABLE IF NOT EXISTS compounds (id INTEGER PRIMARY KEY, name TEXT, property REAL)''')
+c.execute("INSERT INTO compounds (name, property) VALUES (?, ?)", ("aspirin", 123.45))
+conn.commit()
+for row in c.execute("SELECT * FROM compounds"):
+    print(row)
+conn.close()
+```
+
+### 3. Design of Experiments (DoE)
+Generate a factorial design matrix for formulation experiments using pure Python and pandas.
+
+**Example:**
+```python
+import pandas as pd
+import itertools
+levels_A = [0, 1, 2]  # Excipient A: low, medium, high
+levels_B = [0, 1, 2]  # Excipient B: low, medium, high
+factorial_design = list(itertools.product(levels_A, levels_B))
+df = pd.DataFrame(factorial_design, columns=['Excipient_A', 'Excipient_B'])
+print(df)
+```
+
+### 4. Regulatory/Clinical Data Workflow (NLP)
+Parse and analyze regulatory or clinical trial summaries for keywords (e.g., FDA) using pandas and regex.
+
+**Example:**
+```python
+import pandas as pd
+import re
+df = pd.read_csv('data/clinical_trials.csv')
+df['has_fda'] = df['summary'].apply(lambda x: bool(re.search(r'FDA', x, re.I)))
+print(df[['trial_id', 'has_fda']])
+```
