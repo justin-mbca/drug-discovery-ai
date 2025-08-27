@@ -50,31 +50,39 @@ graph TD;
 
 # 🧠💊 Drug Discovery AI Assistant
 
-## 🤖 System Overview: LLM RAG Agents & Multi-Agent Orchestration
 
-This project implements an end-to-end LLM-powered system for accelerating pharmaceutical research, leveraging Retrieval-Augmented Generation (RAG) agents and multi-agent workflows:
+## 🤖 System Overview: End-to-End AI for Drug Discovery & Formulation
 
-- **LLM RAG Agents:** The core agents use Retrieval-Augmented Generation (RAG) to combine large language model reasoning with real-time retrieval from biomedical databases (e.g., PubMed, PubChem). This enables up-to-date, context-aware answers for drug discovery tasks.
-- **CrewAI Multi-Agent Orchestration:** CrewAI coordinates multiple specialized agents, each responsible for a distinct part of the workflow (e.g., literature search, compound lookup, synthesis). Agents communicate and delegate tasks to maximize research efficiency.
-- **Vector Database (MongoDB + VoyageAI):** Retrieved documents and embeddings are stored in MongoDB, with VoyageAI providing vector search capabilities for fast, relevant retrieval.
-- **Production API (FastAPI):** The system exposes its capabilities via a FastAPI application, allowing programmatic access to multi-agent LLM workflows for integration with other tools or user interfaces.
+This project is a modular, end-to-end AI platform for pharmaceutical research and drug development. It combines large language models (LLMs), machine learning, multi-agent orchestration, and data engineering to automate and accelerate key R&D workflows:
+
+- **LLM RAG Agents:** Retrieval-Augmented Generation (RAG) agents use LLMs to synthesize up-to-date, context-aware answers from biomedical databases (e.g., PubMed, PubChem).
+- **Multi-Agent Orchestration (CrewAI):** Specialized agents coordinate tasks such as literature mining, compound analysis, predictive modeling, DoE, and regulatory data parsing.
+- **Predictive Modeling:** Machine learning models (scikit-learn) predict compound properties (e.g., solubility) from features, supporting formulation and screening.
+- **Design of Experiments (DoE):** Automated generation of experimental design matrices for formulation optimization and QbD studies.
+- **Regulatory/Clinical NLP:** Natural language processing tools extract insights from regulatory and clinical trial data.
+- **Database Integration:** Supports both NoSQL (MongoDB) and SQL (SQLite) for flexible data storage and retrieval.
+- **Production API (FastAPI):** Exposes all capabilities via a robust RESTful API for integration and automation.
+- **Clear Documentation & Diagrams:** All workflows are documented with diagrams and code samples for reproducibility and collaboration.
 
 **How it works:**
-1. A user or API client submits a query (e.g., a compound name) to the FastAPI endpoint.
-2. The orchestrator agent (CrewAI) delegates subtasks to RAG agents, which retrieve and synthesize information from external sources using custom tools.
-3. Retrieved data is embedded and stored in MongoDB for efficient future access.
-4. The system returns a synthesized, context-rich response to the user.
+1. A user or API client submits a query (e.g., a compound name or experiment request) to the FastAPI endpoint.
+2. The orchestrator agent (CrewAI) delegates subtasks to specialized agents and tools: literature search, compound property prediction, DoE, and regulatory data analysis.
+3. Data is processed, modeled, and stored in MongoDB or SQLite as appropriate.
+4. The system returns a synthesized, actionable response to the user or downstream application.
 
 See `agents/multi_agent.py` and `app/main.py` for implementation details.
 
 ![Demo GIF](assets/demo.gif) *(record a short Loom/GIF later)*
 
-An end-to-end AI system for accelerating pharmaceutical research, demonstrating:
+This platform demonstrates:
 
-✅ **LLM Orchestration** (LangChain/CrewAI)  
-✅ **Vector RAG** (MongoDB + VoyageAI)  
+✅ **LLM Orchestration & RAG** (LangChain/CrewAI, OpenAI, llama-index)  
+✅ **Predictive Modeling** (scikit-learn)  
+✅ **Design of Experiments** (DoE, pandas)  
+✅ **Regulatory/Clinical NLP** (pandas, regex)  
+✅ **Database Integration** (MongoDB, SQLite)  
 ✅ **Production API** (FastAPI/Pydantic)  
-✅ **Multi-Agent Systems**  
+✅ **Multi-Agent Systems**
 
 
 
@@ -314,3 +322,20 @@ print(df[['trial_id', 'has_fda']])
 2         3     True
 3         4    False
 ```
+
+---
+
+## 🧩 Feature Integration Summary
+
+| Feature                | Role in Workflow                                      | Feeds Into/Depends On                |
+|------------------------|-------------------------------------------------------|--------------------------------------|
+| FastAPI API            | Entry point for all requests                          | Orchestrator agent                   |
+| CrewAI Orchestration   | Delegates tasks to agents/tools                       | All specialized modules              |
+| PubMedTool             | Retrieves literature                                  | Compound analysis, regulatory review |
+| PubChemTool            | Fetches compound data                                 | Predictive modeling, DoE             |
+| Predictive Modeling    | Predicts properties for compounds                     | DoE, formulation optimization        |
+| DoE                    | Designs experiments for formulation                   | Uses compound data/model predictions |
+| Regulatory/Clinical NLP| Extracts insights from regulatory/clinical documents  | Compliance, reporting                |
+| MongoDB/SQLite         | Stores all data and results                           | All modules                          |
+
+This table shows how each module fits into the overall workflow and how they interact, making the system modular, extensible, and easy to understand.
