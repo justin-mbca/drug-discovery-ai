@@ -33,6 +33,7 @@ def create_drug_discovery_crew():
         verbose=True
     )
 
+
     literature_review = Task(
         description="Find studies on {compound} as a potential Alzheimer's drug candidate.",
         agent=researcher
@@ -41,7 +42,8 @@ def create_drug_discovery_crew():
     compound_analysis = Task(
         description="Analyze chemical properties of {compound} and assess its drug potential.",
         agent=chemist,
-        context=[literature_review]
+        context=[literature_review],
+        expected_output="A summary of chemical properties for each candidate."
     )
 
     return Crew(agents=[researcher, chemist], tasks=[literature_review, compound_analysis])
