@@ -137,7 +137,7 @@ After starting the app, open your browser and visit:
 Add a screenshot of your Swagger UI here for reference:
 
 ```
-![Swagger UI Screenshot](docs/api-docs.pdf)
+[View API Docs (PDF)](docs/api-docs.pdf)
 ```
 
 ---
