@@ -240,6 +240,11 @@ preds = model.predict(X_test)
 print("MSE:", mean_squared_error(y_test, preds))
 ```
 
+**Sample Output:**
+```
+MSE: 0.14592400000000008
+```
+
 ### 2. SQL/Database Integration (SQLite)
 Store and query compound or experiment data using SQLite.
 
@@ -256,6 +261,11 @@ for row in c.execute("SELECT * FROM compounds"):
 conn.close()
 ```
 
+**Sample Output:**
+```
+(1, 'aspirin', 123.45)
+```
+
 ### 3. Design of Experiments (DoE)
 Generate a factorial design matrix for formulation experiments using pure Python and pandas.
 
@@ -270,6 +280,20 @@ df = pd.DataFrame(factorial_design, columns=['Excipient_A', 'Excipient_B'])
 print(df)
 ```
 
+**Sample Output:**
+```
+   Excipient_A  Excipient_B
+0            0            0
+1            0            1
+2            0            2
+3            1            0
+4            1            1
+5            1            2
+6            2            0
+7            2            1
+8            2            2
+```
+
 ### 4. Regulatory/Clinical Data Workflow (NLP)
 Parse and analyze regulatory or clinical trial summaries for keywords (e.g., FDA) using pandas and regex.
 
@@ -280,4 +304,13 @@ import re
 df = pd.read_csv('data/clinical_trials.csv')
 df['has_fda'] = df['summary'].apply(lambda x: bool(re.search(r'FDA', x, re.I)))
 print(df[['trial_id', 'has_fda']])
+```
+
+**Sample Output:**
+```
+   trial_id  has_fda
+0         1     True
+1         2     True
+2         3     True
+3         4    False
 ```
