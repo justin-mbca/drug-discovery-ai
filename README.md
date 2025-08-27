@@ -70,7 +70,108 @@ An end-to-end AI system for accelerating pharmaceutical research, demonstrating:
 ✅ **Multi-Agent Systems**  
 
 
-## 🏗️ Architecture
+
+## 🚀 API Endpoints & Usage
+
+### Base URL
+
+```
+http://127.0.0.1:8000
+```
+
+### Endpoints
+
+#### `GET /`
+Returns a welcome message to confirm the API is running.
+
+**Example Response**
+```json
+{
+	"message": "Drug Discovery AI API"
+}
+```
+
+---
+
+#### `POST /analyze`
+Analyze a chemical compound using the AI agents.
+
+**Request Body**
+```json
+{
+	"compound": "aspirin"
+}
+```
+
+**Example Curl**
+```bash
+curl -X POST "http://127.0.0.1:8000/analyze" -H "Content-Type: application/json" -d '{"compound": "aspirin"}'
+```
+
+**Example Response**
+```json
+{
+	"compound": "aspirin",
+	"properties": {
+		"molecular_weight": 123.45,
+		"formula": "C6H12O6",
+		"iupac_name": "glucose"
+	},
+	"source": "mock"
+}
+```
+
+---
+
+### Interactive API Documentation
+
+After starting the app, open your browser and visit:
+
+- [Swagger UI](http://127.0.0.1:8000/docs) — interactive API docs and testing
+- [ReDoc](http://127.0.0.1:8000/redoc) — alternative API documentation
+
+---
+
+### Example Screenshot
+
+Add a screenshot of your Swagger UI here for reference:
+
+```
+![Swagger UI Screenshot](docs/api-docs.pdf)
+```
+
+---
+
+### How to Run
+
+1. Install dependencies:
+	 ```bash
+	 pip install -r requirements.txt
+	 ```
+
+2. Set your OpenAI API key in a `.env` file:
+	 ```
+	 OPENAI_API_KEY=sk-...
+	 ```
+
+3. Start the app:
+	 ```bash
+	 uvicorn app.main:app --reload
+	 ```
+
+4. Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser.
+
+---
+
+### Example Compounds
+
+Try these in the `/analyze` endpoint:
+- `"aspirin"`
+- `"glucose"`
+- `"ibuprofen"`
+- `"acetaminophen"`
+
+---
 
 The following diagram shows the high-level architecture of the Drug Discovery AI Assistant:
 
