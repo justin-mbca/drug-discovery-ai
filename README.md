@@ -136,9 +136,9 @@ After starting the app, open your browser and visit:
 
 Add a screenshot of your Swagger UI here for reference:
 
-```
-[View API Docs (PDF)](https://github.com/justin-mbca/drug-discovery-ai/blob/main/docs/api-docs.pdf)
-```
+
+[View API Docs](https://github.com/justin-mbca/drug-discovery-ai/blob/main/docs/api-docs.pdf)
+
 
 ---
 
