@@ -1,42 +1,75 @@
-
 ## 🧩 Modular Workflow
 
 The following diagram shows the modular structure and workflow of the project:
 
 ```mermaid
 graph TD;
-	subgraph API Layer
-		Main[main.py]
-	end
-	subgraph Agent Layer
-		Crew[agents/multi_agent.py]
-	end
-	subgraph Tool Layer
-		PubMedTool[tools/pubmed.py]
-		PubChemTool[tools/pubchem.py]
-	end
-	subgraph Data Layer
-		DB[db/mongodb.py]
-		DataRaw[data/raw/]
-		DataProcessed[data/processed/]
-	end
-	subgraph Utils
-		UtilsNode[app/utils/]
-	end
-	Main --> Crew
-	Crew --> PubMedTool
-	Crew --> PubChemTool
-	PubMedTool -->|fetches| DataRaw
-	PubChemTool -->|fetches| DataRaw
-	Crew --> DB
-	Main --> UtilsNode
-	Crew --> UtilsNode
-	Main -->|returns| Main
+    subgraph API Layer
+        Main[main.py / example_main.py]
+    end
+    subgraph Agent Layer
+        DiscoveryAgent[Discovery Agent]
+        DesignAgent[Design Agent]
+        ValidationAgent[Validation Agent]
+        ApprovalAgent[Approval Agent]
+    end
+    subgraph Tool Layer
+        PubMedTool[tools/pubmed.py]
+        PubChemTool[tools/pubchem.py]
+        AlphaFoldTool[tools/alphafold.py]
+        DockingTool[tools/docking.py]
+        QSARTool[tools/qsar.py]
+        LabTool[tools/lab.py]
+        ClinicalTool[tools/clinical.py]
+        RegulatoryTool[tools/regulatory.py]
+    end
+    subgraph Data Layer
+        DB[db/mongodb.py]
+        DataRaw[data/raw/]
+        DataProcessed[data/processed/]
+    end
+    subgraph Utils
+        UtilsNode[app/utils/]
+    end
+
+    Main --> DiscoveryAgent
+    DiscoveryAgent --> PubMedTool
+    DiscoveryAgent --> AlphaFoldTool
+    DiscoveryAgent --> PubChemTool
+    DiscoveryAgent --> DesignAgent
+    DesignAgent --> DockingTool
+    DesignAgent --> QSARTool
+    DesignAgent --> PubChemTool
+    DesignAgent --> ValidationAgent
+    ValidationAgent --> LabTool
+    ValidationAgent --> ClinicalTool
+    ValidationAgent --> ApprovalAgent
+    ApprovalAgent --> RegulatoryTool
+
+    PubMedTool -->|fetches| DataRaw
+    PubChemTool -->|fetches| DataRaw
+    AlphaFoldTool -->|outputs| DataProcessed
+    DockingTool -->|outputs| DataProcessed
+    QSARTool -->|outputs| DataProcessed
+    LabTool -->|outputs| DataProcessed
+    ClinicalTool -->|outputs| DataProcessed
+    RegulatoryTool -->|outputs| DataProcessed
+
+    DiscoveryAgent --> DB
+    DesignAgent --> DB
+    ValidationAgent --> DB
+    ApprovalAgent --> DB
+
+    Main --> UtilsNode
+    DiscoveryAgent --> UtilsNode
+    DesignAgent --> UtilsNode
+    ValidationAgent --> UtilsNode
+    ApprovalAgent --> UtilsNode
 ```
 
 * API Layer: Handles incoming requests and responses.
 * Agent Layer: Orchestrates agent logic and task delegation.
-* Tool Layer: Provides modular access to external data sources.
+* Tool Layer: Provides modular access to external data sources and AI models.
 * Data Layer: Handles persistent and intermediate data storage.
 * Utils: Shared utility functions used across modules.
 
@@ -54,7 +87,7 @@ This project implements an end-to-end LLM-powered system for accelerating pharma
 
 **How it works:**
 1. A user or API client submits a query (e.g., a compound name) to the FastAPI endpoint.
-2. The orchestrator agent (CrewAI) delegates subtasks to RAG agents, which retrieve and synthesize information from external sources using custom tools.
+2. The orchestrator agent delegates subtasks to RAG agents, which retrieve and synthesize information from external sources using custom tools.
 3. Retrieved data is embedded and stored in MongoDB for efficient future access.
 4. The system returns a synthesized, context-rich response to the user.
 
@@ -76,22 +109,22 @@ The following diagram shows the high-level architecture of the Drug Discovery AI
 
 ```mermaid
 graph TD;
-	User[User/API Client]
-	subgraph FastAPI App
-		Main[main.py]
-		Crew[agents/multi_agent.py]
-		PubMedTool[tools/pubmed.py]
-		PubChemTool[tools/pubchem.py]
-	end
-	PubMed["PubMed (Online Database)"]
-	PubChem["PubChem (Online Database)"]
+    User[User/API Client]
+    subgraph FastAPI App
+        Main[main.py]
+        Crew[agents/multi_agent.py]
+        PubMedTool[tools/pubmed.py]
+        PubChemTool[tools/pubchem.py]
+    end
+    PubMed["PubMed (Online Database)"]
+    PubChem["PubChem (Online Database)"]
 
-	User -->|POST /analyze| Main
-	Main --> Crew
-	Crew --> PubMedTool
-	Crew --> PubChemTool
-	PubMedTool --> PubMed
-	PubChemTool --> PubChem
+    User -->|POST /analyze| Main
+    Main --> Crew
+    Crew --> PubMedTool
+    Crew --> PubChemTool
+    PubMedTool --> PubMed
+    PubChemTool --> PubChem
 ```
 
 * User/API Client sends a request to the FastAPI app.
@@ -103,4 +136,24 @@ graph TD;
 ## 🚀 Quick Start
 ```bash
 pip install -r requirements.txt
-python app/main.py
+uvicorn app.example_main:app --reload
+```
+
+## 🧪 Example API Endpoints
+
+Test the full workflow (all stages):
+
+```
+GET /full_workflow?query=BACE1
+```
+
+Test individual stages:
+
+```
+GET /discovery?query=BACE1
+GET /design?compound=aspirin
+GET /validation?candidate=aspirin
+GET /approval?candidate=aspirin
+```
+
+You can also use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) to try all endpoints in your browser.
