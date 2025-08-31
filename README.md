@@ -247,4 +247,45 @@ fetch('http://127.0.0.1:8000/full_workflow?query=BACE1')
 
 You can design interactive dashboards, result visualizations, and workflow management features tailored to your needs.
 
-**Tip:** For production, consider CORS, authentication, and secure deployment. See FastAPI and your frontend framework docs for integration best practices.
+
+---
+
+## 🧪 Step-by-Step Example: Discovering a Drug Candidate
+
+Here’s how you can use the Drug Discovery AI pipeline for a real-world drug discovery scenario:
+
+**Goal:** Identify and evaluate new drug candidates for Alzheimer’s disease (target: BACE1)
+
+### 1. Start the Backend API
+```bash
+uvicorn app.example_main:app --reload
+```
+
+### 2. Submit a Query (e.g., via browser or curl)
+```bash
+curl "http://127.0.0.1:8000/full_workflow?query=BACE1"
+```
+Or use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+### 3. Review the Output
+- **Discovery Agent:** Summarizes BACE1’s role in Alzheimer’s, retrieves relevant compounds and literature.
+- **Design Agent:** Suggests and evaluates new compound designs, docking scores, and predicted properties.
+- **Validation Agent:** Simulates lab/clinical validation, summarizes findings.
+- **Approval Agent:** Generates a regulatory summary for the candidate.
+
+### 4. Iterate and Refine
+- Try different targets or compounds (e.g., "aspirin", "tau protein").
+- Adjust agent prompts or models for more specific results.
+- Integrate your own data or tools for deeper analysis.
+
+### 5. (Optional) Build a Frontend
+- Use the provided examples to create a web UI for easier interaction and visualization.
+
+
+---
+
+## 🎬 Workflow in Action
+
+![Workflow Demo GIF](assets/demo.gif)
+
+*Watch the pipeline in action: from query to candidate evaluation, all steps are automated and visualized for rapid drug discovery.*
