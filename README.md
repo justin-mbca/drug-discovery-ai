@@ -147,7 +147,26 @@ Now that you have the Drug Discovery AI Assistant running locally, here are some
 
 ---
 
-## 🌐 Connecting a Frontend UI
+
+## 🌐 Simple Streamlit Frontend
+
+You can interact with the Drug Discovery AI backend using a simple Streamlit web app. This provides an easy-to-use interface for entering queries and viewing results.
+
+### Usage
+
+1. Make sure your FastAPI backend is running (see Quick Start above).
+2. Install Streamlit if you haven't already:
+	```bash
+	pip install streamlit
+	```
+3. Run the frontend:
+	```bash
+	streamlit run frontend.py
+	```
+4. Enter a disease, target, or compound in the web UI and view the results interactively.
+
+The Streamlit app is located in `frontend.py`.
+
 
 You can build a user-friendly frontend to interact with the Drug Discovery AI API. Here are some options and examples:
 
