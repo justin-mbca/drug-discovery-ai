@@ -1,70 +1,44 @@
 
-# Supported LLM Models
 
-All agents use a local LLM served by Ollama by default. The system is designed to be modular, allowing you to select the best model for your use case, including both general-purpose and biomedical-specific LLMs.
+# Supported Biomedical Language Models
 
-**How to change the model:**
-- Pass the desired model name to the agent constructor, e.g.:
-	```python
-	agent = DiscoveryAgent(model="mistral")
-	agent = DesignAgent(model="phi3")
-	```
-- To see all available models, run:
-	```bash
-	ollama list
-	```
-- To add a new model, run:
-	```bash
-	ollama pull <model_name>
-	```
+All agents now use only biomedical-specific language models for summarization and knowledge extraction. General-purpose LLMs (Llama, Mistral, Phi3, etc.) and Ollama integration have been removed for simplicity and domain focus.
 
-## Recommended Models
+## Biomedical Models Used
 
-- `llama3` (default): Latest generation of Meta's Llama models, strong general-purpose performance for summarization, reasoning, and scientific tasks.
-- `llama2`: Previous generation from Meta, smaller and faster than llama3, suitable for lightweight tasks but less capable for complex reasoning.
-- `mistral`: Open-weight model focused on efficiency and speed, good for fast responses and smaller hardware.
-- `phi3`: Microsoft’s compact model, designed for efficiency and strong performance on reasoning and code, suitable for resource-constrained environments.
+- **BioGPT**: Microsoft’s biomedical language model, trained on PubMed and biomedical text. Excellent for drug/life sciences tasks, and highly recommended for biomedical text generation, summarization, and question answering.
+- **PubMedBERT**: Biomedical BERT model, trained on PubMed abstracts and full text. Ideal for extracting biomedical knowledge, masked word prediction, and summarization of scientific literature.
+- **BioBERT**: Biomedical BERT variant, also trained on PubMed and PMC articles. Used for protein/gene target summarization and biomedical fill-mask tasks.
 
-## Biomedical Models
+> **Note:** All models are loaded via Hugging Face Transformers and run locally. No Ollama or general LLMs are required.
 
-- `BioGPT`: Microsoft’s biomedical language model, trained on PubMed and biomedical text. Excellent for drug/life sciences tasks, and small enough for local inference. **BioGPT is highly recommended for biomedical text generation, summarization, and question answering.**
-- `PubMedBERT`: Biomedical BERT model, trained on PubMed abstracts and full text. Very efficient for local biomedical NLP, especially for fill-mask, classification, and entity recognition tasks. **PubMedBERT is ideal for extracting biomedical knowledge and masked word prediction.**
+**When to use these models:**
+- Use **BioGPT**, **PubMedBERT**, or **BioBERT** for all drug discovery, pharmaceutical, or life sciences tasks (e.g., drug properties, disease mechanisms, literature summarization, biomedical Q&A).
+- These models are trained on domain-specific corpora (PubMed, biomedical literature), so they produce more accurate, relevant, and trustworthy results for scientific and medical queries than general LLMs.
 
-> **When to prefer BioGPT or PubMedBERT over general LLMs?**
->
-> - Use **BioGPT** or **PubMedBERT** when your task is biomedical, pharmaceutical, or life sciences focused (e.g., drug properties, disease mechanisms, literature summarization, biomedical Q&A).
-> - These models are trained on domain-specific corpora (PubMed, biomedical literature), so they produce more accurate, relevant, and trustworthy results for scientific and medical queries than general LLMs like Llama or Mistral.
-> - For general reasoning, code, or non-biomedical tasks, Llama3, Llama2, Mistral, or Phi3 may be more appropriate.
+See the `tools/biobert_tool.py` and `tools/pubmedbert_tool.py` for usage examples.
 
-**Note:** BioGPT and PubMedBERT are not available in Ollama by default. To use them, install via Hugging Face Transformers and update your agent code to use the Hugging Face pipeline for inference. See `test_biomed_llm.py` for a working example.
-
-You can experiment with these and other models available in the [Ollama library](https://ollama.com/library) or on [Hugging Face](https://huggingface.co/models) to find the best fit for your workflow.
-
-Refer to the [Ollama documentation](https://ollama.com/library) and [Hugging Face model hub](https://huggingface.co/models) for more details on available models and their capabilities.
 
 # Agent Enhancements (August 2025)
 
 All core agents (Discovery, Design, Validation, Approval) have been modernized and enhanced:
 
 - Integrated real data sources and tools for each agent (PubMed, PubChem, AlphaFold, Docking, QSAR, Lab, Clinical, Regulatory).
-- Added LLM summarization to every agent using a local Ollama LLM (configurable model, e.g., llama3).
+- Added biomedical LLM summarization to every agent using BioGPT, PubMedBERT, or BioBERT.
 - Prompts are now readable, context-rich, and tailored to each agent's domain (compound info, literature, docking, QSAR, lab, clinical, regulatory, etc.).
-- Streaming LLM output is fully accumulated for complete, high-quality responses.
+- Summarization is performed using domain-specific models for high-quality, relevant responses.
 - Exception handling is robust and specific.
-- LLM model is configurable via each agent's constructor for easy experimentation.
 - Code is modular, maintainable, and ready for further extension.
+
 
 # Recent Enhancements (August 2025)
 
 The drug discovery AI workflow has been significantly improved:
 
 - Integrated real PubMed, PubChem, and AlphaFold tools for literature, compound, and structure data.
-- Replaced mock LLM with a local Ollama LLM (configurable model, e.g., llama3).
-- LLM prompt engineering now produces detailed, context-aware compound summaries.
-- Prompts include readable PubChem info, relevant PubMed IDs, and explicit summary instructions.
-- Streaming LLM output is fully accumulated for complete, high-quality responses.
+- All summarization and knowledge extraction now use biomedical-specific models (BioGPT, PubMedBERT, BioBERT).
+- Prompts and fill-mask tasks are tailored for biomedical context and accuracy.
 - Exception handling is more robust and specific.
-- LLM model is configurable via the agent constructor for easy experimentation.
 - Code is modular, maintainable, and ready for further extension.
 
 ## 🧩 Modular Workflow
@@ -99,15 +73,16 @@ This project is an end-to-end AI platform for accelerating pharmaceutical resear
 3. Retrieved and generated data are embedded and stored in MongoDB for efficient future access.
 4. The system returns a synthesized, context-rich response to the user.
 
+
 ## 🖼️ Example Workflow & LLM Outputs (Mermaid Diagram)
 
 ```mermaid
 flowchart TD
 	A[Discovery Agent] -->|BioGPT| B1["Aspirin is a nonsteroidal anti-inflammatory drug (NSAID)..."]
 	A -->|PubMedBERT| B2["aspirin is used to treat atherosclerosis."]
-	C[Design Agent] -->|Llama3/Mistral| D["Docking score for compound X is -8.2..."]
-	E[Validation Agent] -->|Llama3| F["Lab results confirm efficacy in vitro..."]
-	G[Approval Agent] -->|Llama3| H["Regulatory summary: meets FDA requirements..."]
+	C[Design Agent] -->|PubMedBERT| D["Docking score for compound X is -8.2..."]
+	E[Validation Agent] -->|PubMedBERT| F["Lab results confirm efficacy in vitro..."]
+	G[Approval Agent] -->|PubMedBERT| H["Regulatory summary: meets FDA requirements..."]
 
 	style A fill:#e0f7fa,stroke:#00796b,stroke-width:2px
 	style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
@@ -115,7 +90,7 @@ flowchart TD
 	style G fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
 ```
 
-*This diagram shows each agent, the LLM/model used, and a sample output for that stage. Biomedical models (BioGPT, PubMedBERT) are used in Discovery; general LLMs (Llama3/Mistral) are used in other stages.*
+*This diagram shows each agent and the biomedical model used for summarization. All stages now use BioGPT, PubMedBERT, or BioBERT as appropriate.*
 
 See `agents/multi_agent.py` and `app/main.py` for implementation details.
 

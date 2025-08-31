@@ -16,47 +16,24 @@ Enhancements accomplished in this module:
 8. Code is modular, maintainable, and ready for further extension.
 """
 
+
+
 from tools.pubmed import PubMedTool
 from tools.alphafold import AlphaFoldTool
 from tools.pubchem import PubChemTool
+from tools.biobert_tool import biobert_summarize
+from tools.pubmedbert_tool import pubmedbert_summarize
 
-import requests
-import json
 
 
-def query_llm(prompt, model="llama2"):
-    """
-    Query a local LLM running via Ollama (http://localhost:11434).
-    """
-    try:
-        response = requests.post(
-            "http://localhost:11434/api/generate",
-            json={"model": model, "prompt": prompt},
-            timeout=30,
-            stream=True
-        )
-        response.raise_for_status()
-        full_response = ""
-        for line in response.iter_lines():
-            if line:
-                try:
-                    data = json.loads(line)
-                    if "response" in data:
-                        full_response += data["response"]
-                except json.JSONDecodeError:
-                    continue
-        return full_response.strip() if full_response else "No response from LLM."
-    except requests.RequestException as e:
-        return f"LLM error: {e}"
 
 
 
 class DiscoveryAgent:
-    def __init__(self, model="llama3"):
+    def __init__(self):
         self.pubmed = PubMedTool()
         self.alphafold = AlphaFoldTool()
         self.pubchem = PubChemTool()
-        self.model = model
 
     def _format_pubchem_info(self, pubchem_info):
         if not pubchem_info or not isinstance(pubchem_info, dict):
@@ -73,12 +50,17 @@ class DiscoveryAgent:
         pubchem_info = self.pubchem.lookup(query)
         pubchem_str = self._format_pubchem_info(pubchem_info)
         lit_str = ", ".join(literature) if literature else "None"
-        prompt = (
-            f"Compound information from PubChem:\n{pubchem_str}\n\n"
-            f"Relevant PubMed IDs: {lit_str}\n\n"
-            "Please provide a detailed summary of the compound, including its molecular weight, formula, IUPAC name, and discuss its potential relevance in drug discovery, referencing the literature if possible."
-        )
-        llm_summary = query_llm(prompt, model=self.model)
+
+        # If PubChem returns no info, assume protein/gene target and use BioBERT
+        if not pubchem_info or pubchem_info == {} or pubchem_str == "No PubChem info available.":
+            # Use BioBERT for protein/gene summarization
+            biobert_summary = biobert_summarize(query)
+            llm_summary = "BioBERT summary (top predictions):\n" + "\n".join(biobert_summary)
+        else:
+            # Use PubMedBERT for compound summarization
+            pubmedbert_summary = pubmedbert_summarize(query)
+            llm_summary = "PubMedBERT summary (top predictions):\n" + "\n".join(pubmedbert_summary)
+
         return {
             "literature": literature,
             "structure": structure,
