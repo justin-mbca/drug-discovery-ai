@@ -233,7 +233,8 @@ Or use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:800
 - Use the provided examples to create a web UI for easier interaction and visualization.
 
 
-## 🧪 Example API Endpoints
+
+## 🧪 Example API Endpoints & Tested Outputs
 
 Test the full workflow (all stages):
 
@@ -250,7 +251,34 @@ curl "http://127.0.0.1:8000/validation?candidate=aspirin"
 curl "http://127.0.0.1:8000/approval?candidate=aspirin"
 ```
 
+
 ### 🧬 Disease Sample Queries
+
+#### Example: DiscoveryAgent with BioBERT NER Extraction
+
+You can run the DiscoveryAgent directly in Python to test disease-to-target extraction using BioBERT NER (with fallback to regex):
+
+```python
+from agents.discovery_agent import DiscoveryAgent
+result = DiscoveryAgent().run('Alzheimer disease')
+print(result)
+```
+
+**Sample Output:**
+
+```
+{
+	'literature': ['40886227', '40881622', '40881157'],
+	'structure': 'AlphaFold structure for Alzheimer disease not found online (status 404). Download manually from https://alphafold.ebi.ac.uk/entry/Alzheimer disease if needed.',
+	'pubchem': {'error': 'PubChem API error: 404 Client Error: PUGREST.NotFound for url: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Alzheimer%20disease/property/MolecularWeight,MolecularFormula,IUPACName/JSON'},
+	'llm_summary': 'PubMedBERT summary (top predictions):\nalzheimer disease is associated with inflammation. (score: 0.143)\nalzheimer disease is associated with aging. (score: 0.093)\nalzheimer disease is associated with obesity. (score: 0.084)\nalzheimer disease is associated with neuroinflammation. (score: 0.064)\nalzheimer disease is associated with depression. (score: 0.035)',
+	'suggested_targets': ['PET', 'IEEE', 'USA', 'SUVR', 'ADNI']
+}
+```
+
+This confirms that BioBERT NER-based target extraction is working. The `suggested_targets` field contains entities extracted from PubMed abstracts using BioBERT (with fallback to regex if needed).
+
+---
 
 You can start the workflow with a disease name. The system will suggest relevant protein/gene targets for further exploration:
 

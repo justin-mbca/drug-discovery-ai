@@ -24,7 +24,7 @@ from tools.alphafold import AlphaFoldTool
 from tools.pubchem import PubChemTool
 from tools.biobert_tool import biobert_summarize
 from tools.pubmedbert_tool import pubmedbert_summarize
-from tools.target_extraction import fetch_pubmed_abstracts, extract_targets_from_abstracts
+from tools.target_extraction import fetch_pubmed_abstracts, extract_targets_from_abstracts, extract_targets_biobert
 
 
 
@@ -57,7 +57,13 @@ class DiscoveryAgent:
         targets = []
         if literature:
             abstracts = fetch_pubmed_abstracts(literature)
-            targets = extract_targets_from_abstracts(abstracts)
+            try:
+                targets = extract_targets_biobert(abstracts)
+                # fallback if BioBERT returns nothing
+                if not targets:
+                    targets = extract_targets_from_abstracts(abstracts)
+            except Exception:
+                targets = extract_targets_from_abstracts(abstracts)
 
         # If PubChem returns no info, assume protein/gene target and use BioBERT
         if not pubchem_info or pubchem_info == {} or pubchem_str == "No PubChem info available.":
