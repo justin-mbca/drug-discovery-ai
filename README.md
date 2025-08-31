@@ -281,11 +281,3 @@ Or use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:800
 ### 5. (Optional) Build a Frontend
 - Use the provided examples to create a web UI for easier interaction and visualization.
 
-
----
-
-## 🎬 Workflow in Action
-
-![Workflow Demo GIF](assets/demo.gif)
-
-*Watch the pipeline in action: from query to candidate evaluation, all steps are automated and visualized for rapid drug discovery.*
