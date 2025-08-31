@@ -193,4 +193,58 @@ Now that you have the Drug Discovery AI Assistant running locally, here are some
 - **Scale Up:** Integrate with more advanced vector databases, distributed compute, or workflow orchestration tools for larger-scale research.
 - **Contribute:** Open issues or pull requests to help improve the project, or share your use cases and feedback!
 
-For more ideas, see the code in `agents/`, `tools/`, and `app/`, or reach out via the project repository.
+
+---
+
+## 🌐 Connecting a Frontend UI
+
+You can build a user-friendly frontend to interact with the Drug Discovery AI API. Here are some options and examples:
+
+### 1. Simple Web Client (HTML/JS)
+
+You can use a basic HTML/JavaScript page to send requests to the FastAPI backend:
+
+```html
+<form id="queryForm">
+	<input type="text" id="query" placeholder="Enter compound name">
+	<button type="submit">Submit</button>
+</form>
+<pre id="result"></pre>
+<script>
+document.getElementById('queryForm').onsubmit = async function(e) {
+	e.preventDefault();
+	const q = document.getElementById('query').value;
+	const res = await fetch(`http://127.0.0.1:8000/full_workflow?query=${encodeURIComponent(q)}`);
+	document.getElementById('result').textContent = await res.text();
+};
+</script>
+```
+
+### 2. Streamlit App (Python)
+
+Create a simple Streamlit UI for local use:
+
+```python
+import streamlit as st
+import requests
+
+st.title("Drug Discovery AI Assistant")
+query = st.text_input("Enter compound name:")
+if st.button("Submit"):
+		response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={query}")
+		st.write(response.text)
+```
+
+### 3. Advanced Web UI (React, Next.js, etc.)
+
+For a modern, user-friendly experience, build a custom frontend using React, Next.js, or similar frameworks. Example (React fetch call):
+
+```javascript
+fetch('http://127.0.0.1:8000/full_workflow?query=BACE1')
+	.then(res => res.json())
+	.then(data => setResult(data));
+```
+
+You can design interactive dashboards, result visualizations, and workflow management features tailored to your needs.
+
+**Tip:** For production, consider CORS, authentication, and secure deployment. See FastAPI and your frontend framework docs for integration best practices.
