@@ -130,6 +130,19 @@ pip install -r requirements.txt
 uvicorn app.example_main:app --reload
 ```
 
+## 🛠️ API Endpoints
+
+The FastAPI backend exposes the following endpoints (see `app/example_main.py`):
+
+| Endpoint         | Method | Description                                                      | Example Query Param(s)         |
+|------------------|--------|------------------------------------------------------------------|-------------------------------|
+| `/discovery`     | GET    | Run DiscoveryAgent on a disease/target/compound                  | `?query=BACE1`                |
+| `/design`        | GET    | Run DesignAgent on a compound                                    | `?compound=aspirin`           |
+| `/validation`    | GET    | Run ValidationAgent on a candidate drug                          | `?candidate=aspirin`          |
+| `/approval`      | GET    | Run ApprovalAgent on a candidate drug                            | `?candidate=aspirin`          |
+| `/full_workflow` | GET    | Run the full workflow (Discovery → Design → Validation → Approval)| `?query=BACE1`                |
+
+All endpoints return JSON responses. Use `/full_workflow` for an end-to-end pipeline, or call individual endpoints for stepwise control.
 ---
 
 ## 🏁 What Next?
