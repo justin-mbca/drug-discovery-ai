@@ -2,70 +2,8 @@
 
 The following diagram shows the modular structure and workflow of the project:
 
-```mermaid
-graph TD;
-    subgraph API Layer
-        Main[main.py / example_main.py]
-    end
-    subgraph Agent Layer
-        DiscoveryAgent[Discovery Agent]
-        DesignAgent[Design Agent]
-        ValidationAgent[Validation Agent]
-        ApprovalAgent[Approval Agent]
-    end
-    subgraph Tool Layer
-        PubMedTool[tools/pubmed.py]
-        PubChemTool[tools/pubchem.py]
-        AlphaFoldTool[tools/alphafold.py]
-        DockingTool[tools/docking.py]
-        QSARTool[tools/qsar.py]
-        LabTool[tools/lab.py]
-        ClinicalTool[tools/clinical.py]
-        RegulatoryTool[tools/regulatory.py]
-    end
-    subgraph Data Layer
-        DB[db/mongodb.py]
-        DataRaw[data/raw/]
-        DataProcessed[data/processed/]
-    end
-    subgraph Utils
-        UtilsNode[app/utils/]
-    end
 
-    Main --> DiscoveryAgent
-    DiscoveryAgent --> PubMedTool
-    DiscoveryAgent --> AlphaFoldTool
-    DiscoveryAgent --> PubChemTool
-    DiscoveryAgent --> DesignAgent
-    DesignAgent --> DockingTool
-    DesignAgent --> QSARTool
-    DesignAgent --> PubChemTool
-    DesignAgent --> ValidationAgent
-    ValidationAgent --> LabTool
-    ValidationAgent --> ClinicalTool
-    ValidationAgent --> ApprovalAgent
-    ApprovalAgent --> RegulatoryTool
-
-    PubMedTool -->|fetches| DataRaw
-    PubChemTool -->|fetches| DataRaw
-    AlphaFoldTool -->|outputs| DataProcessed
-    DockingTool -->|outputs| DataProcessed
-    QSARTool -->|outputs| DataProcessed
-    LabTool -->|outputs| DataProcessed
-    ClinicalTool -->|outputs| DataProcessed
-    RegulatoryTool -->|outputs| DataProcessed
-
-    DiscoveryAgent --> DB
-    DesignAgent --> DB
-    ValidationAgent --> DB
-    ApprovalAgent --> DB
-
-    Main --> UtilsNode
-    DiscoveryAgent --> UtilsNode
-    DesignAgent --> UtilsNode
-    ValidationAgent --> UtilsNode
-    ApprovalAgent --> UtilsNode
-```
+![Modular Workflow Diagram](assets/workflow_diagram.png)
 
 * API Layer: Handles incoming requests and responses.
 * Agent Layer: Orchestrates agent logic and task delegation.
@@ -108,59 +46,8 @@ An end-to-end AI system for accelerating pharmaceutical research, demonstrating:
 
 The following diagram shows the updated high-level architecture of the Drug Discovery AI Assistant:
 
-```mermaid
-graph TD;
-    User[User/API Client]
-    subgraph FastAPI App
-        Main[main.py / example_main.py]
-        DiscoveryAgent[Discovery Agent]
-        DesignAgent[Design Agent]
-        ValidationAgent[Validation Agent]
-        ApprovalAgent[Approval Agent]
-    end
-    subgraph Tools
-        PubMedTool[PubMed Tool]
-        PubChemTool[PubChem Tool]
-        AlphaFoldTool[AlphaFold Tool]
-        DockingTool[Docking Tool]
-        QSARTool[QSAR Tool]
-        LabTool[Lab Tool]
-        ClinicalTool[Clinical Tool]
-        RegulatoryTool[Regulatory Tool]
-    end
-    MongoDB[(MongoDB)]
-    PubMed["PubMed (Online Database)"]
-    PubChem["PubChem (Online Database)"]
 
-    User -->|API Request| Main
-    Main --> DiscoveryAgent
-    DiscoveryAgent --> PubMedTool
-    DiscoveryAgent --> PubChemTool
-    DiscoveryAgent --> AlphaFoldTool
-    DiscoveryAgent --> DesignAgent
-    DesignAgent --> DockingTool
-    DesignAgent --> QSARTool
-    DesignAgent --> PubChemTool
-    DesignAgent --> ValidationAgent
-    ValidationAgent --> LabTool
-    ValidationAgent --> ClinicalTool
-    ValidationAgent --> ApprovalAgent
-    ApprovalAgent --> RegulatoryTool
-
-    PubMedTool --> PubMed
-    PubChemTool --> PubChem
-    AlphaFoldTool -->|structure prediction| MongoDB
-    DockingTool -->|docking results| MongoDB
-    QSARTool -->|qsar results| MongoDB
-    LabTool -->|lab results| MongoDB
-    ClinicalTool -->|clinical data| MongoDB
-    RegulatoryTool -->|regulatory data| MongoDB
-
-    DiscoveryAgent --> MongoDB
-    DesignAgent --> MongoDB
-    ValidationAgent --> MongoDB
-    ApprovalAgent --> MongoDB
-```
+![Architecture Diagram](assets/architecture_diagram.png)
 
 * User/API Client sends a request to the FastAPI app.
 * The app orchestrates agents and tools.
