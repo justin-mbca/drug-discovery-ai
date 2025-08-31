@@ -103,33 +103,70 @@ An end-to-end AI system for accelerating pharmaceutical research, demonstrating:
 ✅ **Multi-Agent Systems**  
 
 
+
 ## 🏗️ Architecture
 
-The following diagram shows the high-level architecture of the Drug Discovery AI Assistant:
+The following diagram shows the updated high-level architecture of the Drug Discovery AI Assistant:
 
 ```mermaid
 graph TD;
     User[User/API Client]
     subgraph FastAPI App
-        Main[main.py]
-        Crew[agents/multi_agent.py]
-        PubMedTool[tools/pubmed.py]
-        PubChemTool[tools/pubchem.py]
+        Main[main.py / example_main.py]
+        DiscoveryAgent[Discovery Agent]
+        DesignAgent[Design Agent]
+        ValidationAgent[Validation Agent]
+        ApprovalAgent[Approval Agent]
     end
+    subgraph Tools
+        PubMedTool[PubMed Tool]
+        PubChemTool[PubChem Tool]
+        AlphaFoldTool[AlphaFold Tool]
+        DockingTool[Docking Tool]
+        QSARTool[QSAR Tool]
+        LabTool[Lab Tool]
+        ClinicalTool[Clinical Tool]
+        RegulatoryTool[Regulatory Tool]
+    end
+    MongoDB[(MongoDB)]
     PubMed["PubMed (Online Database)"]
     PubChem["PubChem (Online Database)"]
 
-    User -->|POST /analyze| Main
-    Main --> Crew
-    Crew --> PubMedTool
-    Crew --> PubChemTool
+    User -->|API Request| Main
+    Main --> DiscoveryAgent
+    DiscoveryAgent --> PubMedTool
+    DiscoveryAgent --> PubChemTool
+    DiscoveryAgent --> AlphaFoldTool
+    DiscoveryAgent --> DesignAgent
+    DesignAgent --> DockingTool
+    DesignAgent --> QSARTool
+    DesignAgent --> PubChemTool
+    DesignAgent --> ValidationAgent
+    ValidationAgent --> LabTool
+    ValidationAgent --> ClinicalTool
+    ValidationAgent --> ApprovalAgent
+    ApprovalAgent --> RegulatoryTool
+
     PubMedTool --> PubMed
     PubChemTool --> PubChem
+    AlphaFoldTool -->|structure prediction| MongoDB
+    DockingTool -->|docking results| MongoDB
+    QSARTool -->|qsar results| MongoDB
+    LabTool -->|lab results| MongoDB
+    ClinicalTool -->|clinical data| MongoDB
+    RegulatoryTool -->|regulatory data| MongoDB
+
+    DiscoveryAgent --> MongoDB
+    DesignAgent --> MongoDB
+    ValidationAgent --> MongoDB
+    ApprovalAgent --> MongoDB
 ```
 
 * User/API Client sends a request to the FastAPI app.
-* The app orchestrates agents and tools (CrewAI).
-* Tools fetch data from online databases (PubMed, PubChem).
+* The app orchestrates agents and tools.
+* Each agent delegates to specialized tools for data retrieval and analysis.
+* Tools fetch data from online databases or perform computations.
+* All results and intermediate data are stored in MongoDB.
 
 ---
 
