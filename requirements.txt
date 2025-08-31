@@ -9,6 +9,7 @@ unsloth
 pytest
 transformers
 torch
+streamlit
 pymongo
 rdkit
 fastapi
