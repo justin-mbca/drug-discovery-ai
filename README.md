@@ -1,9 +1,4 @@
 
-
-# Supported Biomedical Language Models
-
-All agents now use only biomedical-specific language models for summarization and knowledge extraction. General-purpose LLMs (Llama, Mistral, Phi3, etc.) and Ollama integration have been removed for simplicity and domain focus.
-
 ## Biomedical Models Used
 
 - **BioGPT**: Microsoft’s biomedical language model, trained on PubMed and biomedical text. Excellent for drug/life sciences tasks, and highly recommended for biomedical text generation, summarization, and question answering.
