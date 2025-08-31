@@ -18,11 +18,13 @@ Enhancements accomplished in this module:
 
 
 
+
 from tools.pubmed import PubMedTool
 from tools.alphafold import AlphaFoldTool
 from tools.pubchem import PubChemTool
 from tools.biobert_tool import biobert_summarize
 from tools.pubmedbert_tool import pubmedbert_summarize
+from tools.target_extraction import fetch_pubmed_abstracts, extract_targets_from_abstracts
 
 
 
@@ -51,6 +53,12 @@ class DiscoveryAgent:
         pubchem_str = self._format_pubchem_info(pubchem_info)
         lit_str = ", ".join(literature) if literature else "None"
 
+        # New: Extract top protein/gene targets from PubMed abstracts if the query is a disease
+        targets = []
+        if literature:
+            abstracts = fetch_pubmed_abstracts(literature)
+            targets = extract_targets_from_abstracts(abstracts)
+
         # If PubChem returns no info, assume protein/gene target and use BioBERT
         if not pubchem_info or pubchem_info == {} or pubchem_str == "No PubChem info available.":
             # Use BioBERT for protein/gene summarization
@@ -65,5 +73,6 @@ class DiscoveryAgent:
             "literature": literature,
             "structure": structure,
             "pubchem": pubchem_info,
-            "llm_summary": llm_summary
+            "llm_summary": llm_summary,
+            "suggested_targets": targets
         }

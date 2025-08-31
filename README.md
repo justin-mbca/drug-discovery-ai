@@ -1,4 +1,3 @@
-
 ## Biomedical Models Used
 
 - **BioGPT**: Microsoft’s biomedical language model, trained on PubMed and biomedical text. Excellent for drug/life sciences tasks, and highly recommended for biomedical text generation, summarization, and question answering.
@@ -131,24 +130,6 @@ pip install -r requirements.txt
 uvicorn app.example_main:app --reload
 ```
 
-## 🧪 Example API Endpoints
-
-Test the full workflow (all stages):
-
-```
-GET /full_workflow?query=BACE1
-```
-
-Test individual stages:
-
-```
-GET /discovery?query=BACE1
-GET /design?compound=aspirin
-GET /validation?candidate=aspirin
-GET /approval?candidate=aspirin
-```
-
-
 ---
 
 ## 🏁 What Next?
@@ -250,4 +231,44 @@ Or use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:800
 
 ### 5. (Optional) Build a Frontend
 - Use the provided examples to create a web UI for easier interaction and visualization.
+
+
+## 🧪 Example API Endpoints
+
+Test the full workflow (all stages):
+
+```bash
+curl "http://127.0.0.1:8000/full_workflow?query=BACE1"
+```
+
+Test individual stages:
+
+```bash
+curl "http://127.0.0.1:8000/discovery?query=BACE1"
+curl "http://127.0.0.1:8000/design?compound=aspirin"
+curl "http://127.0.0.1:8000/validation?candidate=aspirin"
+curl "http://127.0.0.1:8000/approval?candidate=aspirin"
+```
+
+### 🧬 Disease Sample Queries
+
+You can start the workflow with a disease name. The system will suggest relevant protein/gene targets for further exploration:
+
+```bash
+# Alzheimer's disease (will suggest targets like BACE1, APP, MAPT, etc.)
+curl "http://127.0.0.1:8000/discovery?query=Alzheimer's disease"
+
+# Parkinson's disease
+curl "http://127.0.0.1:8000/discovery?query=Parkinson's disease"
+
+# Amyotrophic lateral sclerosis (ALS)
+curl "http://127.0.0.1:8000/discovery?query=ALS"
+
+# Pancreatic cancer
+curl "http://127.0.0.1:8000/discovery?query=pancreatic cancer"
+```
+
+You can then use the suggested targets as queries for the full workflow or design endpoints.
+
+**Note:** When a protein structure is needed and not found locally, the app will automatically download the precomputed 3D structure from the AlphaFold EBI database.
 
