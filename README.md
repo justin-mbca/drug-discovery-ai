@@ -178,4 +178,19 @@ GET /validation?candidate=aspirin
 GET /approval?candidate=aspirin
 ```
 
-You can also use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) to try all endpoints in your browser.
+
+---
+
+## 🏁 What Next?
+
+Now that you have the Drug Discovery AI Assistant running locally, here are some suggested next steps:
+
+- **Customize Agents:** Modify or extend the agent logic in `agents/` to add new tools, change prompts, or integrate additional data sources.
+- **Integrate New Models:** Try other LLMs from Ollama or Hugging Face by updating the agent `model` parameter, or add your own domain-specific models.
+- **Experiment with Prompts:** Tune the prompts for each agent to improve the quality and relevance of LLM outputs for your specific research needs.
+- **Deploy the API:** Use FastAPI’s deployment options to run the system in production (e.g., with Docker, on a cloud VM, or behind a reverse proxy).
+- **Connect a Frontend:** Build a web or desktop UI to interact with the API, visualize results, or manage workflows.
+- **Scale Up:** Integrate with more advanced vector databases, distributed compute, or workflow orchestration tools for larger-scale research.
+- **Contribute:** Open issues or pull requests to help improve the project, or share your use cases and feedback!
+
+For more ideas, see the code in `agents/`, `tools/`, and `app/`, or reach out via the project repository.
