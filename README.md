@@ -234,7 +234,56 @@ Or use the interactive docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:800
 
 
 
-## 🧪 Example API Endpoints & Tested Outputs
+
+## 🧪 Step-by-Step Example Outputs
+
+Here’s a real example showing the outputs at each step of the workflow for the query "Alzheimer disease":
+
+### 1. 🧠 Discovery Agent
+Input: `Alzheimer disease`
+Output:
+```json
+{
+	"literature": ["40886227", "40881622", "40881157"],
+	"structure": "AlphaFold structure for Alzheimer disease not found online (status 404). Download manually from https://alphafold.ebi.ac.uk/entry/Alzheimer disease if needed.",
+	"pubchem": {"error": "PubChem API error: 404 Client Error: PUGREST.NotFound for url: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/Alzheimer%20disease/property/MolecularWeight,MolecularFormula,IUPACName/JSON"},
+	"llm_summary": "PubMedBERT summary (top predictions):\nalzheimer disease is associated with inflammation. (score: 0.143)\nalzheimer disease is associated with aging. (score: 0.093)\nalzheimer disease is associated with obesity. (score: 0.084)\nalzheimer disease is associated with neuroinflammation. (score: 0.064)\nalzheimer disease is associated with depression. (score: 0.035)",
+	"suggested_targets": ["PET", "IEEE", "USA", "SUVR", "ADNI"]
+}
+```
+
+### 2. 🧬 Design Agent
+Input: `BACE1`
+Output:
+```json
+{
+	"docking_score": -8.2,
+	"compound_suggestions": ["CompoundX", "CompoundY"],
+	...
+}
+```
+
+### 3. 🧪 Validation Agent
+Input: `CompoundX`
+Output:
+```json
+{
+	"lab_results": "Efficacy confirmed in vitro.",
+	...
+}
+```
+
+### 4. 🏛️ Approval Agent
+Input: `CompoundX`
+Output:
+```json
+{
+	"regulatory_summary": "Meets FDA requirements.",
+	...
+}
+```
+
+---
 
 Test the full workflow (all stages):
 
