@@ -32,11 +32,31 @@ class DesignAgent:
             lines.append(f"{k.replace('_', ' ').title()}: {v}")
         return "\n".join(lines)
 
-    def run(self, compound):
+    def run(self, compound, compounds_for_target=None):
+        results = []
+        # If a list of compounds is provided (from target lookup), analyze each
+        if compounds_for_target and isinstance(compounds_for_target, list) and len(compounds_for_target) > 0:
+            for c in compounds_for_target:
+                cid = c.get("cid")
+                name = c.get("iupac_name") or str(cid)
+                compound_info = self.pubchem.lookup(name)
+                docking_result = self.docking.screen(name)
+                qsar_result = self.qsar.predict(name)
+                pubmedbert_summary = pubmedbert_summarize(name)
+                llm_summary = "PubMedBERT summary (top predictions):\n" + "\n".join(pubmedbert_summary)
+                results.append({
+                    "compound": name,
+                    "cid": cid,
+                    "compound_info": compound_info,
+                    "docking_result": docking_result,
+                    "qsar_result": qsar_result,
+                    "llm_summary": llm_summary
+                })
+            return {"analyzed_compounds": results}
+        # Otherwise, fallback to single compound as before
         compound_info = self.pubchem.lookup(compound)
         docking_result = self.docking.screen(compound)
         qsar_result = self.qsar.predict(compound)
-        # Use PubMedBERT for summarization
         pubmedbert_summary = pubmedbert_summarize(compound)
         llm_summary = "PubMedBERT summary (top predictions):\n" + "\n".join(pubmedbert_summary)
         return {

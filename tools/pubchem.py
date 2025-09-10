@@ -8,9 +8,14 @@ class PubChemTool:
     def lookup(self, compound):
         """
         Look up compound information from PubChem using the PUG REST API.
+        Supports both compound names and numeric CIDs.
         Returns a dictionary with compound info or an error message.
         """
-        base_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{compound}/property/MolecularWeight,MolecularFormula,IUPACName/JSON"
+        # If input is all digits, treat as CID
+        if str(compound).isdigit():
+            base_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{compound}/property/MolecularWeight,MolecularFormula,IUPACName/JSON"
+        else:
+            base_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{compound}/property/MolecularWeight,MolecularFormula,IUPACName/JSON"
         try:
             response = requests.get(base_url, timeout=10)
             response.raise_for_status()

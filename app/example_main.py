@@ -44,18 +44,19 @@ def approval(candidate: str):
     """Test ApprovalAgent with a candidate drug name"""
     return approval_agent.run(candidate)
 
+
 @app.get("/full_workflow")
 def full_workflow(query: str):
     """Run the full drug discovery workflow: Discovery -> Design -> Validation -> Approval"""
     # Discovery stage
     discovery_result = discovery_agent.run(query)
-    # Use a mock compound/candidate name for downstream steps (in real use, extract from results)
-    compound = query  # For demo, use the same query
+    # If compounds_for_target is present, use it for design agent
+    compounds_for_target = discovery_result.get("compounds_for_target")
+    compound = query  # fallback
     # Design stage
-    design_result = design_agent.run(compound)
-    # Validation stage
+    design_result = design_agent.run(compound, compounds_for_target=compounds_for_target)
+    # Validation and approval use the original query (or could be extended to use top compound)
     validation_result = validation_agent.run(compound)
-    # Approval stage
     approval_result = approval_agent.run(compound)
     return {
         "discovery": discovery_result,

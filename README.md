@@ -1,3 +1,96 @@
+
+# Drug Discovery AI Assistant
+
+## 🚀 Project Overview
+An end-to-end, modular AI system for drug discovery, integrating biomedical databases, multi-agent orchestration, and domain-specific LLMs. Designed for automation, extensibility, and real-world research impact.
+
+---
+
+## 🧑‍💻 My Contributions
+- Designed and implemented the modular, multi-agent architecture (Discovery, Design, Validation, Approval).
+- Integrated real-world biomedical data sources (PubMed, PubChem, AlphaFold) and tools.
+- Developed API (FastAPI) and web UI (Streamlit) for interactive and programmatic access.
+- Leveraged domain-specific LLMs (BioGPT, PubMedBERT, BioBERT) for summarization and knowledge extraction.
+- Wrote robust, extensible Python code with clear documentation and error handling.
+
+---
+
+## 🛠️ Technologies Used
+- **Python** (3.10+)
+- **FastAPI** (API backend)
+- **Streamlit** (web UI)
+- **LangChain, CrewAI** (agent orchestration)
+- **MongoDB** (vector/document storage)
+- **Hugging Face Transformers** (BioGPT, PubMedBERT, BioBERT)
+- **Docker** (optional, for deployment)
+
+---
+
+## 📈 Example Outputs
+
+**API Example:**
+```bash
+curl "http://127.0.0.1:8000/full_workflow?query=BACE1"
+```
+Sample response:
+```json
+{
+	"discovery": {"literature": ["40886227", ...], "structure": "AlphaFold structure ...", ...},
+	"design": {"compound_info": { ... }, ...},
+	"validation": {"lab_result": "...", ...},
+	"approval": {"approval_report": "...", ...}
+}
+```
+
+**Web UI:**
+![Streamlit Screenshot](assets/demo.gif)
+
+---
+
+## 📓 Quickstart Notebook
+
+See [`notebooks/demo_workflow.ipynb`](notebooks/demo_workflow.ipynb) for a step-by-step demo of the pipeline (API calls, outputs, and explanations).
+
+---
+
+## ⚙️ Usage Instructions
+
+**1. Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+**2. Start the API:**
+```bash
+uvicorn app.example_main:app --reload
+```
+
+**3. (Optional) Start the Streamlit frontend:**
+```bash
+streamlit run frontend.py
+```
+
+**4. Try the API:**
+```bash
+curl "http://127.0.0.1:8000/full_workflow?query=aspirin"
+```
+
+---
+
+## 💡 Project Motivation & Impact
+This project demonstrates how modern AI and LLMs can automate and accelerate drug discovery by integrating literature, compound, and structure data. It showcases skills in software engineering, biomedical data integration, and applied AI—making it a strong portfolio piece for computational drug discovery roles.
+
+---
+
+## 🌱 Future Work / Stretch Goals
+- Add more ML/DL modeling (e.g., biomarker → drug response prediction)
+- Expand ETL pipelines for omics/clinical data
+- Integrate experiment tracking (MLflow)
+- Deploy with Docker for reproducibility
+- Write a LinkedIn/Medium post about the project
+
+---
+
 ## Biomedical Models Used
 
 - **BioGPT**: Microsoft’s biomedical language model, trained on PubMed and biomedical text. Excellent for drug/life sciences tasks, and highly recommended for biomedical text generation, summarization, and question answering.
@@ -34,6 +127,46 @@ The drug discovery AI workflow has been significantly improved:
 - Prompts and fill-mask tasks are tailored for biomedical context and accuracy.
 - Exception handling is more robust and specific.
 - Code is modular, maintainable, and ready for further extension.
+
+## 🔬 New Features: PubChem Target-to-Compound Lookup & Multi-Compound Analysis (August 2025)
+
+- **Target-to-Compound Lookup:**
+	- The DiscoveryAgent now performs a real-time lookup of compounds associated with a given target using the PubChem REST API.
+	- When you enter a target (e.g., "BACE1"), the system fetches a list of relevant compounds from PubChem and displays them in the output as `compounds_for_target`.
+	- This enables a true target-to-compound workflow, bridging the gap between target identification and compound design.
+
+- **Multi-Compound Analysis:**
+	- The DesignAgent now accepts and analyzes multiple compounds per target.
+	- When a list of compounds is returned by the DiscoveryAgent, the DesignAgent will evaluate each one (e.g., docking, QSAR, etc.) and return results for all.
+	- This allows for broader exploration and comparison of candidate compounds.
+
+- **Streamlit Frontend Improvements:**
+	- The web UI now displays all workflow steps and persists outputs for each section using `st.session_state`.
+	- User input is validated to ensure correct entry of disease, target, or compound at each step.
+	- The compounds found for a target are clearly displayed and can be used as input for the design step.
+
+**Example Output (DiscoveryAgent with PubChem integration):**
+```json
+{
+	"literature": ["40886227", ...],
+	"structure": "AlphaFold structure for BACE1 found.",
+	"compounds_for_target": ["CID1234", "CID5678", "CID91011"],
+	"llm_summary": "BACE1 is a key target in Alzheimer's disease..."
+}
+```
+
+**Example Output (DesignAgent with multi-compound analysis):**
+```json
+{
+	"compound_results": {
+		"CID1234": {"docking_score": -8.2, ...},
+		"CID5678": {"docking_score": -7.9, ...},
+		...
+	}
+}
+```
+
+See the updated Streamlit UI (`frontend.py`) for a more interactive and persistent workflow experience.
 
 ## 🧩 Modular Workflow
 
