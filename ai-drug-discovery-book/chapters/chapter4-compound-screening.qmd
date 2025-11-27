@@ -1,0 +1,77 @@
+---
+title: "Compound Screening"
+---
+
+# Compound Screening
+
+## Learning Objectives
+- Understand the principles of virtual compound screening
+- Use public compound databases (PubChem, ChEMBL)
+- Implement basic compound search and filtering in Python
+- Apply drug-likeness and ADMET filters
+- Evaluate screening results for downstream analysis
+
+## Introduction
+Compound screening is a key step in drug discovery, enabling researchers to identify promising molecules from vast chemical libraries. Virtual screening, powered by cheminformatics and AI, accelerates this process and reduces experimental costs.
+
+## Core Concepts
+- Types of screening: high-throughput, virtual, fragment-based
+- Public compound databases: PubChem, ChEMBL
+- Drug-likeness and ADMET (absorption, distribution, metabolism, excretion, toxicity)
+- Filtering and prioritization strategies
+
+## Hands-On Implementation
+```python
+# Install required libraries
+!pip install pubchempy chembl_webresource_client pandas
+
+import pubchempy as pcp
+from chembl_webresource_client.new_client import new_client
+import pandas as pd
+
+# Example: Search PubChem for aspirin
+compounds = pcp.get_compounds('aspirin', 'name')
+for c in compounds:
+    print(f"CID: {c.cid}, Canonical SMILES: {c.canonical_smiles}")
+
+# Example: Search ChEMBL for approved drugs
+molecule = new_client.molecule
+approved_drugs = molecule.filter(max_phase=4)
+for drug in approved_drugs[:5]:
+    print(drug['molecule_chembl_id'], drug['pref_name'])
+```
+
+## Case Study / Real-World Example
+Researchers used virtual screening to identify novel inhibitors for a cancer target, narrowing down from millions of compounds to a handful of candidates for experimental validation.
+
+## Common Challenges & Solutions
+- Data quality and consistency across databases
+- Handling large result sets efficiently
+- Integrating screening results with downstream workflows
+
+## Learning Tasks
+- Search for 10 compounds related to a disease of your choice in PubChem
+- Filter a list of compounds by molecular weight and LogP
+- Summarize the ADMET properties of 3 candidate molecules
+
+## Tools & Libraries
+- PubChemPy
+- ChEMBL WebResource Client
+- pandas
+
+Installation:
+```bash
+pip install pubchempy chembl_webresource_client pandas
+```
+
+## Summary
+Virtual compound screening is a powerful tool for narrowing down chemical space, but requires careful filtering and integration with biological data.
+
+## Further Reading
+- PubChem: https://pubchem.ncbi.nlm.nih.gov/
+- ChEMBL: https://www.ebi.ac.uk/chembl/
+- Walters, W.P. et al., "Virtual screening—an overview" (Drug Discov Today, 1998)
+
+---
+
+[Open the interactive Jupyter notebook for this chapter](../notebooks/chapter4-compound-screening.ipynb)
