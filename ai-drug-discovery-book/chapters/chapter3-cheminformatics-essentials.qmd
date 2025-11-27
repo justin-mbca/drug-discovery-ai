@@ -81,4 +81,4 @@ Mastering cheminformatics tools like RDKit is essential for modern drug discover
 
 ---
 
-[Open the interactive Jupyter notebook for this chapter](../notebooks/chapter3-cheminformatics-essentials.ipynb)
+[View the notebook on GitHub](https://github.com/justin-mbca/drug-discovery-ai/blob/main/ai-drug-discovery-book/notebooks/chapter3-cheminformatics-essentials.ipynb)

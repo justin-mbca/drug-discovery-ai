@@ -75,4 +75,4 @@ AI is bridging the gap between genomics and drug discovery, enabling faster, mor
 
 ---
 
-[Open the interactive Jupyter notebook for this chapter](../notebooks/chapter1-genomics-to-molecules.ipynb)
+[View the notebook on GitHub](https://github.com/justin-mbca/drug-discovery-ai/blob/main/ai-drug-discovery-book/notebooks/chapter1-genomics-to-molecules.ipynb)

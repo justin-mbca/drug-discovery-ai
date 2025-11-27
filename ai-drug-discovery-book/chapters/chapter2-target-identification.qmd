@@ -72,4 +72,4 @@ AI-powered literature mining accelerates target identification, but careful vali
 - UniProt: https://www.uniprot.org/
 - Open Targets: https://www.opentargets.org/
 
-[Open the interactive Jupyter notebook for this chapter](../notebooks/chapter2-target-identification.ipynb)
+[View the notebook on GitHub](https://github.com/justin-mbca/drug-discovery-ai/blob/main/ai-drug-discovery-book/notebooks/chapter2-target-identification.ipynb)

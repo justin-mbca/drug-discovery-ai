@@ -74,4 +74,4 @@ Virtual compound screening is a powerful tool for narrowing down chemical space,
 
 ---
 
-[Open the interactive Jupyter notebook for this chapter](../notebooks/chapter4-compound-screening.ipynb)
+[View the notebook on GitHub](https://github.com/justin-mbca/drug-discovery-ai/blob/main/ai-drug-discovery-book/notebooks/chapter4-compound-screening.ipynb)
