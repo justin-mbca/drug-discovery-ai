@@ -1,0 +1,78 @@
+---
+title: "Genomics to Molecules"
+---
+
+# Genomics to Molecules
+
+## Learning Objectives
+- Understand the parallels between genomics and drug discovery workflows
+- Recognize the impact of AI in pharmaceutical research
+- Set up a Python environment for drug discovery
+- Explore the current landscape of AI-discovered drugs
+- Perform basic cheminformatics operations in Python
+
+## Introduction
+The transition from genomics to drug discovery is a natural progression for data scientists. Both fields rely on large-scale data analysis, machine learning, and computational tools. With the advent of AI, especially breakthroughs like AlphaFold, the pharmaceutical industry is experiencing a revolution in how new drugs are discovered and developed.
+
+## Core Concepts
+- Genomics pipelines vs. drug discovery workflows
+- The role of AI in modern pharma (AlphaFold, DeepMind, etc.)
+- Overview of AI-discovered drugs in clinical trials
+- Setting up your development environment (Python, Jupyter, RDKit, etc.)
+
+## Hands-On Implementation
+```python
+# Install RDKit and other essentials
+!pip install rdkit-pypi pandas
+
+from rdkit import Chem
+from rdkit.Chem import Descriptors
+import pandas as pd
+
+# Example: Load a SMILES string and calculate properties
+smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"  # Aspirin
+mol = Chem.MolFromSmiles(smiles)
+
+if mol:
+    mw = Descriptors.MolWt(mol)
+    logp = Descriptors.MolLogP(mol)
+    print(f"Molecular Weight: {mw:.2f}")
+    print(f"LogP: {logp:.2f}")
+else:
+    print("Invalid SMILES string.")
+```
+
+## Case Study / Real-World Example
+AlphaFold's protein structure predictions have enabled rapid target identification for diseases. For example, researchers can now model protein-ligand interactions for novel targets in Alzheimer's disease, accelerating the path from genomics data to candidate molecules.
+
+## Common Challenges & Solutions
+- Data integration between genomics and cheminformatics
+- Handling large datasets and computational resources
+- Ensuring reproducibility in research workflows
+
+## Learning Tasks
+- Set up a Python environment with RDKit and Jupyter
+- Load and analyze a list of SMILES strings from ChEMBL
+- Research one AI-discovered drug currently in clinical trials and summarize its discovery process
+
+## Tools & Libraries
+- RDKit
+- pandas
+- Jupyter Lab/Notebook
+
+Installation:
+```bash
+pip install rdkit-pypi pandas jupyterlab
+```
+
+## Summary
+AI is bridging the gap between genomics and drug discovery, enabling faster, more accurate identification of drug candidates. Setting up a robust computational environment is the first step for hands-on exploration.
+
+## Further Reading
+- Jumper et al., "Highly accurate protein structure prediction with AlphaFold" (Nature, 2021)
+- ChEMBL database: https://www.ebi.ac.uk/chembl/
+- RDKit documentation: https://www.rdkit.org/docs/
+
+---
+
+[Open the interactive Jupyter notebook for this chapter](../notebooks/chapter1-genomics-to-molecules.ipynb)
