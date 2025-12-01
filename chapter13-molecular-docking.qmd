@@ -1,8 +1,0 @@
-# Chapter 13: Molecular Docking
-
-Molecular docking predicts how small molecules bind to protein targets. This chapter introduces docking theory, software, and practical workflows for virtual screening.
-
-## 13.1 Docking Theory
-## 13.2 Docking Software (AutoDock, Vina)
-## 13.3 Preparing Structures for Docking
-## 13.4 Analyzing Docking Results

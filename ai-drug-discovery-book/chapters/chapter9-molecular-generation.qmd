@@ -1,6 +1,42 @@
+
 # Chapter 9: Molecular Generation
 
-Generative models can design novel molecules with desired properties. This chapter introduces molecular generation techniques, including SMILES-based and graph-based approaches.
+---
+
+## Summary
+
+Generative models can design novel molecules with desired properties. This chapter introduces molecular generation techniques, including SMILES-based and graph-based approaches, and discusses how to evaluate generated molecules.
+
+---
+
+## Key Code Snippets
+
+### 1. Generate Molecules with a SMILES RNN (Example)
+```python
+# Example only: replace with actual model
+import torch
+model = ...  # pretrained RNN
+z = torch.randn(1, latent_dim)
+smiles = model.sample(z)
+print(smiles)
+```
+
+### 2. Evaluate Validity of Generated SMILES
+```python
+from rdkit import Chem
+smiles_list = ["CCO", "invalid_smiles"]
+for s in smiles_list:
+	mol = Chem.MolFromSmiles(s)
+	print(f"{s}: {'valid' if mol else 'invalid'}")
+```
+
+---
+
+## Notebook Link
+
+For a full workflow, see the interactive notebook: (notebook not available for this chapter)
+
+---
 
 ## 9.1 Generative Models Overview
 ## 9.2 SMILES-Based Generation

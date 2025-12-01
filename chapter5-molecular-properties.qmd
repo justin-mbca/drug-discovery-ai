@@ -1,8 +1,0 @@
-# Chapter 5: Molecular Properties
-
-This chapter explores key physicochemical properties of molecules (e.g., logP, MW, H-bond donors/acceptors) and their importance in drug design and ADMET prediction.
-
-## 5.1 Physicochemical Descriptors
-## 5.2 Calculating Properties with RDKit
-## 5.3 Lipinski’s Rule of Five
-## 5.4 Property-Based Filtering

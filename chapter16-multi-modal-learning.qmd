@@ -1,7 +1,0 @@
-# Chapter 16: Multi-Modal Learning
-
-Multi-modal learning combines data types (e.g., chemical, biological, clinical) for improved predictions. This chapter explores architectures and applications in drug discovery.
-
-## 16.1 What is Multi-Modal Learning?
-## 16.2 Data Integration Strategies
-## 16.3 Applications in Drug Discovery

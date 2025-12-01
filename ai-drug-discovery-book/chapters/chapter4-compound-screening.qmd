@@ -2,7 +2,52 @@
 title: "Compound Screening"
 ---
 
+
 # Compound Screening
+
+---
+
+## Summary
+
+Compound screening is a key step in drug discovery, enabling researchers to identify promising molecules from vast chemical libraries. Virtual screening, powered by cheminformatics and AI, accelerates this process and reduces experimental costs.
+
+---
+
+## Key Code Snippets
+
+### 1. Search PubChem for a Compound
+```python
+import pubchempy as pcp
+compounds = pcp.get_compounds('aspirin', 'name')
+for c in compounds:
+    print(f"CID: {c.cid}, Canonical SMILES: {c.canonical_smiles}")
+```
+
+### 2. Search ChEMBL for Approved Drugs
+```python
+from chembl_webresource_client.new_client import new_client
+molecule = new_client.molecule
+approved_drugs = molecule.filter(max_phase=4)
+for drug in approved_drugs[:5]:
+    print(drug['molecule_chembl_id'], drug['pref_name'])
+```
+
+### 3. Filter Compounds by Property
+```python
+import pandas as pd
+# Example: Filter by molecular weight
+df = pd.DataFrame([{ 'name': c.iupac_name, 'mw': c.molecular_weight } for c in compounds])
+filtered = df[df['mw'] < 500]
+print(filtered)
+```
+
+---
+
+## Notebook Link
+
+For the full workflow, see the interactive notebook: [chapter4-compound-screening.ipynb](../notebooks/chapter4-compound-screening.ipynb)
+
+---
 
 ## Learning Objectives
 - Understand the principles of virtual compound screening

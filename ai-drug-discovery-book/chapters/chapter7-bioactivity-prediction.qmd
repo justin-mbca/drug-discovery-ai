@@ -1,6 +1,44 @@
+
 # Chapter 7: Bioactivity Prediction
 
-Predicting the biological activity of molecules is central to drug discovery. This chapter covers data sources, machine learning models, and evaluation strategies for bioactivity prediction.
+---
+
+## Summary
+
+Predicting the biological activity of molecules is central to drug discovery. This chapter covers data sources, machine learning models, and evaluation strategies for bioactivity prediction, including how to prepare data and assess model performance.
+
+---
+
+## Key Code Snippets
+
+### 1. Load Bioactivity Data from ChEMBL
+```python
+from chembl_webresource_client.new_client import new_client
+activity = new_client.activity
+acts = activity.filter(target_chembl_id="CHEMBL25", standard_type="IC50")
+for a in list(acts)[:5]:
+	print(a['molecule_chembl_id'], a['standard_value'])
+```
+
+### 2. Train a Classifier for Bioactivity
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+X = ...  # feature matrix
+y = ...  # binary activity labels
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+print("Accuracy:", clf.score(X_test, y_test))
+```
+
+---
+
+## Notebook Link
+
+For a full workflow, see the interactive notebook: (notebook not available for this chapter)
+
+---
 
 ## 7.1 Bioactivity Data Sources
 ## 7.2 Feature Engineering for Bioactivity

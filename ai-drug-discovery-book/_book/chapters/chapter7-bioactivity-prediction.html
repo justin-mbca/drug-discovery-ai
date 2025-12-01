@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Introduction – AI-Driven Drug Discovery: A Hands-On Guide</title>
+<title>11&nbsp; Chapter 7: Bioactivity Prediction – AI-Driven Drug Discovery: A Hands-On Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +20,64 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./../chapter1-genomics-to-molecules.html" rel="next">
-<link href="./preface.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/chapter8-admet-prediction.html" rel="next">
+<link href="../chapters/chapter6-graph-neural-networks.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preface.html">Part 0: Getting Started</a></li><li class="breadcrumb-item"><a href="./introduction.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part2-machine-learning.html">Part II: Machine Learning for Molecules</a></li><li class="breadcrumb-item"><a href="../chapters/chapter7-bioactivity-prediction.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 7: Bioactivity Prediction</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">AI-Driven Drug Discovery: A Hands-On Guide</a> 
+      <a href="../">AI-Driven Drug Discovery: A Hands-On Guide</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -110,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -125,25 +160,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+  <a href="../preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="../introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
@@ -160,25 +195,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part1-foundations.html" class="sidebar-item-text sidebar-link">
+  <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
@@ -195,43 +230,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./part2-machine-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 6: Graph Neural Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter7-bioactivity-prediction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter7-bioactivity-prediction.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 7: Bioactivity Prediction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter8-admet-prediction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter8-admet-prediction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 8: ADMET Prediction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter9-molecular-generation.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter9-molecular-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Chapter 9: Molecular Generation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter10-conditional-generation.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter10-conditional-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chapter 10: Conditional Generation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter11-transformers-chemistry.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter11-transformers-chemistry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Chapter 11: Transformers in Chemistry</span></span></a>
   </div>
 </li>
@@ -248,19 +283,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter12-protein-structure.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter12-protein-structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Chapter 12: Protein Structure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter13-molecular-docking.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter13-molecular-docking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Chapter 13: Molecular Docking</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter14-ml-enhanced-docking.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter14-ml-enhanced-docking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 14: ML-Enhanced Docking</span></span></a>
   </div>
 </li>
@@ -277,43 +312,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter15-retrosynthesis.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter15-retrosynthesis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Chapter 15: Retrosynthesis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter16-multi-modal-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter16-multi-modal-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Chapter 16: Multi-Modal Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter17-end-to-end-pipeline.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter17-end-to-end-pipeline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Chapter 17: End-to-End Pipeline</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter18-case-studies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter18-case-studies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Chapter 18: Case Studies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter19-external-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter19-external-tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Chapter 19: External Tools</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter20-ethical-considerations.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter20-ethical-considerations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Chapter 20: Ethical Considerations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../chapter21-future-next-steps.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter21-future-next-steps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Chapter 21: Future Next Steps</span></span></a>
   </div>
 </li>
@@ -321,13 +356,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
+  <a href="../conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -341,16 +376,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">3</span> Introduction</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">11.1</span> Summary</a></li>
+  <li><a href="#key-code-snippets" id="toc-key-code-snippets" class="nav-link" data-scroll-target="#key-code-snippets"><span class="header-section-number">11.2</span> Key Code Snippets</a>
+  <ul class="collapse">
+  <li><a href="#load-bioactivity-data-from-chembl" id="toc-load-bioactivity-data-from-chembl" class="nav-link" data-scroll-target="#load-bioactivity-data-from-chembl"><span class="header-section-number">11.2.1</span> 1. Load Bioactivity Data from ChEMBL</a></li>
+  <li><a href="#train-a-classifier-for-bioactivity" id="toc-train-a-classifier-for-bioactivity" class="nav-link" data-scroll-target="#train-a-classifier-for-bioactivity"><span class="header-section-number">11.2.2</span> 2. Train a Classifier for Bioactivity</a></li>
+  </ul></li>
+  <li><a href="#notebook-link" id="toc-notebook-link" class="nav-link" data-scroll-target="#notebook-link"><span class="header-section-number">11.3</span> Notebook Link</a></li>
+  <li><a href="#bioactivity-data-sources" id="toc-bioactivity-data-sources" class="nav-link" data-scroll-target="#bioactivity-data-sources"><span class="header-section-number">11.4</span> 7.1 Bioactivity Data Sources</a></li>
+  <li><a href="#feature-engineering-for-bioactivity" id="toc-feature-engineering-for-bioactivity" class="nav-link" data-scroll-target="#feature-engineering-for-bioactivity"><span class="header-section-number">11.5</span> 7.2 Feature Engineering for Bioactivity</a></li>
+  <li><a href="#ml-models-for-activity-prediction" id="toc-ml-models-for-activity-prediction" class="nav-link" data-scroll-target="#ml-models-for-activity-prediction"><span class="header-section-number">11.6</span> 7.3 ML Models for Activity Prediction</a></li>
+  <li><a href="#model-evaluation-and-validation" id="toc-model-evaluation-and-validation" class="nav-link" data-scroll-target="#model-evaluation-and-validation"><span class="header-section-number">11.7</span> 7.4 Model Evaluation and Validation</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preface.html">Part 0: Getting Started</a></li><li class="breadcrumb-item"><a href="./introduction.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part2-machine-learning.html">Part II: Machine Learning for Molecules</a></li><li class="breadcrumb-item"><a href="../chapters/chapter7-bioactivity-prediction.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 7: Bioactivity Prediction</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 7: Bioactivity Prediction</span></h1>
 </div>
 
 
@@ -367,10 +412,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Introduction</h1>
-<p>Artificial intelligence is revolutionizing drug discovery. This book introduces the key concepts, tools, and workflows that are shaping the future of pharmaceutical research. You will learn how to leverage AI, machine learning, and public biomedical data to accelerate the discovery of new medicines.</p>
-<p>We begin with foundational concepts and build up to advanced, real-world applications, ensuring you gain both theoretical understanding and practical skills.</p>
+<hr>
+<section id="summary" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">11.1</span> Summary</h2>
+<p>Predicting the biological activity of molecules is central to drug discovery. This chapter covers data sources, machine learning models, and evaluation strategies for bioactivity prediction, including how to prepare data and assess model performance.</p>
+<hr>
+</section>
+<section id="key-code-snippets" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="key-code-snippets"><span class="header-section-number">11.2</span> Key Code Snippets</h2>
+<section id="load-bioactivity-data-from-chembl" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="load-bioactivity-data-from-chembl"><span class="header-section-number">11.2.1</span> 1. Load Bioactivity Data from ChEMBL</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> chembl_webresource_client.new_client <span class="im">import</span> new_client</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>activity <span class="op">=</span> new_client.activity</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>acts <span class="op">=</span> activity.<span class="bu">filter</span>(target_chembl_id<span class="op">=</span><span class="st">"CHEMBL25"</span>, standard_type<span class="op">=</span><span class="st">"IC50"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> <span class="bu">list</span>(acts)[:<span class="dv">5</span>]:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a[<span class="st">'molecule_chembl_id'</span>], a[<span class="st">'standard_value'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="train-a-classifier-for-bioactivity" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="train-a-classifier-for-bioactivity"><span class="header-section-number">11.2.2</span> 2. Train a Classifier for Bioactivity</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> ...  <span class="co"># feature matrix</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ...  <span class="co"># binary activity labels</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train, y_train)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accuracy:"</span>, clf.score(X_test, y_test))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="notebook-link" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="notebook-link"><span class="header-section-number">11.3</span> Notebook Link</h2>
+<p>For a full workflow, see the interactive notebook: (notebook not available for this chapter)</p>
+<hr>
+</section>
+<section id="bioactivity-data-sources" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="bioactivity-data-sources"><span class="header-section-number">11.4</span> 7.1 Bioactivity Data Sources</h2>
+</section>
+<section id="feature-engineering-for-bioactivity" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="feature-engineering-for-bioactivity"><span class="header-section-number">11.5</span> 7.2 Feature Engineering for Bioactivity</h2>
+</section>
+<section id="ml-models-for-activity-prediction" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="ml-models-for-activity-prediction"><span class="header-section-number">11.6</span> 7.3 ML Models for Activity Prediction</h2>
+</section>
+<section id="model-evaluation-and-validation" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="model-evaluation-and-validation"><span class="header-section-number">11.7</span> 7.4 Model Evaluation and Validation</h2>
 
 
 </section>
@@ -778,13 +864,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./preface.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span>
+      <a href="../chapters/chapter6-graph-neural-networks.html" class="pagination-link" aria-label="Chapter 6: Graph Neural Networks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 6: Graph Neural Networks</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./../chapter1-genomics-to-molecules.html" class="pagination-link" aria-label="Chapter 1: Genomics to Molecules">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/chapter8-admet-prediction.html" class="pagination-link" aria-label="Chapter 8: ADMET Prediction">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 8: ADMET Prediction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

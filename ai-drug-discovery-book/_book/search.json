@@ -64,12 +64,12 @@
   {
     "objectID": "chapters/chapter1-genomics-to-molecules.html",
     "href": "chapters/chapter1-genomics-to-molecules.html",
-    "title": "3  Genomics to Molecules",
+    "title": "3  Chapter 1: Genomics to Molecules",
     "section": "",
-    "text": "4 Genomics to Molecules",
+    "text": "3.1 Summary\nThis chapter introduces the journey from genomics data to actionable molecular targets in drug discovery. It covers how genetic information is translated into protein targets and how these are linked to small molecules for therapeutic intervention.\nThis workflow demonstrates how to start from a gene (e.g., SOD1 for ALS), find the corresponding protein (UniProt), retrieve known small-molecule ligands (ChEMBL), and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.",
     "crumbs": [
       "Part 0: Getting Started",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
     ]
   },
   {
@@ -559,12 +559,12 @@
   {
     "objectID": "part2-machine-learning.html",
     "href": "part2-machine-learning.html",
-    "title": "8  Part II: Machine Learning for Molecules",
+    "title": "9  Part II: Machine Learning for Molecules",
     "section": "",
-    "text": "9 Part II: Machine Learning for Molecules\nThis part covers the application of machine learning to molecular data, including classical algorithms, feature engineering, and model evaluation.",
+    "text": "10 Part II: Machine Learning for Molecules\nThis part covers the application of machine learning to molecular data, including classical algorithms, feature engineering, and model evaluation.",
     "crumbs": [
       "Part II: Machine Learning for Molecules",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Part II: Machine Learning for Molecules</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Part II: Machine Learning for Molecules</span>"
     ]
   },
   {
@@ -740,6 +740,1876 @@
     "crumbs": [
       "Part 0: Getting Started",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter1-genomics-to-molecules.html",
+    "href": "../chapter1-genomics-to-molecules.html",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "",
+    "text": "3.1 1.1 Introduction to Genomics in Drug Discovery\nThis chapter introduces the journey from genomics data to actionable molecular targets in drug discovery. It covers how genetic information is translated into protein targets and how these are linked to small molecules for therapeutic intervention.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter1-genomics-to-molecules.html#from-genes-to-proteins",
+    "href": "../chapter1-genomics-to-molecules.html#from-genes-to-proteins",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.2 1.2 From Genes to Proteins",
+    "text": "3.2 1.2 From Genes to Proteins",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter1-genomics-to-molecules.html#target-identification-and-validation",
+    "href": "../chapter1-genomics-to-molecules.html#target-identification-and-validation",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.3 1.3 Target Identification and Validation",
+    "text": "3.3 1.3 Target Identification and Validation",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter1-genomics-to-molecules.html#linking-targets-to-molecules",
+    "href": "../chapter1-genomics-to-molecules.html#linking-targets-to-molecules",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.4 1.4 Linking Targets to Molecules",
+    "text": "3.4 1.4 Linking Targets to Molecules",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter1-genomics-to-molecules.html#case-study-als-gene-to-ligand",
+    "href": "../chapter1-genomics-to-molecules.html#case-study-als-gene-to-ligand",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.5 1.5 Case Study: ALS Gene to Ligand",
+    "text": "3.5 1.5 Case Study: ALS Gene to Ligand",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter2-environment-setup.html",
+    "href": "../chapter2-environment-setup.html",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "",
+    "text": "4.1 2.1 Installing Python and Conda\nThis chapter guides you through setting up a reproducible computational environment for AI-driven drug discovery, including Python, Jupyter, and essential libraries.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter2-environment-setup.html#setting-up-jupyter-notebooks",
+    "href": "../chapter2-environment-setup.html#setting-up-jupyter-notebooks",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "4.2 2.2 Setting Up Jupyter Notebooks",
+    "text": "4.2 2.2 Setting Up Jupyter Notebooks",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter2-environment-setup.html#managing-dependencies",
+    "href": "../chapter2-environment-setup.html#managing-dependencies",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "4.3 2.3 Managing Dependencies",
+    "text": "4.3 2.3 Managing Dependencies",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter2-environment-setup.html#version-control-with-git",
+    "href": "../chapter2-environment-setup.html#version-control-with-git",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "4.4 2.4 Version Control with Git",
+    "text": "4.4 2.4 Version Control with Git",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter3-cheminformatics.html",
+    "href": "../chapter3-cheminformatics.html",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "",
+    "text": "6.1 3.1 Molecular Representations (SMILES, InChI)\nCheminformatics is the foundation for representing, searching, and analyzing chemical structures computationally. This chapter covers molecular representations, file formats, and basic cheminformatics operations.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter3-cheminformatics.html#chemical-file-formats",
+    "href": "../chapter3-cheminformatics.html#chemical-file-formats",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "6.2 3.2 Chemical File Formats",
+    "text": "6.2 3.2 Chemical File Formats",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter3-cheminformatics.html#structure-search-and-similarity",
+    "href": "../chapter3-cheminformatics.html#structure-search-and-similarity",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "6.3 3.3 Structure Search and Similarity",
+    "text": "6.3 3.3 Structure Search and Similarity",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter3-cheminformatics.html#cheminformatics-toolkits",
+    "href": "../chapter3-cheminformatics.html#cheminformatics-toolkits",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "6.4 3.4 Cheminformatics Toolkits",
+    "text": "6.4 3.4 Cheminformatics Toolkits",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter4-molecular-fingerprints.html",
+    "href": "../chapter4-molecular-fingerprints.html",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "",
+    "text": "7.1 4.1 What Are Molecular Fingerprints?\nMolecular fingerprints are compact representations of chemical structures used for similarity searching and machine learning. This chapter explains different types of fingerprints and their applications.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter4-molecular-fingerprints.html#types-maccs-morgan-topological",
+    "href": "../chapter4-molecular-fingerprints.html#types-maccs-morgan-topological",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "7.2 4.2 Types: MACCS, Morgan, Topological",
+    "text": "7.2 4.2 Types: MACCS, Morgan, Topological",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter4-molecular-fingerprints.html#applications-in-virtual-screening",
+    "href": "../chapter4-molecular-fingerprints.html#applications-in-virtual-screening",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "7.3 4.3 Applications in Virtual Screening",
+    "text": "7.3 4.3 Applications in Virtual Screening",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter4-molecular-fingerprints.html#fingerprints-in-machine-learning",
+    "href": "../chapter4-molecular-fingerprints.html#fingerprints-in-machine-learning",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "7.4 4.4 Fingerprints in Machine Learning",
+    "text": "7.4 4.4 Fingerprints in Machine Learning",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter5-molecular-properties.html",
+    "href": "../chapter5-molecular-properties.html",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "",
+    "text": "8.1 5.1 Physicochemical Descriptors\nThis chapter explores key physicochemical properties of molecules (e.g., logP, MW, H-bond donors/acceptors) and their importance in drug design and ADMET prediction.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter5-molecular-properties.html#calculating-properties-with-rdkit",
+    "href": "../chapter5-molecular-properties.html#calculating-properties-with-rdkit",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "8.2 5.2 Calculating Properties with RDKit",
+    "text": "8.2 5.2 Calculating Properties with RDKit",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter5-molecular-properties.html#lipinskis-rule-of-five",
+    "href": "../chapter5-molecular-properties.html#lipinskis-rule-of-five",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "8.3 5.3 Lipinski’s Rule of Five",
+    "text": "8.3 5.3 Lipinski’s Rule of Five",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter5-molecular-properties.html#property-based-filtering",
+    "href": "../chapter5-molecular-properties.html#property-based-filtering",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "8.4 5.4 Property-Based Filtering",
+    "text": "8.4 5.4 Property-Based Filtering",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter6-graph-neural-networks.html",
+    "href": "../chapter6-graph-neural-networks.html",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "",
+    "text": "10.1 6.1 Introduction to GNNs\nGraph Neural Networks (GNNs) are powerful tools for learning on molecular graphs. This chapter introduces GNN concepts and their application to molecular property prediction.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter6-graph-neural-networks.html#molecular-graph-construction",
+    "href": "../chapter6-graph-neural-networks.html#molecular-graph-construction",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.2 6.2 Molecular Graph Construction",
+    "text": "10.2 6.2 Molecular Graph Construction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter6-graph-neural-networks.html#gnn-architectures-for-chemistry",
+    "href": "../chapter6-graph-neural-networks.html#gnn-architectures-for-chemistry",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.3 6.3 GNN Architectures for Chemistry",
+    "text": "10.3 6.3 GNN Architectures for Chemistry",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter6-graph-neural-networks.html#case-study-gnn-for-solubility",
+    "href": "../chapter6-graph-neural-networks.html#case-study-gnn-for-solubility",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.4 6.4 Case Study: GNN for Solubility",
+    "text": "10.4 6.4 Case Study: GNN for Solubility",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter7-bioactivity-prediction.html",
+    "href": "../chapter7-bioactivity-prediction.html",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "",
+    "text": "11.1 7.1 Bioactivity Data Sources\nPredicting the biological activity of molecules is central to drug discovery. This chapter covers data sources, machine learning models, and evaluation strategies for bioactivity prediction.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter7-bioactivity-prediction.html#feature-engineering-for-bioactivity",
+    "href": "../chapter7-bioactivity-prediction.html#feature-engineering-for-bioactivity",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.2 7.2 Feature Engineering for Bioactivity",
+    "text": "11.2 7.2 Feature Engineering for Bioactivity",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter7-bioactivity-prediction.html#ml-models-for-activity-prediction",
+    "href": "../chapter7-bioactivity-prediction.html#ml-models-for-activity-prediction",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.3 7.3 ML Models for Activity Prediction",
+    "text": "11.3 7.3 ML Models for Activity Prediction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter7-bioactivity-prediction.html#model-evaluation-and-validation",
+    "href": "../chapter7-bioactivity-prediction.html#model-evaluation-and-validation",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.4 7.4 Model Evaluation and Validation",
+    "text": "11.4 7.4 Model Evaluation and Validation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter8-admet-prediction.html",
+    "href": "../chapter8-admet-prediction.html",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "",
+    "text": "12.1 8.1 Introduction to ADMET\nADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties are critical for drug candidates. This chapter discusses computational approaches for ADMET prediction.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter8-admet-prediction.html#data-and-descriptors",
+    "href": "../chapter8-admet-prediction.html#data-and-descriptors",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.2 8.2 Data and Descriptors",
+    "text": "12.2 8.2 Data and Descriptors",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter8-admet-prediction.html#ml-models-for-admet",
+    "href": "../chapter8-admet-prediction.html#ml-models-for-admet",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.3 8.3 ML Models for ADMET",
+    "text": "12.3 8.3 ML Models for ADMET",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter8-admet-prediction.html#interpreting-admet-predictions",
+    "href": "../chapter8-admet-prediction.html#interpreting-admet-predictions",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.4 8.4 Interpreting ADMET Predictions",
+    "text": "12.4 8.4 Interpreting ADMET Predictions",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter9-molecular-generation.html",
+    "href": "../chapter9-molecular-generation.html",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "",
+    "text": "13.1 9.1 Generative Models Overview\nGenerative models can design novel molecules with desired properties. This chapter introduces molecular generation techniques, including SMILES-based and graph-based approaches.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter9-molecular-generation.html#smiles-based-generation",
+    "href": "../chapter9-molecular-generation.html#smiles-based-generation",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.2 9.2 SMILES-Based Generation",
+    "text": "13.2 9.2 SMILES-Based Generation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter9-molecular-generation.html#graph-based-generation",
+    "href": "../chapter9-molecular-generation.html#graph-based-generation",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.3 9.3 Graph-Based Generation",
+    "text": "13.3 9.3 Graph-Based Generation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter9-molecular-generation.html#evaluating-generated-molecules",
+    "href": "../chapter9-molecular-generation.html#evaluating-generated-molecules",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.4 9.4 Evaluating Generated Molecules",
+    "text": "13.4 9.4 Evaluating Generated Molecules",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter10-conditional-generation.html",
+    "href": "../chapter10-conditional-generation.html",
+    "title": "14  Chapter 10: Conditional Generation",
+    "section": "",
+    "text": "14.1 10.1 Conditional Generative Models\nConditional generation enables the design of molecules with specific properties or activities. This chapter covers conditional VAEs, GANs, and reinforcement learning for molecular design.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 10: Conditional Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter10-conditional-generation.html#property-conditioned-generation",
+    "href": "../chapter10-conditional-generation.html#property-conditioned-generation",
+    "title": "14  Chapter 10: Conditional Generation",
+    "section": "14.2 10.2 Property-Conditioned Generation",
+    "text": "14.2 10.2 Property-Conditioned Generation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 10: Conditional Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter10-conditional-generation.html#reinforcement-learning-approaches",
+    "href": "../chapter10-conditional-generation.html#reinforcement-learning-approaches",
+    "title": "14  Chapter 10: Conditional Generation",
+    "section": "14.3 10.3 Reinforcement Learning Approaches",
+    "text": "14.3 10.3 Reinforcement Learning Approaches",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 10: Conditional Generation</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter11-transformers-chemistry.html",
+    "href": "../chapter11-transformers-chemistry.html",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "",
+    "text": "15.1 11.1 Introduction to Transformers\nTransformers have revolutionized sequence modeling and are now applied to chemistry. This chapter explores transformer architectures for SMILES, reaction prediction, and property modeling.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter11-transformers-chemistry.html#smiles-transformers",
+    "href": "../chapter11-transformers-chemistry.html#smiles-transformers",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "15.2 11.2 SMILES Transformers",
+    "text": "15.2 11.2 SMILES Transformers",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter11-transformers-chemistry.html#reaction-prediction",
+    "href": "../chapter11-transformers-chemistry.html#reaction-prediction",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "15.3 11.3 Reaction Prediction",
+    "text": "15.3 11.3 Reaction Prediction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter11-transformers-chemistry.html#property-prediction",
+    "href": "../chapter11-transformers-chemistry.html#property-prediction",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "15.4 11.4 Property Prediction",
+    "text": "15.4 11.4 Property Prediction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter12-protein-structure.html",
+    "href": "../chapter12-protein-structure.html",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "",
+    "text": "16.1 12.1 Protein Structure Levels\nUnderstanding protein structure is key to structure-based drug design. This chapter covers protein structure basics, experimental methods, and computational prediction (e.g., AlphaFold).",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter12-protein-structure.html#experimental-determination",
+    "href": "../chapter12-protein-structure.html#experimental-determination",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "16.2 12.2 Experimental Determination",
+    "text": "16.2 12.2 Experimental Determination",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter12-protein-structure.html#structure-prediction-tools",
+    "href": "../chapter12-protein-structure.html#structure-prediction-tools",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "16.3 12.3 Structure Prediction Tools",
+    "text": "16.3 12.3 Structure Prediction Tools",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter12-protein-structure.html#protein-ligand-interactions",
+    "href": "../chapter12-protein-structure.html#protein-ligand-interactions",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "16.4 12.4 Protein-Ligand Interactions",
+    "text": "16.4 12.4 Protein-Ligand Interactions",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter13-molecular-docking.html",
+    "href": "../chapter13-molecular-docking.html",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "",
+    "text": "17.1 13.1 Docking Theory\nMolecular docking predicts how small molecules bind to protein targets. This chapter introduces docking theory, software, and practical workflows for virtual screening.",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter13-molecular-docking.html#docking-software-autodock-vina",
+    "href": "../chapter13-molecular-docking.html#docking-software-autodock-vina",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "17.2 13.2 Docking Software (AutoDock, Vina)",
+    "text": "17.2 13.2 Docking Software (AutoDock, Vina)",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter13-molecular-docking.html#preparing-structures-for-docking",
+    "href": "../chapter13-molecular-docking.html#preparing-structures-for-docking",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "17.3 13.3 Preparing Structures for Docking",
+    "text": "17.3 13.3 Preparing Structures for Docking",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter13-molecular-docking.html#analyzing-docking-results",
+    "href": "../chapter13-molecular-docking.html#analyzing-docking-results",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "17.4 13.4 Analyzing Docking Results",
+    "text": "17.4 13.4 Analyzing Docking Results",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter14-ml-enhanced-docking.html",
+    "href": "../chapter14-ml-enhanced-docking.html",
+    "title": "18  Chapter 14: ML-Enhanced Docking",
+    "section": "",
+    "text": "18.1 14.1 ML Scoring Functions\nMachine learning can improve docking accuracy and speed. This chapter discusses ML scoring functions, pose prediction, and integration with docking pipelines.",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Chapter 14: ML-Enhanced Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter14-ml-enhanced-docking.html#pose-prediction",
+    "href": "../chapter14-ml-enhanced-docking.html#pose-prediction",
+    "title": "18  Chapter 14: ML-Enhanced Docking",
+    "section": "18.2 14.2 Pose Prediction",
+    "text": "18.2 14.2 Pose Prediction",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Chapter 14: ML-Enhanced Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter14-ml-enhanced-docking.html#integrating-ml-with-docking",
+    "href": "../chapter14-ml-enhanced-docking.html#integrating-ml-with-docking",
+    "title": "18  Chapter 14: ML-Enhanced Docking",
+    "section": "18.3 14.3 Integrating ML with Docking",
+    "text": "18.3 14.3 Integrating ML with Docking",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Chapter 14: ML-Enhanced Docking</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter15-retrosynthesis.html",
+    "href": "../chapter15-retrosynthesis.html",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "",
+    "text": "19.1 15.1 Introduction to Retrosynthesis\nRetrosynthesis planning is essential for proposing synthetic routes to molecules. This chapter covers rule-based and AI-driven retrosynthesis tools and strategies.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter15-retrosynthesis.html#rule-based-approaches",
+    "href": "../chapter15-retrosynthesis.html#rule-based-approaches",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "19.2 15.2 Rule-Based Approaches",
+    "text": "19.2 15.2 Rule-Based Approaches",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter15-retrosynthesis.html#ai-driven-retrosynthesis",
+    "href": "../chapter15-retrosynthesis.html#ai-driven-retrosynthesis",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "19.3 15.3 AI-Driven Retrosynthesis",
+    "text": "19.3 15.3 AI-Driven Retrosynthesis",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter15-retrosynthesis.html#evaluating-synthetic-routes",
+    "href": "../chapter15-retrosynthesis.html#evaluating-synthetic-routes",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "19.4 15.4 Evaluating Synthetic Routes",
+    "text": "19.4 15.4 Evaluating Synthetic Routes",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter16-multi-modal-learning.html",
+    "href": "../chapter16-multi-modal-learning.html",
+    "title": "20  Chapter 16: Multi-Modal Learning",
+    "section": "",
+    "text": "20.1 16.1 What is Multi-Modal Learning?\nMulti-modal learning combines data types (e.g., chemical, biological, clinical) for improved predictions. This chapter explores architectures and applications in drug discovery.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Chapter 16: Multi-Modal Learning</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter16-multi-modal-learning.html#data-integration-strategies",
+    "href": "../chapter16-multi-modal-learning.html#data-integration-strategies",
+    "title": "20  Chapter 16: Multi-Modal Learning",
+    "section": "20.2 16.2 Data Integration Strategies",
+    "text": "20.2 16.2 Data Integration Strategies",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Chapter 16: Multi-Modal Learning</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter16-multi-modal-learning.html#applications-in-drug-discovery",
+    "href": "../chapter16-multi-modal-learning.html#applications-in-drug-discovery",
+    "title": "20  Chapter 16: Multi-Modal Learning",
+    "section": "20.3 16.3 Applications in Drug Discovery",
+    "text": "20.3 16.3 Applications in Drug Discovery",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Chapter 16: Multi-Modal Learning</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter17-end-to-end-pipeline.html",
+    "href": "../chapter17-end-to-end-pipeline.html",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "",
+    "text": "21.1 17.1 Pipeline Overview\nThis chapter presents a complete AI-driven drug discovery pipeline, from data collection to candidate prioritization, integrating methods from previous chapters.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter17-end-to-end-pipeline.html#data-preparation",
+    "href": "../chapter17-end-to-end-pipeline.html#data-preparation",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "21.2 17.2 Data Preparation",
+    "text": "21.2 17.2 Data Preparation",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter17-end-to-end-pipeline.html#model-training-and-evaluation",
+    "href": "../chapter17-end-to-end-pipeline.html#model-training-and-evaluation",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "21.3 17.3 Model Training and Evaluation",
+    "text": "21.3 17.3 Model Training and Evaluation",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter17-end-to-end-pipeline.html#candidate-selection",
+    "href": "../chapter17-end-to-end-pipeline.html#candidate-selection",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "21.4 17.4 Candidate Selection",
+    "text": "21.4 17.4 Candidate Selection",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter18-case-studies.html",
+    "href": "../chapter18-case-studies.html",
+    "title": "22  Chapter 18: Case Studies",
+    "section": "",
+    "text": "22.1 18.1 Case Study 1: ALS Drug Discovery\nReal-world case studies demonstrate the application of AI and cheminformatics in drug discovery. This chapter presents selected examples and lessons learned.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Chapter 18: Case Studies</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter18-case-studies.html#case-study-2-kinase-inhibitors",
+    "href": "../chapter18-case-studies.html#case-study-2-kinase-inhibitors",
+    "title": "22  Chapter 18: Case Studies",
+    "section": "22.2 18.2 Case Study 2: Kinase Inhibitors",
+    "text": "22.2 18.2 Case Study 2: Kinase Inhibitors",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Chapter 18: Case Studies</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter18-case-studies.html#lessons-learned",
+    "href": "../chapter18-case-studies.html#lessons-learned",
+    "title": "22  Chapter 18: Case Studies",
+    "section": "22.3 18.3 Lessons Learned",
+    "text": "22.3 18.3 Lessons Learned",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Chapter 18: Case Studies</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter19-external-tools.html",
+    "href": "../chapter19-external-tools.html",
+    "title": "23  Chapter 19: External Tools",
+    "section": "",
+    "text": "23.1 19.1 Structural Databases\nThis chapter reviews external tools and databases commonly used in computational drug discovery, including RCSB PDB, ChEMBL, and PubChem.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Chapter 19: External Tools</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter19-external-tools.html#bioactivity-databases",
+    "href": "../chapter19-external-tools.html#bioactivity-databases",
+    "title": "23  Chapter 19: External Tools",
+    "section": "23.2 19.2 Bioactivity Databases",
+    "text": "23.2 19.2 Bioactivity Databases",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Chapter 19: External Tools</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter19-external-tools.html#workflow-automation-tools",
+    "href": "../chapter19-external-tools.html#workflow-automation-tools",
+    "title": "23  Chapter 19: External Tools",
+    "section": "23.3 19.3 Workflow Automation Tools",
+    "text": "23.3 19.3 Workflow Automation Tools",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Chapter 19: External Tools</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter20-ethical-considerations.html",
+    "href": "../chapter20-ethical-considerations.html",
+    "title": "24  Chapter 20: Ethical Considerations",
+    "section": "",
+    "text": "24.1 20.1 Data Privacy and Security\nEthics are critical in AI-driven drug discovery. This chapter discusses data privacy, algorithmic bias, and responsible innovation in cheminformatics and AI.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Chapter 20: Ethical Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter20-ethical-considerations.html#bias-in-ai-models",
+    "href": "../chapter20-ethical-considerations.html#bias-in-ai-models",
+    "title": "24  Chapter 20: Ethical Considerations",
+    "section": "24.2 20.2 Bias in AI Models",
+    "text": "24.2 20.2 Bias in AI Models",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Chapter 20: Ethical Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter20-ethical-considerations.html#responsible-innovation",
+    "href": "../chapter20-ethical-considerations.html#responsible-innovation",
+    "title": "24  Chapter 20: Ethical Considerations",
+    "section": "24.3 20.3 Responsible Innovation",
+    "text": "24.3 20.3 Responsible Innovation",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Chapter 20: Ethical Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter21-future-next-steps.html",
+    "href": "../chapter21-future-next-steps.html",
+    "title": "25  Chapter 21: Future Next Steps",
+    "section": "",
+    "text": "25.1 21.1 Emerging Technologies\nThe final chapter outlines emerging trends and future directions in AI-driven drug discovery, including new algorithms, data sources, and collaborative science.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Chapter 21: Future Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter21-future-next-steps.html#open-science-and-collaboration",
+    "href": "../chapter21-future-next-steps.html#open-science-and-collaboration",
+    "title": "25  Chapter 21: Future Next Steps",
+    "section": "25.2 21.2 Open Science and Collaboration",
+    "text": "25.2 21.2 Open Science and Collaboration",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Chapter 21: Future Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "../chapter21-future-next-steps.html#next-steps-for-practitioners",
+    "href": "../chapter21-future-next-steps.html#next-steps-for-practitioners",
+    "title": "25  Chapter 21: Future Next Steps",
+    "section": "25.3 21.3 Next Steps for Practitioners",
+    "text": "25.3 21.3 Next Steps for Practitioners",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Chapter 21: Future Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#from-genes-to-proteins",
+    "href": "chapters/chapter1-genomics-to-molecules.html#from-genes-to-proteins",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.5 1.2 From Genes to Proteins",
+    "text": "3.5 1.2 From Genes to Proteins",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#target-identification-and-validation",
+    "href": "chapters/chapter1-genomics-to-molecules.html#target-identification-and-validation",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.6 1.3 Target Identification and Validation",
+    "text": "3.6 1.3 Target Identification and Validation",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#linking-targets-to-molecules",
+    "href": "chapters/chapter1-genomics-to-molecules.html#linking-targets-to-molecules",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.7 1.4 Linking Targets to Molecules",
+    "text": "3.7 1.4 Linking Targets to Molecules",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#case-study-als-gene-to-ligand",
+    "href": "chapters/chapter1-genomics-to-molecules.html#case-study-als-gene-to-ligand",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.8 1.5 Case Study: ALS Gene to Ligand",
+    "text": "3.8 1.5 Case Study: ALS Gene to Ligand",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-environment-setup.html",
+    "href": "chapters/chapter2-environment-setup.html",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "",
+    "text": "4.1 2.1 Installing Python and Conda\nThis chapter guides you through setting up a reproducible computational environment for AI-driven drug discovery, including Python, Jupyter, and essential libraries.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-environment-setup.html#setting-up-jupyter-notebooks",
+    "href": "chapters/chapter2-environment-setup.html#setting-up-jupyter-notebooks",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "4.2 2.2 Setting Up Jupyter Notebooks",
+    "text": "4.2 2.2 Setting Up Jupyter Notebooks",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-environment-setup.html#managing-dependencies",
+    "href": "chapters/chapter2-environment-setup.html#managing-dependencies",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "4.3 2.3 Managing Dependencies",
+    "text": "4.3 2.3 Managing Dependencies",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-environment-setup.html#version-control-with-git",
+    "href": "chapters/chapter2-environment-setup.html#version-control-with-git",
+    "title": "4  Chapter 2: Environment Setup",
+    "section": "4.4 2.4 Version Control with Git",
+    "text": "4.4 2.4 Version Control with Git",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 2: Environment Setup</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics.html",
+    "href": "chapters/chapter3-cheminformatics.html",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "",
+    "text": "6.1 3.1 Molecular Representations (SMILES, InChI)\nCheminformatics is the foundation for representing, searching, and analyzing chemical structures computationally. This chapter covers molecular representations, file formats, and basic cheminformatics operations.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics.html#chemical-file-formats",
+    "href": "chapters/chapter3-cheminformatics.html#chemical-file-formats",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "6.2 3.2 Chemical File Formats",
+    "text": "6.2 3.2 Chemical File Formats",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics.html#structure-search-and-similarity",
+    "href": "chapters/chapter3-cheminformatics.html#structure-search-and-similarity",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "6.3 3.3 Structure Search and Similarity",
+    "text": "6.3 3.3 Structure Search and Similarity",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics.html#cheminformatics-toolkits",
+    "href": "chapters/chapter3-cheminformatics.html#cheminformatics-toolkits",
+    "title": "6  Chapter 3: Cheminformatics Essentials",
+    "section": "6.4 3.4 Cheminformatics Toolkits",
+    "text": "6.4 3.4 Cheminformatics Toolkits",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Chapter 3: Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-molecular-fingerprints.html",
+    "href": "chapters/chapter4-molecular-fingerprints.html",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "",
+    "text": "7.1 4.1 What Are Molecular Fingerprints?\nMolecular fingerprints are compact representations of chemical structures used for similarity searching and machine learning. This chapter explains different types of fingerprints and their applications.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-molecular-fingerprints.html#types-maccs-morgan-topological",
+    "href": "chapters/chapter4-molecular-fingerprints.html#types-maccs-morgan-topological",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "7.2 4.2 Types: MACCS, Morgan, Topological",
+    "text": "7.2 4.2 Types: MACCS, Morgan, Topological",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-molecular-fingerprints.html#applications-in-virtual-screening",
+    "href": "chapters/chapter4-molecular-fingerprints.html#applications-in-virtual-screening",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "7.3 4.3 Applications in Virtual Screening",
+    "text": "7.3 4.3 Applications in Virtual Screening",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-molecular-fingerprints.html#fingerprints-in-machine-learning",
+    "href": "chapters/chapter4-molecular-fingerprints.html#fingerprints-in-machine-learning",
+    "title": "7  Chapter 4: Molecular Fingerprints",
+    "section": "7.4 4.4 Fingerprints in Machine Learning",
+    "text": "7.4 4.4 Fingerprints in Machine Learning",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Chapter 4: Molecular Fingerprints</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-molecular-properties.html",
+    "href": "chapters/chapter5-molecular-properties.html",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "",
+    "text": "8.1 5.1 Physicochemical Descriptors\nThis chapter explores key physicochemical properties of molecules (e.g., logP, MW, H-bond donors/acceptors) and their importance in drug design and ADMET prediction.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-molecular-properties.html#calculating-properties-with-rdkit",
+    "href": "chapters/chapter5-molecular-properties.html#calculating-properties-with-rdkit",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "8.2 5.2 Calculating Properties with RDKit",
+    "text": "8.2 5.2 Calculating Properties with RDKit",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-molecular-properties.html#lipinskis-rule-of-five",
+    "href": "chapters/chapter5-molecular-properties.html#lipinskis-rule-of-five",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "8.3 5.3 Lipinski’s Rule of Five",
+    "text": "8.3 5.3 Lipinski’s Rule of Five",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-molecular-properties.html#property-based-filtering",
+    "href": "chapters/chapter5-molecular-properties.html#property-based-filtering",
+    "title": "8  Chapter 5: Molecular Properties",
+    "section": "8.4 5.4 Property-Based Filtering",
+    "text": "8.4 5.4 Property-Based Filtering",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Chapter 5: Molecular Properties</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html",
+    "href": "chapters/chapter6-graph-neural-networks.html",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "",
+    "text": "10.1 Summary\nGraph Neural Networks (GNNs) are powerful tools for learning on molecular graphs. This chapter introduces GNN concepts and their application to molecular property prediction, including how molecules are represented as graphs and how GNNs can learn from these structures.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html#molecular-graph-construction",
+    "href": "chapters/chapter6-graph-neural-networks.html#molecular-graph-construction",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.5 6.2 Molecular Graph Construction",
+    "text": "10.5 6.2 Molecular Graph Construction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html#gnn-architectures-for-chemistry",
+    "href": "chapters/chapter6-graph-neural-networks.html#gnn-architectures-for-chemistry",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.6 6.3 GNN Architectures for Chemistry",
+    "text": "10.6 6.3 GNN Architectures for Chemistry",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html#case-study-gnn-for-solubility",
+    "href": "chapters/chapter6-graph-neural-networks.html#case-study-gnn-for-solubility",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.7 6.4 Case Study: GNN for Solubility",
+    "text": "10.7 6.4 Case Study: GNN for Solubility",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html",
+    "href": "chapters/chapter7-bioactivity-prediction.html",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "",
+    "text": "11.1 Summary\nPredicting the biological activity of molecules is central to drug discovery. This chapter covers data sources, machine learning models, and evaluation strategies for bioactivity prediction, including how to prepare data and assess model performance.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html#feature-engineering-for-bioactivity",
+    "href": "chapters/chapter7-bioactivity-prediction.html#feature-engineering-for-bioactivity",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.5 7.2 Feature Engineering for Bioactivity",
+    "text": "11.5 7.2 Feature Engineering for Bioactivity",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html#ml-models-for-activity-prediction",
+    "href": "chapters/chapter7-bioactivity-prediction.html#ml-models-for-activity-prediction",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.6 7.3 ML Models for Activity Prediction",
+    "text": "11.6 7.3 ML Models for Activity Prediction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html#model-evaluation-and-validation",
+    "href": "chapters/chapter7-bioactivity-prediction.html#model-evaluation-and-validation",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.7 7.4 Model Evaluation and Validation",
+    "text": "11.7 7.4 Model Evaluation and Validation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html",
+    "href": "chapters/chapter8-admet-prediction.html",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "",
+    "text": "12.1 Summary\nADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties are critical for drug candidates. This chapter discusses computational approaches for ADMET prediction, including data sources, descriptors, and machine learning models.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html#data-and-descriptors",
+    "href": "chapters/chapter8-admet-prediction.html#data-and-descriptors",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.5 8.2 Data and Descriptors",
+    "text": "12.5 8.2 Data and Descriptors",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html#ml-models-for-admet",
+    "href": "chapters/chapter8-admet-prediction.html#ml-models-for-admet",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.6 8.3 ML Models for ADMET",
+    "text": "12.6 8.3 ML Models for ADMET",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html#interpreting-admet-predictions",
+    "href": "chapters/chapter8-admet-prediction.html#interpreting-admet-predictions",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.7 8.4 Interpreting ADMET Predictions",
+    "text": "12.7 8.4 Interpreting ADMET Predictions",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html",
+    "href": "chapters/chapter9-molecular-generation.html",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "",
+    "text": "13.1 Summary\nGenerative models can design novel molecules with desired properties. This chapter introduces molecular generation techniques, including SMILES-based and graph-based approaches, and discusses how to evaluate generated molecules.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html#smiles-based-generation",
+    "href": "chapters/chapter9-molecular-generation.html#smiles-based-generation",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.5 9.2 SMILES-Based Generation",
+    "text": "13.5 9.2 SMILES-Based Generation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html#graph-based-generation",
+    "href": "chapters/chapter9-molecular-generation.html#graph-based-generation",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.6 9.3 Graph-Based Generation",
+    "text": "13.6 9.3 Graph-Based Generation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html#evaluating-generated-molecules",
+    "href": "chapters/chapter9-molecular-generation.html#evaluating-generated-molecules",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.7 9.4 Evaluating Generated Molecules",
+    "text": "13.7 9.4 Evaluating Generated Molecules",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter10-conditional-generation.html",
+    "href": "chapters/chapter10-conditional-generation.html",
+    "title": "14  Chapter 10: Conditional Generation",
+    "section": "",
+    "text": "14.1 10.1 Conditional Generative Models\nConditional generation enables the design of molecules with specific properties or activities. This chapter covers conditional VAEs, GANs, and reinforcement learning for molecular design.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 10: Conditional Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter10-conditional-generation.html#property-conditioned-generation",
+    "href": "chapters/chapter10-conditional-generation.html#property-conditioned-generation",
+    "title": "14  Chapter 10: Conditional Generation",
+    "section": "14.2 10.2 Property-Conditioned Generation",
+    "text": "14.2 10.2 Property-Conditioned Generation",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 10: Conditional Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter10-conditional-generation.html#reinforcement-learning-approaches",
+    "href": "chapters/chapter10-conditional-generation.html#reinforcement-learning-approaches",
+    "title": "14  Chapter 10: Conditional Generation",
+    "section": "14.3 10.3 Reinforcement Learning Approaches",
+    "text": "14.3 10.3 Reinforcement Learning Approaches",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Chapter 10: Conditional Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter11-transformers-chemistry.html",
+    "href": "chapters/chapter11-transformers-chemistry.html",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "",
+    "text": "15.1 11.1 Introduction to Transformers\nTransformers have revolutionized sequence modeling and are now applied to chemistry. This chapter explores transformer architectures for SMILES, reaction prediction, and property modeling.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter11-transformers-chemistry.html#smiles-transformers",
+    "href": "chapters/chapter11-transformers-chemistry.html#smiles-transformers",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "15.2 11.2 SMILES Transformers",
+    "text": "15.2 11.2 SMILES Transformers",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter11-transformers-chemistry.html#reaction-prediction",
+    "href": "chapters/chapter11-transformers-chemistry.html#reaction-prediction",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "15.3 11.3 Reaction Prediction",
+    "text": "15.3 11.3 Reaction Prediction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter11-transformers-chemistry.html#property-prediction",
+    "href": "chapters/chapter11-transformers-chemistry.html#property-prediction",
+    "title": "15  Chapter 11: Transformers in Chemistry",
+    "section": "15.4 11.4 Property Prediction",
+    "text": "15.4 11.4 Property Prediction",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Chapter 11: Transformers in Chemistry</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter12-protein-structure.html",
+    "href": "chapters/chapter12-protein-structure.html",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "",
+    "text": "16.1 12.1 Protein Structure Levels\nUnderstanding protein structure is key to structure-based drug design. This chapter covers protein structure basics, experimental methods, and computational prediction (e.g., AlphaFold).",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter12-protein-structure.html#experimental-determination",
+    "href": "chapters/chapter12-protein-structure.html#experimental-determination",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "16.2 12.2 Experimental Determination",
+    "text": "16.2 12.2 Experimental Determination",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter12-protein-structure.html#structure-prediction-tools",
+    "href": "chapters/chapter12-protein-structure.html#structure-prediction-tools",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "16.3 12.3 Structure Prediction Tools",
+    "text": "16.3 12.3 Structure Prediction Tools",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter12-protein-structure.html#protein-ligand-interactions",
+    "href": "chapters/chapter12-protein-structure.html#protein-ligand-interactions",
+    "title": "16  Chapter 12: Protein Structure",
+    "section": "16.4 12.4 Protein-Ligand Interactions",
+    "text": "16.4 12.4 Protein-Ligand Interactions",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Chapter 12: Protein Structure</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter13-molecular-docking.html",
+    "href": "chapters/chapter13-molecular-docking.html",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "",
+    "text": "17.1 13.1 Docking Theory\nMolecular docking predicts how small molecules bind to protein targets. This chapter introduces docking theory, software, and practical workflows for virtual screening.",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter13-molecular-docking.html#docking-software-autodock-vina",
+    "href": "chapters/chapter13-molecular-docking.html#docking-software-autodock-vina",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "17.2 13.2 Docking Software (AutoDock, Vina)",
+    "text": "17.2 13.2 Docking Software (AutoDock, Vina)",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter13-molecular-docking.html#preparing-structures-for-docking",
+    "href": "chapters/chapter13-molecular-docking.html#preparing-structures-for-docking",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "17.3 13.3 Preparing Structures for Docking",
+    "text": "17.3 13.3 Preparing Structures for Docking",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter13-molecular-docking.html#analyzing-docking-results",
+    "href": "chapters/chapter13-molecular-docking.html#analyzing-docking-results",
+    "title": "17  Chapter 13: Molecular Docking",
+    "section": "17.4 13.4 Analyzing Docking Results",
+    "text": "17.4 13.4 Analyzing Docking Results",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Chapter 13: Molecular Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter14-ml-enhanced-docking.html",
+    "href": "chapters/chapter14-ml-enhanced-docking.html",
+    "title": "18  Chapter 14: ML-Enhanced Docking",
+    "section": "",
+    "text": "18.1 14.1 ML Scoring Functions\nMachine learning can improve docking accuracy and speed. This chapter discusses ML scoring functions, pose prediction, and integration with docking pipelines.",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Chapter 14: ML-Enhanced Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter14-ml-enhanced-docking.html#pose-prediction",
+    "href": "chapters/chapter14-ml-enhanced-docking.html#pose-prediction",
+    "title": "18  Chapter 14: ML-Enhanced Docking",
+    "section": "18.2 14.2 Pose Prediction",
+    "text": "18.2 14.2 Pose Prediction",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Chapter 14: ML-Enhanced Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter14-ml-enhanced-docking.html#integrating-ml-with-docking",
+    "href": "chapters/chapter14-ml-enhanced-docking.html#integrating-ml-with-docking",
+    "title": "18  Chapter 14: ML-Enhanced Docking",
+    "section": "18.3 14.3 Integrating ML with Docking",
+    "text": "18.3 14.3 Integrating ML with Docking",
+    "crumbs": [
+      "Part III: Structure-Based Drug Design",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Chapter 14: ML-Enhanced Docking</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter15-retrosynthesis.html",
+    "href": "chapters/chapter15-retrosynthesis.html",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "",
+    "text": "19.1 15.1 Introduction to Retrosynthesis\nRetrosynthesis planning is essential for proposing synthetic routes to molecules. This chapter covers rule-based and AI-driven retrosynthesis tools and strategies.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter15-retrosynthesis.html#rule-based-approaches",
+    "href": "chapters/chapter15-retrosynthesis.html#rule-based-approaches",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "19.2 15.2 Rule-Based Approaches",
+    "text": "19.2 15.2 Rule-Based Approaches",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter15-retrosynthesis.html#ai-driven-retrosynthesis",
+    "href": "chapters/chapter15-retrosynthesis.html#ai-driven-retrosynthesis",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "19.3 15.3 AI-Driven Retrosynthesis",
+    "text": "19.3 15.3 AI-Driven Retrosynthesis",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter15-retrosynthesis.html#evaluating-synthetic-routes",
+    "href": "chapters/chapter15-retrosynthesis.html#evaluating-synthetic-routes",
+    "title": "19  Chapter 15: Retrosynthesis",
+    "section": "19.4 15.4 Evaluating Synthetic Routes",
+    "text": "19.4 15.4 Evaluating Synthetic Routes",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Chapter 15: Retrosynthesis</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter16-multi-modal-learning.html",
+    "href": "chapters/chapter16-multi-modal-learning.html",
+    "title": "20  Chapter 16: Multi-Modal Learning",
+    "section": "",
+    "text": "20.1 16.1 What is Multi-Modal Learning?\nMulti-modal learning combines data types (e.g., chemical, biological, clinical) for improved predictions. This chapter explores architectures and applications in drug discovery.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Chapter 16: Multi-Modal Learning</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter16-multi-modal-learning.html#data-integration-strategies",
+    "href": "chapters/chapter16-multi-modal-learning.html#data-integration-strategies",
+    "title": "20  Chapter 16: Multi-Modal Learning",
+    "section": "20.2 16.2 Data Integration Strategies",
+    "text": "20.2 16.2 Data Integration Strategies",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Chapter 16: Multi-Modal Learning</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter16-multi-modal-learning.html#applications-in-drug-discovery",
+    "href": "chapters/chapter16-multi-modal-learning.html#applications-in-drug-discovery",
+    "title": "20  Chapter 16: Multi-Modal Learning",
+    "section": "20.3 16.3 Applications in Drug Discovery",
+    "text": "20.3 16.3 Applications in Drug Discovery",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Chapter 16: Multi-Modal Learning</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter17-end-to-end-pipeline.html",
+    "href": "chapters/chapter17-end-to-end-pipeline.html",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "",
+    "text": "21.1 17.1 Pipeline Overview\nThis chapter presents a complete AI-driven drug discovery pipeline, from data collection to candidate prioritization, integrating methods from previous chapters.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter17-end-to-end-pipeline.html#data-preparation",
+    "href": "chapters/chapter17-end-to-end-pipeline.html#data-preparation",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "21.2 17.2 Data Preparation",
+    "text": "21.2 17.2 Data Preparation",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter17-end-to-end-pipeline.html#model-training-and-evaluation",
+    "href": "chapters/chapter17-end-to-end-pipeline.html#model-training-and-evaluation",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "21.3 17.3 Model Training and Evaluation",
+    "text": "21.3 17.3 Model Training and Evaluation",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter17-end-to-end-pipeline.html#candidate-selection",
+    "href": "chapters/chapter17-end-to-end-pipeline.html#candidate-selection",
+    "title": "21  Chapter 17: End-to-End Pipeline",
+    "section": "21.4 17.4 Candidate Selection",
+    "text": "21.4 17.4 Candidate Selection",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Chapter 17: End-to-End Pipeline</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter18-case-studies.html",
+    "href": "chapters/chapter18-case-studies.html",
+    "title": "22  Chapter 18: Case Studies",
+    "section": "",
+    "text": "22.1 18.1 Case Study 1: ALS Drug Discovery\nReal-world case studies demonstrate the application of AI and cheminformatics in drug discovery. This chapter presents selected examples and lessons learned.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Chapter 18: Case Studies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter18-case-studies.html#case-study-2-kinase-inhibitors",
+    "href": "chapters/chapter18-case-studies.html#case-study-2-kinase-inhibitors",
+    "title": "22  Chapter 18: Case Studies",
+    "section": "22.2 18.2 Case Study 2: Kinase Inhibitors",
+    "text": "22.2 18.2 Case Study 2: Kinase Inhibitors",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Chapter 18: Case Studies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter18-case-studies.html#lessons-learned",
+    "href": "chapters/chapter18-case-studies.html#lessons-learned",
+    "title": "22  Chapter 18: Case Studies",
+    "section": "22.3 18.3 Lessons Learned",
+    "text": "22.3 18.3 Lessons Learned",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Chapter 18: Case Studies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter19-external-tools.html",
+    "href": "chapters/chapter19-external-tools.html",
+    "title": "23  Chapter 19: External Tools",
+    "section": "",
+    "text": "23.1 19.1 Structural Databases\nThis chapter reviews external tools and databases commonly used in computational drug discovery, including RCSB PDB, ChEMBL, and PubChem.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Chapter 19: External Tools</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter19-external-tools.html#bioactivity-databases",
+    "href": "chapters/chapter19-external-tools.html#bioactivity-databases",
+    "title": "23  Chapter 19: External Tools",
+    "section": "23.2 19.2 Bioactivity Databases",
+    "text": "23.2 19.2 Bioactivity Databases",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Chapter 19: External Tools</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter19-external-tools.html#workflow-automation-tools",
+    "href": "chapters/chapter19-external-tools.html#workflow-automation-tools",
+    "title": "23  Chapter 19: External Tools",
+    "section": "23.3 19.3 Workflow Automation Tools",
+    "text": "23.3 19.3 Workflow Automation Tools",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Chapter 19: External Tools</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter20-ethical-considerations.html",
+    "href": "chapters/chapter20-ethical-considerations.html",
+    "title": "24  Chapter 20: Ethical Considerations",
+    "section": "",
+    "text": "24.1 20.1 Data Privacy and Security\nEthics are critical in AI-driven drug discovery. This chapter discusses data privacy, algorithmic bias, and responsible innovation in cheminformatics and AI.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Chapter 20: Ethical Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter20-ethical-considerations.html#bias-in-ai-models",
+    "href": "chapters/chapter20-ethical-considerations.html#bias-in-ai-models",
+    "title": "24  Chapter 20: Ethical Considerations",
+    "section": "24.2 20.2 Bias in AI Models",
+    "text": "24.2 20.2 Bias in AI Models",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Chapter 20: Ethical Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter20-ethical-considerations.html#responsible-innovation",
+    "href": "chapters/chapter20-ethical-considerations.html#responsible-innovation",
+    "title": "24  Chapter 20: Ethical Considerations",
+    "section": "24.3 20.3 Responsible Innovation",
+    "text": "24.3 20.3 Responsible Innovation",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Chapter 20: Ethical Considerations</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter21-future-next-steps.html",
+    "href": "chapters/chapter21-future-next-steps.html",
+    "title": "25  Chapter 21: Future Next Steps",
+    "section": "",
+    "text": "25.1 21.1 Emerging Technologies\nThe final chapter outlines emerging trends and future directions in AI-driven drug discovery, including new algorithms, data sources, and collaborative science.",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Chapter 21: Future Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter21-future-next-steps.html#open-science-and-collaboration",
+    "href": "chapters/chapter21-future-next-steps.html#open-science-and-collaboration",
+    "title": "25  Chapter 21: Future Next Steps",
+    "section": "25.2 21.2 Open Science and Collaboration",
+    "text": "25.2 21.2 Open Science and Collaboration",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Chapter 21: Future Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter21-future-next-steps.html#next-steps-for-practitioners",
+    "href": "chapters/chapter21-future-next-steps.html#next-steps-for-practitioners",
+    "title": "25  Chapter 21: Future Next Steps",
+    "section": "25.3 21.3 Next Steps for Practitioners",
+    "text": "25.3 21.3 Next Steps for Practitioners",
+    "crumbs": [
+      "Part IV: Synthesis and Advanced Topics",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Chapter 21: Future Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#key-code-snippets",
+    "href": "chapters/chapter1-genomics-to-molecules.html#key-code-snippets",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.2 Key Code Snippets",
+    "text": "3.2 Key Code Snippets\n\n3.2.1 1. Retrieve ALS Target Genes from Open Targets\nimport requests\nefo_id = \"Orphanet_803\"  # ALS\not_url = f\"https://platform-api.opentargets.io/v3/platform/public/association/filter?disease={efo_id}&size=30&fields=target.gene_info.symbol,target.gene_info.name,association_score.overall\"\nresp = requests.get(ot_url)\ngene_hits = resp.json().get('data', [])\nals_genes = [g['target']['gene_info']['symbol'] for g in gene_hits]\nprint('Top ALS target genes:', als_genes)\n\n\n3.2.2 2. Batch Extract Non-Protein Entities from PDB\nimport requests, pandas as pd\npdb_ids = ['2RSQ', '4RFX', '7WWT', ...]  # your PDB list\nall_results = []\nfor pdb_id in pdb_ids:\n    url = f'https://data.rcsb.org/rest/v1/core/entry/{pdb_id}'\n    resp = requests.get(url)\n    if resp.status_code == 200:\n        data = resp.json()\n        for entity in data.get('nonpolymer_entities', []):\n            chem_comp = entity.get('chem_comp', {})\n            all_results.append({\n                'pdb_id': pdb_id,\n                'entity_id': chem_comp.get('id', ''),\n                'entity_name': chem_comp.get('name', ''),\n                'entity_type': chem_comp.get('type', '')\n            })\npd.DataFrame(all_results).to_csv('batch_als_pdb_entities.csv', index=False)\n\n\n3.2.3 3. Find Known Ligands for a Target in ChEMBL\nfrom chembl_webresource_client.new_client import new_client\ntarget = new_client.target\nactivity = new_client.activity\nacc = 'P00441'  # UniProt for SOD1\ntargets = list(target.filter(target_components__accession=acc))\nchembl_id = targets[0]['target_chembl_id']\nacts = activity.filter(target_chembl_id=chembl_id, standard_type='IC50')\nfor a in list(acts)[:5]:\n    print(a.get('molecule_chembl_id'), a.get('standard_value'))",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#notebook-link",
+    "href": "chapters/chapter1-genomics-to-molecules.html#notebook-link",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.3 Notebook Link",
+    "text": "3.3 Notebook Link\nFor the full workflow, see the interactive notebook: chapter1-genomics-to-molecules.ipynb",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#introduction-to-genomics-in-drug-discovery",
+    "href": "chapters/chapter1-genomics-to-molecules.html#introduction-to-genomics-in-drug-discovery",
+    "title": "3  Chapter 1: Genomics to Molecules",
+    "section": "3.4 1.1 Introduction to Genomics in Drug Discovery",
+    "text": "3.4 1.1 Introduction to Genomics in Drug Discovery",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 1: Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html#key-code-snippets",
+    "href": "chapters/chapter6-graph-neural-networks.html#key-code-snippets",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.2 Key Code Snippets",
+    "text": "10.2 Key Code Snippets\n\n10.2.1 1. Construct a Molecular Graph with RDKit and NetworkX\nfrom rdkit import Chem\nimport networkx as nx\nsmiles = \"CCO\"\nmol = Chem.MolFromSmiles(smiles)\nG = nx.Graph()\nfor atom in mol.GetAtoms():\n    G.add_node(atom.GetIdx(), label=atom.GetSymbol())\nfor bond in mol.GetBonds():\n    G.add_edge(bond.GetBeginAtomIdx(), bond.GetEndAtomIdx(), type=bond.GetBondType())\n\n\n10.2.2 2. Simple GNN Layer with PyTorch Geometric\nfrom torch_geometric.nn import GCNConv\nimport torch\nconv = GCNConv(in_channels=10, out_channels=16)\nx = torch.randn((num_nodes, 10))\nedge_index = ...  # edge list as tensor\nout = conv(x, edge_index)",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html#notebook-link",
+    "href": "chapters/chapter6-graph-neural-networks.html#notebook-link",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.3 Notebook Link",
+    "text": "10.3 Notebook Link\nFor a full workflow, see the interactive notebook: (notebook not available for this chapter)",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter6-graph-neural-networks.html#introduction-to-gnns",
+    "href": "chapters/chapter6-graph-neural-networks.html#introduction-to-gnns",
+    "title": "10  Chapter 6: Graph Neural Networks",
+    "section": "10.4 6.1 Introduction to GNNs",
+    "text": "10.4 6.1 Introduction to GNNs",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Chapter 6: Graph Neural Networks</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html#key-code-snippets",
+    "href": "chapters/chapter7-bioactivity-prediction.html#key-code-snippets",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.2 Key Code Snippets",
+    "text": "11.2 Key Code Snippets\n\n11.2.1 1. Load Bioactivity Data from ChEMBL\nfrom chembl_webresource_client.new_client import new_client\nactivity = new_client.activity\nacts = activity.filter(target_chembl_id=\"CHEMBL25\", standard_type=\"IC50\")\nfor a in list(acts)[:5]:\n    print(a['molecule_chembl_id'], a['standard_value'])\n\n\n11.2.2 2. Train a Classifier for Bioactivity\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nX = ...  # feature matrix\ny = ...  # binary activity labels\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nclf = RandomForestClassifier()\nclf.fit(X_train, y_train)\nprint(\"Accuracy:\", clf.score(X_test, y_test))",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html#notebook-link",
+    "href": "chapters/chapter7-bioactivity-prediction.html#notebook-link",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.3 Notebook Link",
+    "text": "11.3 Notebook Link\nFor a full workflow, see the interactive notebook: (notebook not available for this chapter)",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter7-bioactivity-prediction.html#bioactivity-data-sources",
+    "href": "chapters/chapter7-bioactivity-prediction.html#bioactivity-data-sources",
+    "title": "11  Chapter 7: Bioactivity Prediction",
+    "section": "11.4 7.1 Bioactivity Data Sources",
+    "text": "11.4 7.1 Bioactivity Data Sources",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Chapter 7: Bioactivity Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html#key-code-snippets",
+    "href": "chapters/chapter8-admet-prediction.html#key-code-snippets",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.2 Key Code Snippets",
+    "text": "12.2 Key Code Snippets\n\n12.2.1 1. Calculate ADMET Descriptors with RDKit\nfrom rdkit import Chem\nfrom rdkit.Chem import Crippen, Descriptors\nsmiles = \"CCO\"\nmol = Chem.MolFromSmiles(smiles)\nlogp = Crippen.MolLogP(mol)\nmw = Descriptors.MolWt(mol)\nprint(f\"LogP: {logp}, MW: {mw}\")\n\n\n12.2.2 2. Predict Toxicity with a Pretrained Model (Example)\n# Example only: replace with actual model\nimport joblib\nmodel = joblib.load('tox_model.pkl')\nX = ...  # feature matrix\ntox_pred = model.predict(X)",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html#notebook-link",
+    "href": "chapters/chapter8-admet-prediction.html#notebook-link",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.3 Notebook Link",
+    "text": "12.3 Notebook Link\nFor a full workflow, see the interactive notebook: (notebook not available for this chapter)",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter8-admet-prediction.html#introduction-to-admet",
+    "href": "chapters/chapter8-admet-prediction.html#introduction-to-admet",
+    "title": "12  Chapter 8: ADMET Prediction",
+    "section": "12.4 8.1 Introduction to ADMET",
+    "text": "12.4 8.1 Introduction to ADMET",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Chapter 8: ADMET Prediction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html#key-code-snippets",
+    "href": "chapters/chapter9-molecular-generation.html#key-code-snippets",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.2 Key Code Snippets",
+    "text": "13.2 Key Code Snippets\n\n13.2.1 1. Generate Molecules with a SMILES RNN (Example)\n# Example only: replace with actual model\nimport torch\nmodel = ...  # pretrained RNN\nz = torch.randn(1, latent_dim)\nsmiles = model.sample(z)\nprint(smiles)\n\n\n13.2.2 2. Evaluate Validity of Generated SMILES\nfrom rdkit import Chem\nsmiles_list = [\"CCO\", \"invalid_smiles\"]\nfor s in smiles_list:\n    mol = Chem.MolFromSmiles(s)\n    print(f\"{s}: {'valid' if mol else 'invalid'}\")",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html#notebook-link",
+    "href": "chapters/chapter9-molecular-generation.html#notebook-link",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.3 Notebook Link",
+    "text": "13.3 Notebook Link\nFor a full workflow, see the interactive notebook: (notebook not available for this chapter)",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter9-molecular-generation.html#generative-models-overview",
+    "href": "chapters/chapter9-molecular-generation.html#generative-models-overview",
+    "title": "13  Chapter 9: Molecular Generation",
+    "section": "13.4 9.1 Generative Models Overview",
+    "text": "13.4 9.1 Generative Models Overview",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Chapter 9: Molecular Generation</span>"
     ]
   }
 ]

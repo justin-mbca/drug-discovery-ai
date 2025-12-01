@@ -1,6 +1,43 @@
+
 # Chapter 8: ADMET Prediction
 
-ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties are critical for drug candidates. This chapter discusses computational approaches for ADMET prediction.
+---
+
+## Summary
+
+ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties are critical for drug candidates. This chapter discusses computational approaches for ADMET prediction, including data sources, descriptors, and machine learning models.
+
+---
+
+## Key Code Snippets
+
+### 1. Calculate ADMET Descriptors with RDKit
+```python
+from rdkit import Chem
+from rdkit.Chem import Crippen, Descriptors
+smiles = "CCO"
+mol = Chem.MolFromSmiles(smiles)
+logp = Crippen.MolLogP(mol)
+mw = Descriptors.MolWt(mol)
+print(f"LogP: {logp}, MW: {mw}")
+```
+
+### 2. Predict Toxicity with a Pretrained Model (Example)
+```python
+# Example only: replace with actual model
+import joblib
+model = joblib.load('tox_model.pkl')
+X = ...  # feature matrix
+tox_pred = model.predict(X)
+```
+
+---
+
+## Notebook Link
+
+For a full workflow, see the interactive notebook: (notebook not available for this chapter)
+
+---
 
 ## 8.1 Introduction to ADMET
 ## 8.2 Data and Descriptors

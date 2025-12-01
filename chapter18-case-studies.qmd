@@ -1,7 +1,0 @@
-# Chapter 18: Case Studies
-
-Real-world case studies demonstrate the application of AI and cheminformatics in drug discovery. This chapter presents selected examples and lessons learned.
-
-## 18.1 Case Study 1: ALS Drug Discovery
-## 18.2 Case Study 2: Kinase Inhibitors
-## 18.3 Lessons Learned

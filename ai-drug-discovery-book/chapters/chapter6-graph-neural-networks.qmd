@@ -1,6 +1,46 @@
+
 # Chapter 6: Graph Neural Networks
 
-Graph Neural Networks (GNNs) are powerful tools for learning on molecular graphs. This chapter introduces GNN concepts and their application to molecular property prediction.
+---
+
+## Summary
+
+Graph Neural Networks (GNNs) are powerful tools for learning on molecular graphs. This chapter introduces GNN concepts and their application to molecular property prediction, including how molecules are represented as graphs and how GNNs can learn from these structures.
+
+---
+
+## Key Code Snippets
+
+### 1. Construct a Molecular Graph with RDKit and NetworkX
+```python
+from rdkit import Chem
+import networkx as nx
+smiles = "CCO"
+mol = Chem.MolFromSmiles(smiles)
+G = nx.Graph()
+for atom in mol.GetAtoms():
+	G.add_node(atom.GetIdx(), label=atom.GetSymbol())
+for bond in mol.GetBonds():
+	G.add_edge(bond.GetBeginAtomIdx(), bond.GetEndAtomIdx(), type=bond.GetBondType())
+```
+
+### 2. Simple GNN Layer with PyTorch Geometric
+```python
+from torch_geometric.nn import GCNConv
+import torch
+conv = GCNConv(in_channels=10, out_channels=16)
+x = torch.randn((num_nodes, 10))
+edge_index = ...  # edge list as tensor
+out = conv(x, edge_index)
+```
+
+---
+
+## Notebook Link
+
+For a full workflow, see the interactive notebook: (notebook not available for this chapter)
+
+---
 
 ## 6.1 Introduction to GNNs
 ## 6.2 Molecular Graph Construction

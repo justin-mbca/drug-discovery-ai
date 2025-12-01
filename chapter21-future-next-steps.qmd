@@ -1,7 +1,0 @@
-# Chapter 21: Future Next Steps
-
-The final chapter outlines emerging trends and future directions in AI-driven drug discovery, including new algorithms, data sources, and collaborative science.
-
-## 21.1 Emerging Technologies
-## 21.2 Open Science and Collaboration
-## 21.3 Next Steps for Practitioners

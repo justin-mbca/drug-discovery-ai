@@ -1,8 +1,0 @@
-# Chapter 9: Molecular Generation
-
-Generative models can design novel molecules with desired properties. This chapter introduces molecular generation techniques, including SMILES-based and graph-based approaches.
-
-## 9.1 Generative Models Overview
-## 9.2 SMILES-Based Generation
-## 9.3 Graph-Based Generation
-## 9.4 Evaluating Generated Molecules

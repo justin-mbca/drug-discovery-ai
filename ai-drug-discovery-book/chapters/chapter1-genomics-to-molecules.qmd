@@ -1,6 +1,70 @@
+
 # Chapter 1: Genomics to Molecules
 
 This chapter introduces the journey from genomics data to actionable molecular targets in drug discovery. It covers how genetic information is translated into protein targets and how these are linked to small molecules for therapeutic intervention.
+
+---
+
+## Summary
+
+This workflow demonstrates how to start from a gene (e.g., SOD1 for ALS), find the corresponding protein (UniProt), retrieve known small-molecule ligands (ChEMBL), and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.
+
+---
+
+## Key Code Snippets
+
+### 1. Retrieve ALS Target Genes from Open Targets
+```python
+import requests
+efo_id = "Orphanet_803"  # ALS
+ot_url = f"https://platform-api.opentargets.io/v3/platform/public/association/filter?disease={efo_id}&size=30&fields=target.gene_info.symbol,target.gene_info.name,association_score.overall"
+resp = requests.get(ot_url)
+gene_hits = resp.json().get('data', [])
+als_genes = [g['target']['gene_info']['symbol'] for g in gene_hits]
+print('Top ALS target genes:', als_genes)
+```
+
+### 2. Batch Extract Non-Protein Entities from PDB
+```python
+import requests, pandas as pd
+pdb_ids = ['2RSQ', '4RFX', '7WWT', ...]  # your PDB list
+all_results = []
+for pdb_id in pdb_ids:
+	url = f'https://data.rcsb.org/rest/v1/core/entry/{pdb_id}'
+	resp = requests.get(url)
+	if resp.status_code == 200:
+		data = resp.json()
+		for entity in data.get('nonpolymer_entities', []):
+			chem_comp = entity.get('chem_comp', {})
+			all_results.append({
+				'pdb_id': pdb_id,
+				'entity_id': chem_comp.get('id', ''),
+				'entity_name': chem_comp.get('name', ''),
+				'entity_type': chem_comp.get('type', '')
+			})
+pd.DataFrame(all_results).to_csv('batch_als_pdb_entities.csv', index=False)
+```
+
+### 3. Find Known Ligands for a Target in ChEMBL
+```python
+from chembl_webresource_client.new_client import new_client
+target = new_client.target
+activity = new_client.activity
+acc = 'P00441'  # UniProt for SOD1
+targets = list(target.filter(target_components__accession=acc))
+chembl_id = targets[0]['target_chembl_id']
+acts = activity.filter(target_chembl_id=chembl_id, standard_type='IC50')
+for a in list(acts)[:5]:
+	print(a.get('molecule_chembl_id'), a.get('standard_value'))
+```
+
+---
+
+## Notebook Link
+
+For the full workflow, see the interactive notebook: [chapter1-genomics-to-molecules.ipynb](../notebooks/chapter1-genomics-to-molecules.ipynb)
+
+---
 
 ## 1.1 Introduction to Genomics in Drug Discovery
 ## 1.2 From Genes to Proteins

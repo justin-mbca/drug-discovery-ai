@@ -2,7 +2,53 @@
 title: "Cheminformatics Essentials"
 ---
 
+
 # Cheminformatics Essentials
+
+---
+
+## Summary
+
+Cheminformatics is the backbone of computational drug discovery. It enables the digital representation, analysis, and manipulation of molecules, making it possible to apply machine learning and AI to chemical data.
+
+---
+
+## Key Code Snippets
+
+### 1. Calculate Molecular Properties with RDKit
+```python
+from rdkit import Chem
+from rdkit.Chem import Descriptors, Crippen
+smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"  # aspirin
+mol = Chem.MolFromSmiles(smiles)
+mw = Descriptors.MolWt(mol)
+logp = Crippen.MolLogP(mol)
+print(f"MW: {mw:.2f}, LogP: {logp:.2f}")
+```
+
+### 2. Visualize Molecules
+```python
+from rdkit.Chem import Draw
+Draw.MolToImage(mol)
+```
+
+### 3. Filter by Lipinski's Rule of Five
+```python
+def is_druglike(mol):
+    mw = Descriptors.MolWt(mol)
+    logp = Crippen.MolLogP(mol)
+    hbd = Chem.Lipinski.NumHDonors(mol)
+    hba = Chem.Lipinski.NumHAcceptors(mol)
+    return (mw < 500 and logp < 5 and hbd <= 5 and hba <= 10)
+```
+
+---
+
+## Notebook Link
+
+For the full workflow, see the interactive notebook: [chapter3-cheminformatics-essentials.ipynb](../notebooks/chapter3-cheminformatics-essentials.ipynb)
+
+---
 
 ## Learning Objectives
 - Understand molecular representations (SMILES, InChI, graphs)
