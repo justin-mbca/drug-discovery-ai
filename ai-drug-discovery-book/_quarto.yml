@@ -11,22 +11,37 @@ book:
       chapters:
         - preface.qmd
         - introduction.qmd
-        - chapters/chapter1-genomics-to-molecules.qmd
-        - chapters/chapter2-target-identification.qmd
-    
+        - ../chapter1-genomics-to-molecules.qmd
+        - ../chapter2-environment-setup.qmd
     - part: "Part I: Foundations"
       chapters:
         - part1-foundations.qmd
-        - chapters/chapter3-cheminformatics-essentials.qmd
-        - chapters/chapter4-compound-screening.qmd
-    
+        - ../chapter3-cheminformatics.qmd
+        - ../chapter4-molecular-fingerprints.qmd
+        - ../chapter5-molecular-properties.qmd
     - part: "Part II: Machine Learning for Molecules"
       chapters:
         - part2-machine-learning.qmd
-        - chapters/chapter5-ml-for-drug-discovery.qmd
-        # Add more chapter files here as you create them
-    
-    # Continue with other parts and chapters as you add files
+        - ../chapter6-graph-neural-networks.qmd
+        - ../chapter7-bioactivity-prediction.qmd
+        - ../chapter8-admet-prediction.qmd
+        - ../chapter9-molecular-generation.qmd
+        - ../chapter10-conditional-generation.qmd
+        - ../chapter11-transformers-chemistry.qmd
+    - part: "Part III: Structure-Based Drug Design"
+      chapters:
+        - ../chapter12-protein-structure.qmd
+        - ../chapter13-molecular-docking.qmd
+        - ../chapter14-ml-enhanced-docking.qmd
+    - part: "Part IV: Synthesis and Advanced Topics"
+      chapters:
+        - ../chapter15-retrosynthesis.qmd
+        - ../chapter16-multi-modal-learning.qmd
+        - ../chapter17-end-to-end-pipeline.qmd
+        - ../chapter18-case-studies.qmd
+        - ../chapter19-external-tools.qmd
+        - ../chapter20-ethical-considerations.qmd
+        - ../chapter21-future-next-steps.qmd
     - conclusion.qmd
     - references.qmd
 
