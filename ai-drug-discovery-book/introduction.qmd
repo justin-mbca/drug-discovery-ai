@@ -7,3 +7,34 @@ title: "Introduction"
 Artificial intelligence is revolutionizing drug discovery. This book introduces the key concepts, tools, and workflows that are shaping the future of pharmaceutical research. You will learn how to leverage AI, machine learning, and public biomedical data to accelerate the discovery of new medicines.
 
 We begin with foundational concepts and build up to advanced, real-world applications, ensuring you gain both theoretical understanding and practical skills.
+
+# High-Level Overview: Steps of Drug Discovery
+
+Drug discovery is a multi-stage process that transforms basic research into new medicines. The main steps are:
+
+1. **Target Identification & Validation**  
+	Understanding disease biology and identifying molecular targets (e.g., genes, proteins).
+2. **Hit Discovery & Screening**  
+	Finding molecules that interact with the target (e.g., high-throughput or virtual screening).
+3. **Lead Optimization**  
+	Refining hits for potency, selectivity, and drug-like properties (e.g., Lipinski’s rules, ADME).
+4. **Preclinical Testing**  
+	Assessing safety and efficacy in vitro and in animal models.
+5. **Clinical Trials**  
+	Testing in humans (Phases I–III).
+6. **Regulatory Approval & Post-Market Surveillance**  
+	Submitting data to agencies (e.g., FDA), monitoring real-world use.
+
+**Book Chapter Mapping:**
+- Chapters 1–2: Target identification, genomics, and molecules
+- Chapters 3–5: Screening, cheminformatics, molecular properties
+- Chapters 6–10: Optimization, validation, preclinical studies
+- Chapters 11–14: Clinical trials, regulatory science, post-market studies
+
+**Online Diagrams and Resources:**
+- [Drug Discovery Cycle Schematic (Wikipedia, SVG, open license)](https://commons.wikimedia.org/wiki/File:Drug_discovery_cycle.svg)
+- [FDA: Drug Development Process Overview](https://www.fda.gov/patients/learn-about-drug-and-device-approvals/drug-development-process)
+- [ChEMBL Visualizations](https://www.ebi.ac.uk/chembl/visualise)
+- [ResearchGate: Drug Discovery and Development Process](https://www.researchgate.net/figure/Drug-discovery-and-development-process_fig1_327003019)
+
+You can click these links for interactive diagrams and further reading.
