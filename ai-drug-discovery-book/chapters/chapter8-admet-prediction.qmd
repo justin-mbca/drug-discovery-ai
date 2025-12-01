@@ -1,0 +1,8 @@
+# Chapter 8: ADMET Prediction
+
+ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties are critical for drug candidates. This chapter discusses computational approaches for ADMET prediction.
+
+## 8.1 Introduction to ADMET
+## 8.2 Data and Descriptors
+## 8.3 ML Models for ADMET
+## 8.4 Interpreting ADMET Predictions

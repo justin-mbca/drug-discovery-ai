@@ -11,37 +11,37 @@ book:
       chapters:
         - preface.qmd
         - introduction.qmd
-        - ../chapter1-genomics-to-molecules.qmd
-        - ../chapter2-environment-setup.qmd
+        - chapters/chapter1-genomics-to-molecules.qmd
+        - chapters/chapter2-environment-setup.qmd
     - part: "Part I: Foundations"
       chapters:
         - part1-foundations.qmd
-        - ../chapter3-cheminformatics.qmd
-        - ../chapter4-molecular-fingerprints.qmd
-        - ../chapter5-molecular-properties.qmd
+        - chapters/chapter3-cheminformatics.qmd
+        - chapters/chapter4-molecular-fingerprints.qmd
+        - chapters/chapter5-molecular-properties.qmd
     - part: "Part II: Machine Learning for Molecules"
       chapters:
         - part2-machine-learning.qmd
-        - ../chapter6-graph-neural-networks.qmd
-        - ../chapter7-bioactivity-prediction.qmd
-        - ../chapter8-admet-prediction.qmd
-        - ../chapter9-molecular-generation.qmd
-        - ../chapter10-conditional-generation.qmd
-        - ../chapter11-transformers-chemistry.qmd
+        - chapters/chapter6-graph-neural-networks.qmd
+        - chapters/chapter7-bioactivity-prediction.qmd
+        - chapters/chapter8-admet-prediction.qmd
+        - chapters/chapter9-molecular-generation.qmd
+        - chapters/chapter10-conditional-generation.qmd
+        - chapters/chapter11-transformers-chemistry.qmd
     - part: "Part III: Structure-Based Drug Design"
       chapters:
-        - ../chapter12-protein-structure.qmd
-        - ../chapter13-molecular-docking.qmd
-        - ../chapter14-ml-enhanced-docking.qmd
+        - chapters/chapter12-protein-structure.qmd
+        - chapters/chapter13-molecular-docking.qmd
+        - chapters/chapter14-ml-enhanced-docking.qmd
     - part: "Part IV: Synthesis and Advanced Topics"
       chapters:
-        - ../chapter15-retrosynthesis.qmd
-        - ../chapter16-multi-modal-learning.qmd
-        - ../chapter17-end-to-end-pipeline.qmd
-        - ../chapter18-case-studies.qmd
-        - ../chapter19-external-tools.qmd
-        - ../chapter20-ethical-considerations.qmd
-        - ../chapter21-future-next-steps.qmd
+        - chapters/chapter15-retrosynthesis.qmd
+        - chapters/chapter16-multi-modal-learning.qmd
+        - chapters/chapter17-end-to-end-pipeline.qmd
+        - chapters/chapter18-case-studies.qmd
+        - chapters/chapter19-external-tools.qmd
+        - chapters/chapter20-ethical-considerations.qmd
+        - chapters/chapter21-future-next-steps.qmd
     - conclusion.qmd
     - references.qmd
 

@@ -1,0 +1,8 @@
+# Chapter 3: Cheminformatics Essentials
+
+Cheminformatics is the foundation for representing, searching, and analyzing chemical structures computationally. This chapter covers molecular representations, file formats, and basic cheminformatics operations.
+
+## 3.1 Molecular Representations (SMILES, InChI)
+## 3.2 Chemical File Formats
+## 3.3 Structure Search and Similarity
+## 3.4 Cheminformatics Toolkits

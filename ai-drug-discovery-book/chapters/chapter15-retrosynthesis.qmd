@@ -1,0 +1,8 @@
+# Chapter 15: Retrosynthesis
+
+Retrosynthesis planning is essential for proposing synthetic routes to molecules. This chapter covers rule-based and AI-driven retrosynthesis tools and strategies.
+
+## 15.1 Introduction to Retrosynthesis
+## 15.2 Rule-Based Approaches
+## 15.3 AI-Driven Retrosynthesis
+## 15.4 Evaluating Synthetic Routes

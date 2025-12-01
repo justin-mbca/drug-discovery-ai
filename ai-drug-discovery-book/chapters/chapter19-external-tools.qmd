@@ -1,0 +1,7 @@
+# Chapter 19: External Tools
+
+This chapter reviews external tools and databases commonly used in computational drug discovery, including RCSB PDB, ChEMBL, and PubChem.
+
+## 19.1 Structural Databases
+## 19.2 Bioactivity Databases
+## 19.3 Workflow Automation Tools

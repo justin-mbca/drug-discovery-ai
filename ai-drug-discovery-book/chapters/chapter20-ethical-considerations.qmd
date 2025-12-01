@@ -1,0 +1,7 @@
+# Chapter 20: Ethical Considerations
+
+Ethics are critical in AI-driven drug discovery. This chapter discusses data privacy, algorithmic bias, and responsible innovation in cheminformatics and AI.
+
+## 20.1 Data Privacy and Security
+## 20.2 Bias in AI Models
+## 20.3 Responsible Innovation

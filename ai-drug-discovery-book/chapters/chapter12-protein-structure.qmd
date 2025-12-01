@@ -1,0 +1,8 @@
+# Chapter 12: Protein Structure
+
+Understanding protein structure is key to structure-based drug design. This chapter covers protein structure basics, experimental methods, and computational prediction (e.g., AlphaFold).
+
+## 12.1 Protein Structure Levels
+## 12.2 Experimental Determination
+## 12.3 Structure Prediction Tools
+## 12.4 Protein-Ligand Interactions
