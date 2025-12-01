@@ -1,0 +1,745 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI-Driven Drug Discovery: A Hands-On Guide",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "1  Preface",
+    "section": "",
+    "text": "2 Preface\nWelcome to “AI-Driven Drug Discovery: A Hands-On Guide.” This book is designed for data scientists, bioinformaticians, and machine learning engineers who want to apply their skills to the world of drug discovery. Our goal is to provide a practical, code-first approach to modern computational drug discovery, with real-world examples and hands-on exercises throughout.\nWe hope this book empowers you to make meaningful contributions to the future of medicine.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "3 Introduction\nArtificial intelligence is revolutionizing drug discovery. This book introduces the key concepts, tools, and workflows that are shaping the future of pharmaceutical research. You will learn how to leverage AI, machine learning, and public biomedical data to accelerate the discovery of new medicines.\nWe begin with foundational concepts and build up to advanced, real-world applications, ensuring you gain both theoretical understanding and practical skills.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html",
+    "href": "chapters/chapter1-genomics-to-molecules.html",
+    "title": "3  Genomics to Molecules",
+    "section": "",
+    "text": "4 Genomics to Molecules",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#learning-objectives",
+    "href": "chapters/chapter1-genomics-to-molecules.html#learning-objectives",
+    "title": "3  Genomics to Molecules",
+    "section": "4.1 Learning Objectives",
+    "text": "4.1 Learning Objectives\n\nUnderstand how to bridge genomics (genes/proteins) and cheminformatics (small molecules) in drug discovery\nUse public databases and Python tools to go from gene to protein to ligand\nAnalyze molecular properties of drug-like compounds",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#introduction",
+    "href": "chapters/chapter1-genomics-to-molecules.html#introduction",
+    "title": "3  Genomics to Molecules",
+    "section": "4.2 Introduction",
+    "text": "4.2 Introduction\nModern drug discovery often starts with genomics—identifying disease-relevant genes and proteins. The next step is to find or design small molecules that can modulate these targets. This chapter demonstrates a practical, stepwise workflow: from gene to protein to ligand to molecular property analysis, using real-world data and open-source tools.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#core-concepts",
+    "href": "chapters/chapter1-genomics-to-molecules.html#core-concepts",
+    "title": "3  Genomics to Molecules",
+    "section": "4.3 Core Concepts",
+    "text": "4.3 Core Concepts\n\nGenomics pipelines vs. drug discovery workflows\nThe role of AI in modern pharma (AlphaFold, DeepMind, etc.)\nOverview of AI-discovered drugs in clinical trials\nSetting up your development environment (Python, Jupyter, RDKit, etc.)",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#hands-on-implementation",
+    "href": "chapters/chapter1-genomics-to-molecules.html#hands-on-implementation",
+    "title": "3  Genomics to Molecules",
+    "section": "4.4 Hands-On Implementation",
+    "text": "4.4 Hands-On Implementation\n# Install RDKit and other essentials\n!pip install rdkit-pypi pandas\n\nfrom rdkit import Chem\nfrom rdkit.Chem import Descriptors\nimport pandas as pd\n\n# Example: Load a SMILES string and calculate properties\nsmiles = \"CC(=O)OC1=CC=CC=C1C(=O)O\"  # Aspirin\nmol = Chem.MolFromSmiles(smiles)\n\nif mol:\n    mw = Descriptors.MolWt(mol)\n    logp = Descriptors.MolLogP(mol)\n    print(f\"Molecular Weight: {mw:.2f}\")\n    print(f\"LogP: {logp:.2f}\")\nelse:\n    print(\"Invalid SMILES string.\")",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#case-study-real-world-example",
+    "href": "chapters/chapter1-genomics-to-molecules.html#case-study-real-world-example",
+    "title": "3  Genomics to Molecules",
+    "section": "4.5 Case Study / Real-World Example",
+    "text": "4.5 Case Study / Real-World Example\nAlphaFold’s protein structure predictions have enabled rapid target identification for diseases. For example, researchers can now model protein-ligand interactions for novel targets in Alzheimer’s disease, accelerating the path from genomics data to candidate molecules.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#common-challenges-solutions",
+    "href": "chapters/chapter1-genomics-to-molecules.html#common-challenges-solutions",
+    "title": "3  Genomics to Molecules",
+    "section": "4.6 Common Challenges & Solutions",
+    "text": "4.6 Common Challenges & Solutions\n\nData integration between genomics and cheminformatics\nHandling large datasets and computational resources\nEnsuring reproducibility in research workflows",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#learning-tasks",
+    "href": "chapters/chapter1-genomics-to-molecules.html#learning-tasks",
+    "title": "3  Genomics to Molecules",
+    "section": "4.8 Learning Tasks",
+    "text": "4.8 Learning Tasks\n\nTry the workflow with a different gene (e.g., MAPT, BACE1, or a gene of your interest)\nAnalyze the properties of several ligands and compare their drug-likeness\nResearch a real-world example where genomics led to a new drug discovery",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#tools-libraries",
+    "href": "chapters/chapter1-genomics-to-molecules.html#tools-libraries",
+    "title": "3  Genomics to Molecules",
+    "section": "4.9 Tools & Libraries",
+    "text": "4.9 Tools & Libraries\n\nRDKit\npandas\nchembl_webresource_client\nJupyter Lab/Notebook\n\nInstallation:\npip install rdkit-pypi pandas chembl_webresource_client jupyterlab",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#summary",
+    "href": "chapters/chapter1-genomics-to-molecules.html#summary",
+    "title": "3  Genomics to Molecules",
+    "section": "4.7 Summary",
+    "text": "4.7 Summary\nThis workflow demonstrates how to start from a gene, find the corresponding protein, retrieve known small-molecule ligands, and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#further-reading",
+    "href": "chapters/chapter1-genomics-to-molecules.html#further-reading",
+    "title": "3  Genomics to Molecules",
+    "section": "4.10 Further Reading",
+    "text": "4.10 Further Reading\n\nJumper et al., “Highly accurate protein structure prediction with AlphaFold” (Nature, 2021)\nChEMBL database: https://www.ebi.ac.uk/chembl/\nRDKit documentation: https://www.rdkit.org/docs/\n\n\nView the notebook on GitHub",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html",
+    "href": "chapters/chapter2-target-identification.html",
+    "title": "4  Target Identification",
+    "section": "",
+    "text": "5 Target Identification",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#learning-objectives",
+    "href": "chapters/chapter2-target-identification.html#learning-objectives",
+    "title": "4  Target Identification",
+    "section": "5.1 Learning Objectives",
+    "text": "5.1 Learning Objectives\n\nExplain the importance of target identification in drug discovery\nUse AI and NLP tools to mine biomedical literature for targets\nAccess and analyze public databases (e.g., UniProt, PubMed)\nImplement a basic target mining workflow in Python\nEvaluate the quality and druggability of identified targets",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#introduction",
+    "href": "chapters/chapter2-target-identification.html#introduction",
+    "title": "4  Target Identification",
+    "section": "5.2 Introduction",
+    "text": "5.2 Introduction\nTarget identification is the first critical step in the drug discovery pipeline. Advances in AI and natural language processing (NLP) have made it possible to mine vast biomedical literature and databases to uncover novel drug targets efficiently.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#core-concepts",
+    "href": "chapters/chapter2-target-identification.html#core-concepts",
+    "title": "4  Target Identification",
+    "section": "5.3 Core Concepts",
+    "text": "5.3 Core Concepts\n\nWhat makes a good drug target?\nData sources: UniProt, PubMed, Open Targets\nAI/NLP for literature mining (e.g., BioBERT, PubMedBERT)\nTarget validation and prioritization",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#hands-on-implementation",
+    "href": "chapters/chapter2-target-identification.html#hands-on-implementation",
+    "title": "4  Target Identification",
+    "section": "5.4 Hands-On Implementation",
+    "text": "5.4 Hands-On Implementation\n# Install transformers and biopython\n!pip install transformers biopython\n\nfrom transformers import pipeline\nfrom Bio import Entrez\n\n# Example: Use Hugging Face pipeline for NER on biomedical text\nnlp = pipeline(\"ner\", model=\"d4data/biobert-ner\")\ntext = \"APP and BACE1 are key targets in Alzheimer's disease.\"\nresults = nlp(text)\nprint(results)\n\n# Example: Search PubMed for Alzheimer's targets\nEntrez.email = \"your.email@example.com\"\nhandle = Entrez.esearch(db=\"pubmed\", term=\"Alzheimer target\", retmax=5)\nrecord = Entrez.read(handle)\nprint(\"PubMed IDs:\", record[\"IdList\"])",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#case-study-real-world-example",
+    "href": "chapters/chapter2-target-identification.html#case-study-real-world-example",
+    "title": "4  Target Identification",
+    "section": "5.5 Case Study / Real-World Example",
+    "text": "5.5 Case Study / Real-World Example\nResearchers used BioBERT to mine PubMed abstracts and identified novel protein targets for neurodegenerative diseases, leading to new therapeutic hypotheses.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#common-challenges-solutions",
+    "href": "chapters/chapter2-target-identification.html#common-challenges-solutions",
+    "title": "4  Target Identification",
+    "section": "5.6 Common Challenges & Solutions",
+    "text": "5.6 Common Challenges & Solutions\n\nAmbiguity in gene/protein names\nData overload from literature mining\nValidating computationally identified targets",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#learning-tasks",
+    "href": "chapters/chapter2-target-identification.html#learning-tasks",
+    "title": "4  Target Identification",
+    "section": "5.7 Learning Tasks",
+    "text": "5.7 Learning Tasks\n\nRun NER on abstracts for a disease of your choice\nRetrieve and summarize 3 recent PubMed articles on target discovery\nList criteria for prioritizing drug targets",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#tools-libraries",
+    "href": "chapters/chapter2-target-identification.html#tools-libraries",
+    "title": "4  Target Identification",
+    "section": "5.8 Tools & Libraries",
+    "text": "5.8 Tools & Libraries\n\nHugging Face Transformers\nBioPython\nPubMed API\n\nInstallation:\npip install transformers biopython",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#summary",
+    "href": "chapters/chapter2-target-identification.html#summary",
+    "title": "4  Target Identification",
+    "section": "5.9 Summary",
+    "text": "5.9 Summary\nAI-powered literature mining accelerates target identification, but careful validation and prioritization are essential for success in drug discovery.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter2-target-identification.html#further-reading",
+    "href": "chapters/chapter2-target-identification.html#further-reading",
+    "title": "4  Target Identification",
+    "section": "5.10 Further Reading",
+    "text": "5.10 Further Reading\n\nLee et al., “BioBERT: a pre-trained biomedical language representation model for biomedical text mining” (Bioinformatics, 2020)\nUniProt: https://www.uniprot.org/\nOpen Targets: https://www.opentargets.org/\n\nView the notebook on GitHub",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Target Identification</span>"
+    ]
+  },
+  {
+    "objectID": "part1-foundations.html",
+    "href": "part1-foundations.html",
+    "title": "5  Part I: Foundations",
+    "section": "",
+    "text": "6 Part I: Foundations\nThis part introduces the essential concepts and tools for AI-driven drug discovery, including cheminformatics, molecular representations, and compound screening.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Part I: Foundations</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html",
+    "href": "chapters/chapter3-cheminformatics-essentials.html",
+    "title": "6  Cheminformatics Essentials",
+    "section": "",
+    "text": "7 Cheminformatics Essentials",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#learning-objectives",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#learning-objectives",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.1 Learning Objectives",
+    "text": "7.1 Learning Objectives\n\nUnderstand molecular representations (SMILES, InChI, graphs)\nCalculate key molecular properties\nApply Lipinski’s Rule of Five for drug-likeness\nUse RDKit for molecule manipulation and visualization\nBuild a simple molecular property calculator",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#introduction",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#introduction",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.2 Introduction",
+    "text": "7.2 Introduction\nCheminformatics is the backbone of computational drug discovery. It enables the digital representation, analysis, and manipulation of molecules, making it possible to apply machine learning and AI to chemical data.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#core-concepts",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#core-concepts",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.3 Core Concepts",
+    "text": "7.3 Core Concepts\n\nSMILES, InChI, and molecular graphs\nLipinski’s Rule of Five and drug-likeness\nMolecular descriptors and property calculations\nData formats: SDF, CSV, SMILES lists",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#hands-on-implementation",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#hands-on-implementation",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.4 Hands-On Implementation",
+    "text": "7.4 Hands-On Implementation\n# Install RDKit\n!pip install rdkit-pypi\n\nfrom rdkit import Chem\nfrom rdkit.Chem import Descriptors, Draw\nfrom rdkit.Chem.Draw import IPythonConsole\nfrom rdkit.Chem import Crippen\n\n# Example: Calculate properties for a list of molecules\nsmiles_list = [\n    \"CCO\",  # ethanol\n    \"CC(=O)OC1=CC=CC=C1C(=O)O\",  # aspirin\n    \"CCN(CC)CCCC(C)NC1=C2C=CC(=CC2=NC=C1)Cl\"  # chlorpromazine\n]\n\nfor smi in smiles_list:\n    mol = Chem.MolFromSmiles(smi)\n    if mol:\n        mw = Descriptors.MolWt(mol)\n        logp = Crippen.MolLogP(mol)\n        print(f\"SMILES: {smi}\\tMW: {mw:.2f}\\tLogP: {logp:.2f}\")\n        display(Draw.MolToImage(mol))\n    else:\n        print(f\"Invalid SMILES: {smi}\")",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#case-study-real-world-example",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#case-study-real-world-example",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.5 Case Study / Real-World Example",
+    "text": "7.5 Case Study / Real-World Example\nA pharmaceutical company screened millions of compounds using RDKit to filter for drug-like molecules, dramatically reducing the number of candidates for experimental testing.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#common-challenges-solutions",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#common-challenges-solutions",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.6 Common Challenges & Solutions",
+    "text": "7.6 Common Challenges & Solutions\n\nHandling invalid or ambiguous SMILES\nScaling property calculations to large datasets\nInterpreting descriptor values in a biological context",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#learning-tasks",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#learning-tasks",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.7 Learning Tasks",
+    "text": "7.7 Learning Tasks\n\nWrite a script to filter molecules by Lipinski’s Rule of Five\nVisualize 5 molecules from ChEMBL using RDKit\nCalculate and plot the distribution of LogP for a dataset",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#tools-libraries",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#tools-libraries",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.8 Tools & Libraries",
+    "text": "7.8 Tools & Libraries\n\nRDKit\npandas\nmatplotlib (for plotting)\n\nInstallation:\npip install rdkit-pypi pandas matplotlib",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#summary",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#summary",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.9 Summary",
+    "text": "7.9 Summary\nMastering cheminformatics tools like RDKit is essential for modern drug discovery, enabling efficient analysis and filtering of chemical libraries.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter3-cheminformatics-essentials.html#further-reading",
+    "href": "chapters/chapter3-cheminformatics-essentials.html#further-reading",
+    "title": "6  Cheminformatics Essentials",
+    "section": "7.10 Further Reading",
+    "text": "7.10 Further Reading\n\nLandrum, G. “RDKit: Open-source cheminformatics” (https://www.rdkit.org/)\nLipinski, C.A. et al., “Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings” (Adv Drug Deliv Rev, 2001)\nChEMBL: https://www.ebi.ac.uk/chembl/\n\n\nView the notebook on GitHub",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheminformatics Essentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html",
+    "href": "chapters/chapter4-compound-screening.html",
+    "title": "7  Compound Screening",
+    "section": "",
+    "text": "8 Compound Screening",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#learning-objectives",
+    "href": "chapters/chapter4-compound-screening.html#learning-objectives",
+    "title": "7  Compound Screening",
+    "section": "8.1 Learning Objectives",
+    "text": "8.1 Learning Objectives\n\nUnderstand the principles of virtual compound screening\nUse public compound databases (PubChem, ChEMBL)\nImplement basic compound search and filtering in Python\nApply drug-likeness and ADMET filters\nEvaluate screening results for downstream analysis",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#introduction",
+    "href": "chapters/chapter4-compound-screening.html#introduction",
+    "title": "7  Compound Screening",
+    "section": "8.2 Introduction",
+    "text": "8.2 Introduction\nCompound screening is a key step in drug discovery, enabling researchers to identify promising molecules from vast chemical libraries. Virtual screening, powered by cheminformatics and AI, accelerates this process and reduces experimental costs.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#core-concepts",
+    "href": "chapters/chapter4-compound-screening.html#core-concepts",
+    "title": "7  Compound Screening",
+    "section": "8.3 Core Concepts",
+    "text": "8.3 Core Concepts\n\nTypes of screening: high-throughput, virtual, fragment-based\nPublic compound databases: PubChem, ChEMBL\nDrug-likeness and ADMET (absorption, distribution, metabolism, excretion, toxicity)\nFiltering and prioritization strategies",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#hands-on-implementation",
+    "href": "chapters/chapter4-compound-screening.html#hands-on-implementation",
+    "title": "7  Compound Screening",
+    "section": "8.4 Hands-On Implementation",
+    "text": "8.4 Hands-On Implementation\n# Install required libraries\n!pip install pubchempy chembl_webresource_client pandas\n\nimport pubchempy as pcp\nfrom chembl_webresource_client.new_client import new_client\nimport pandas as pd\n\n# Example: Search PubChem for aspirin\ncompounds = pcp.get_compounds('aspirin', 'name')\nfor c in compounds:\n    print(f\"CID: {c.cid}, Canonical SMILES: {c.canonical_smiles}\")\n\n# Example: Search ChEMBL for approved drugs\nmolecule = new_client.molecule\napproved_drugs = molecule.filter(max_phase=4)\nfor drug in approved_drugs[:5]:\n    print(drug['molecule_chembl_id'], drug['pref_name'])",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#case-study-real-world-example",
+    "href": "chapters/chapter4-compound-screening.html#case-study-real-world-example",
+    "title": "7  Compound Screening",
+    "section": "8.5 Case Study / Real-World Example",
+    "text": "8.5 Case Study / Real-World Example\nResearchers used virtual screening to identify novel inhibitors for a cancer target, narrowing down from millions of compounds to a handful of candidates for experimental validation.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#common-challenges-solutions",
+    "href": "chapters/chapter4-compound-screening.html#common-challenges-solutions",
+    "title": "7  Compound Screening",
+    "section": "8.6 Common Challenges & Solutions",
+    "text": "8.6 Common Challenges & Solutions\n\nData quality and consistency across databases\nHandling large result sets efficiently\nIntegrating screening results with downstream workflows",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#learning-tasks",
+    "href": "chapters/chapter4-compound-screening.html#learning-tasks",
+    "title": "7  Compound Screening",
+    "section": "8.7 Learning Tasks",
+    "text": "8.7 Learning Tasks\n\nSearch for 10 compounds related to a disease of your choice in PubChem\nFilter a list of compounds by molecular weight and LogP\nSummarize the ADMET properties of 3 candidate molecules",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#tools-libraries",
+    "href": "chapters/chapter4-compound-screening.html#tools-libraries",
+    "title": "7  Compound Screening",
+    "section": "8.8 Tools & Libraries",
+    "text": "8.8 Tools & Libraries\n\nPubChemPy\nChEMBL WebResource Client\npandas\n\nInstallation:\npip install pubchempy chembl_webresource_client pandas",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#summary",
+    "href": "chapters/chapter4-compound-screening.html#summary",
+    "title": "7  Compound Screening",
+    "section": "8.9 Summary",
+    "text": "8.9 Summary\nVirtual compound screening is a powerful tool for narrowing down chemical space, but requires careful filtering and integration with biological data.",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter4-compound-screening.html#further-reading",
+    "href": "chapters/chapter4-compound-screening.html#further-reading",
+    "title": "7  Compound Screening",
+    "section": "8.10 Further Reading",
+    "text": "8.10 Further Reading\n\nPubChem: https://pubchem.ncbi.nlm.nih.gov/\nChEMBL: https://www.ebi.ac.uk/chembl/\nWalters, W.P. et al., “Virtual screening—an overview” (Drug Discov Today, 1998)\n\n\nView the notebook on GitHub",
+    "crumbs": [
+      "Part I: Foundations",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Compound Screening</span>"
+    ]
+  },
+  {
+    "objectID": "part2-machine-learning.html",
+    "href": "part2-machine-learning.html",
+    "title": "8  Part II: Machine Learning for Molecules",
+    "section": "",
+    "text": "9 Part II: Machine Learning for Molecules\nThis part covers the application of machine learning to molecular data, including classical algorithms, feature engineering, and model evaluation.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Part II: Machine Learning for Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "",
+    "text": "10 Machine Learning for Drug Discovery",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#learning-objectives",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#learning-objectives",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.1 Learning Objectives",
+    "text": "10.1 Learning Objectives\n\nUnderstand the role of ML in drug discovery\nPrepare chemical and biological data for ML\nBuild and evaluate classical ML models (e.g., Random Forest, SVM)\nApply ML to predict molecular properties\nBenchmark and interpret model performance",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#introduction",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#introduction",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.2 Introduction",
+    "text": "10.2 Introduction\nMachine learning (ML) is transforming drug discovery by enabling the prediction of molecular properties, bioactivity, and ADMET profiles from data. Both classical and deep learning approaches are used to accelerate the identification of promising drug candidates.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#core-concepts",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#core-concepts",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.3 Core Concepts",
+    "text": "10.3 Core Concepts\n\nTypes of ML models: regression, classification, clustering\nFeature engineering for molecules (descriptors, fingerprints)\nData splitting, cross-validation, and evaluation metrics\nModel interpretation and limitations",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#hands-on-implementation",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#hands-on-implementation",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.4 Hands-On Implementation",
+    "text": "10.4 Hands-On Implementation\n# Install required libraries\n!pip install scikit-learn rdkit-pypi pandas\n\nfrom rdkit import Chem\nfrom rdkit.Chem import Descriptors\nimport pandas as pd\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error\n\n# Example: Predict molecular weight from SMILES (toy example)\ndata = {'smiles': ['CCO', 'CC(=O)OC1=CC=CC=C1C(=O)O', 'CCN(CC)CCCC(C)NC1=C2C=CC(=CC2=NC=C1)Cl'],\n        'property': [46.07, 180.16, 318.86]}\ndf = pd.DataFrame(data)\ndf['mol'] = df['smiles'].apply(Chem.MolFromSmiles)\ndf['mw'] = df['mol'].apply(Descriptors.MolWt)\n\nX = df[['mw']]\ny = df['property']\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\nmodel = RandomForestRegressor()\nmodel.fit(X_train, y_train)\npreds = model.predict(X_test)\nprint(\"MSE:\", mean_squared_error(y_test, preds))",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#case-study-real-world-example",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#case-study-real-world-example",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.5 Case Study / Real-World Example",
+    "text": "10.5 Case Study / Real-World Example\nA biotech company used Random Forest models to predict blood-brain barrier permeability, reducing the number of failed candidates in CNS drug development.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#common-challenges-solutions",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#common-challenges-solutions",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.6 Common Challenges & Solutions",
+    "text": "10.6 Common Challenges & Solutions\n\nData imbalance and bias\nOverfitting and generalization\nFeature selection and interpretability",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#learning-tasks",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#learning-tasks",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.7 Learning Tasks",
+    "text": "10.7 Learning Tasks\n\nBuild a classifier to predict drug-likeness from molecular descriptors\nCompare performance of different ML algorithms\nInterpret feature importance in your model",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#tools-libraries",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#tools-libraries",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.8 Tools & Libraries",
+    "text": "10.8 Tools & Libraries\n\nscikit-learn\nRDKit\npandas\n\nInstallation:\npip install scikit-learn rdkit-pypi pandas",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#summary",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#summary",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.9 Summary",
+    "text": "10.9 Summary\nML enables rapid, data-driven decision making in drug discovery, but requires careful data preparation, model selection, and interpretation.",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter5-ml-for-drug-discovery.html#further-reading",
+    "href": "chapters/chapter5-ml-for-drug-discovery.html#further-reading",
+    "title": "9  Machine Learning for Drug Discovery",
+    "section": "10.10 Further Reading",
+    "text": "10.10 Further Reading\n\nChen, H. et al., “The rise of deep learning in drug discovery” (Drug Discov Today, 2018)\nscikit-learn documentation: https://scikit-learn.org/\n\n\nView the notebook on GitHub",
+    "crumbs": [
+      "Part II: Machine Learning for Molecules",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Machine Learning for Drug Discovery</span>"
+    ]
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "10  Conclusion",
+    "section": "",
+    "text": "11 Conclusion\nYou have completed “AI-Driven Drug Discovery: A Hands-On Guide.” We hope you now feel equipped to apply AI and computational tools to real-world drug discovery challenges. Continue exploring, building, and contributing to this exciting field!",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#step-1-start-from-a-gene-symbol",
+    "href": "chapters/chapter1-genomics-to-molecules.html#step-1-start-from-a-gene-symbol",
+    "title": "3  Genomics to Molecules",
+    "section": "4.3 Step 1: Start from a Gene Symbol",
+    "text": "4.3 Step 1: Start from a Gene Symbol\nWe begin with a gene of interest. For example, the APP gene (Amyloid beta precursor protein) is associated with Alzheimer’s disease.",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#step-2-retrieve-the-protein-uniprot",
+    "href": "chapters/chapter1-genomics-to-molecules.html#step-2-retrieve-the-protein-uniprot",
+    "title": "3  Genomics to Molecules",
+    "section": "4.4 Step 2: Retrieve the Protein (UniProt)",
+    "text": "4.4 Step 2: Retrieve the Protein (UniProt)\nWe use the UniProt database to find the protein corresponding to our gene in humans.\nimport requests\ngene_symbol = 'APP'  # Amyloid beta precursor protein\nuniprot_url = f'https://rest.uniprot.org/uniprotkb/search?query=gene_exact:{gene_symbol}+AND+organism_id:9606&fields=accession,protein_name,gene_names,organism_name,length&format=tsv'\nresp = requests.get(uniprot_url)\nprint('UniProt search result:')\nprint(resp.text)\n# Extract UniProt accession\nlines = resp.text.strip().split('\\n')\nif len(lines) &gt; 1:\n    acc = lines[1].split('\\t')[0]\n    print(f'UniProt accession for APP: {acc}')\nelse:\n    acc = None\n    print('No UniProt entry found.')",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#step-3-find-known-ligands-for-the-target-chembl",
+    "href": "chapters/chapter1-genomics-to-molecules.html#step-3-find-known-ligands-for-the-target-chembl",
+    "title": "3  Genomics to Molecules",
+    "section": "4.5 Step 3: Find Known Ligands for the Target (ChEMBL)",
+    "text": "4.5 Step 3: Find Known Ligands for the Target (ChEMBL)\nWith the UniProt accession, we can search ChEMBL for known ligands (small molecules) that interact with this protein target.\nfrom chembl_webresource_client.new_client import new_client\ntarget = new_client.target\nactivity = new_client.activity\nif acc:\n    # Find ChEMBL target for UniProt accession\n    targets = target.filter(target_components__accession=acc)\n    targets = list(targets)\n    if targets:\n        chembl_id = targets[0]['target_chembl_id']\n        print(f'ChEMBL target ID: {chembl_id}')\n        # Find bioactive molecules for this target\n        acts = activity.filter(target_chembl_id=chembl_id, standard_type='IC50')\n        print('Top 5 ligands with IC50:')\n        ligands = []\n        for a in list(acts)[:5]:\n            mol_id = a.get('molecule_chembl_id', 'NA')\n            ic50 = a.get('standard_value', 'NA')\n            units = a.get('standard_units', '')\n            print(f'Molecule: {mol_id}, IC50: {ic50} {units}')\n            ligands.append(mol_id)\n    else:\n        print('No ChEMBL target found for this UniProt accession.')\nelse:\n    print('No UniProt accession available for ligand search.')",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1-genomics-to-molecules.html#step-4-analyze-a-ligands-molecular-properties-rdkit",
+    "href": "chapters/chapter1-genomics-to-molecules.html#step-4-analyze-a-ligands-molecular-properties-rdkit",
+    "title": "3  Genomics to Molecules",
+    "section": "4.6 Step 4: Analyze a Ligand’s Molecular Properties (RDKit)",
+    "text": "4.6 Step 4: Analyze a Ligand’s Molecular Properties (RDKit)\nPick a ligand from the previous step (e.g., CHEMBL311039) and analyze its structure and properties.\nfrom chembl_webresource_client.new_client import new_client\nfrom rdkit import Chem\nfrom rdkit.Chem import Descriptors\nmolecule = new_client.molecule\nligand_chembl_id = 'CHEMBL311039'  # Replace with a ligand from above if desired\nmol_data = molecule.get(ligand_chembl_id)\nsmiles = mol_data.get('molecule_structures', {}).get('canonical_smiles', None)\nprint(f'Ligand {ligand_chembl_id} SMILES:', smiles)\nif smiles:\n    mol = Chem.MolFromSmiles(smiles)\n    mw = Descriptors.MolWt(mol)\n    logp = Descriptors.MolLogP(mol)\n    print(f'Molecular Weight: {mw:.2f}')\n    print(f'LogP: {logp:.2f}')\nelse:\n    print('No SMILES found for this ligand.')",
+    "crumbs": [
+      "Part 0: Getting Started",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Genomics to Molecules</span>"
+    ]
+  }
+]

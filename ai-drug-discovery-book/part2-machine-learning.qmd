@@ -1,0 +1,7 @@
+---
+title: "Part II: Machine Learning for Molecules"
+---
+
+# Part II: Machine Learning for Molecules
+
+This part covers the application of machine learning to molecular data, including classical algorithms, feature engineering, and model evaluation.

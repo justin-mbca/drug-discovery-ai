@@ -2,71 +2,110 @@
 title: "Genomics to Molecules"
 ---
 
+
 # Genomics to Molecules
 
 ## Learning Objectives
-- Understand the parallels between genomics and drug discovery workflows
-- Recognize the impact of AI in pharmaceutical research
-- Set up a Python environment for drug discovery
-- Explore the current landscape of AI-discovered drugs
-- Perform basic cheminformatics operations in Python
+- Understand how to bridge genomics (genes/proteins) and cheminformatics (small molecules) in drug discovery
+- Use public databases and Python tools to go from gene to protein to ligand
+- Analyze molecular properties of drug-like compounds
 
 ## Introduction
-The transition from genomics to drug discovery is a natural progression for data scientists. Both fields rely on large-scale data analysis, machine learning, and computational tools. With the advent of AI, especially breakthroughs like AlphaFold, the pharmaceutical industry is experiencing a revolution in how new drugs are discovered and developed.
+Modern drug discovery often starts with genomics—identifying disease-relevant genes and proteins. The next step is to find or design small molecules that can modulate these targets. This chapter demonstrates a practical, stepwise workflow: from gene to protein to ligand to molecular property analysis, using real-world data and open-source tools.
 
-## Core Concepts
-- Genomics pipelines vs. drug discovery workflows
-- The role of AI in modern pharma (AlphaFold, DeepMind, etc.)
-- Overview of AI-discovered drugs in clinical trials
-- Setting up your development environment (Python, Jupyter, RDKit, etc.)
+## Step 1: Start from a Gene Symbol
+We begin with a gene of interest. For example, the **APP** gene (Amyloid beta precursor protein) is associated with Alzheimer's disease.
 
-## Hands-On Implementation
+## Step 2: Retrieve the Protein (UniProt)
+We use the UniProt database to find the protein corresponding to our gene in humans.
+
 ```python
-# Install RDKit and other essentials
-!pip install rdkit-pypi pandas
-
-from rdkit import Chem
-from rdkit.Chem import Descriptors
-import pandas as pd
-
-# Example: Load a SMILES string and calculate properties
-smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"  # Aspirin
-mol = Chem.MolFromSmiles(smiles)
-
-if mol:
-    mw = Descriptors.MolWt(mol)
-    logp = Descriptors.MolLogP(mol)
-    print(f"Molecular Weight: {mw:.2f}")
-    print(f"LogP: {logp:.2f}")
+import requests
+gene_symbol = 'APP'  # Amyloid beta precursor protein
+uniprot_url = f'https://rest.uniprot.org/uniprotkb/search?query=gene_exact:{gene_symbol}+AND+organism_id:9606&fields=accession,protein_name,gene_names,organism_name,length&format=tsv'
+resp = requests.get(uniprot_url)
+print('UniProt search result:')
+print(resp.text)
+# Extract UniProt accession
+lines = resp.text.strip().split('\n')
+if len(lines) > 1:
+    acc = lines[1].split('\t')[0]
+    print(f'UniProt accession for APP: {acc}')
 else:
-    print("Invalid SMILES string.")
+    acc = None
+    print('No UniProt entry found.')
 ```
 
-## Case Study / Real-World Example
-AlphaFold's protein structure predictions have enabled rapid target identification for diseases. For example, researchers can now model protein-ligand interactions for novel targets in Alzheimer's disease, accelerating the path from genomics data to candidate molecules.
+## Step 3: Find Known Ligands for the Target (ChEMBL)
+With the UniProt accession, we can search ChEMBL for known ligands (small molecules) that interact with this protein target.
 
-## Common Challenges & Solutions
-- Data integration between genomics and cheminformatics
-- Handling large datasets and computational resources
-- Ensuring reproducibility in research workflows
+```python
+from chembl_webresource_client.new_client import new_client
+target = new_client.target
+activity = new_client.activity
+if acc:
+    # Find ChEMBL target for UniProt accession
+    targets = target.filter(target_components__accession=acc)
+    targets = list(targets)
+    if targets:
+        chembl_id = targets[0]['target_chembl_id']
+        print(f'ChEMBL target ID: {chembl_id}')
+        # Find bioactive molecules for this target
+        acts = activity.filter(target_chembl_id=chembl_id, standard_type='IC50')
+        print('Top 5 ligands with IC50:')
+        ligands = []
+        for a in list(acts)[:5]:
+            mol_id = a.get('molecule_chembl_id', 'NA')
+            ic50 = a.get('standard_value', 'NA')
+            units = a.get('standard_units', '')
+            print(f'Molecule: {mol_id}, IC50: {ic50} {units}')
+            ligands.append(mol_id)
+    else:
+        print('No ChEMBL target found for this UniProt accession.')
+else:
+    print('No UniProt accession available for ligand search.')
+```
+
+## Step 4: Analyze a Ligand's Molecular Properties (RDKit)
+Pick a ligand from the previous step (e.g., CHEMBL311039) and analyze its structure and properties.
+
+```python
+from chembl_webresource_client.new_client import new_client
+from rdkit import Chem
+from rdkit.Chem import Descriptors
+molecule = new_client.molecule
+ligand_chembl_id = 'CHEMBL311039'  # Replace with a ligand from above if desired
+mol_data = molecule.get(ligand_chembl_id)
+smiles = mol_data.get('molecule_structures', {}).get('canonical_smiles', None)
+print(f'Ligand {ligand_chembl_id} SMILES:', smiles)
+if smiles:
+    mol = Chem.MolFromSmiles(smiles)
+    mw = Descriptors.MolWt(mol)
+    logp = Descriptors.MolLogP(mol)
+    print(f'Molecular Weight: {mw:.2f}')
+    print(f'LogP: {logp:.2f}')
+else:
+    print('No SMILES found for this ligand.')
+```
+
+## Summary
+This workflow demonstrates how to start from a gene, find the corresponding protein, retrieve known small-molecule ligands, and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.
 
 ## Learning Tasks
-- Set up a Python environment with RDKit and Jupyter
-- Load and analyze a list of SMILES strings from ChEMBL
-- Research one AI-discovered drug currently in clinical trials and summarize its discovery process
+- Try the workflow with a different gene (e.g., MAPT, BACE1, or a gene of your interest)
+- Analyze the properties of several ligands and compare their drug-likeness
+- Research a real-world example where genomics led to a new drug discovery
 
 ## Tools & Libraries
 - RDKit
 - pandas
+- chembl_webresource_client
 - Jupyter Lab/Notebook
 
 Installation:
 ```bash
-pip install rdkit-pypi pandas jupyterlab
+pip install rdkit-pypi pandas chembl_webresource_client jupyterlab
 ```
-
-## Summary
-AI is bridging the gap between genomics and drug discovery, enabling faster, more accurate identification of drug candidates. Setting up a robust computational environment is the first step for hands-on exploration.
 
 ## Further Reading
 - Jumper et al., "Highly accurate protein structure prediction with AlphaFold" (Nature, 2021)

@@ -1,0 +1,6 @@
+name,smiles
+CHEMBL273030,c1ccc2cc3c(NCCc4c[nH]cn4)nnc(NCCc4c[nH]cn4)c3cc2c1
+CHEMBL272808,Clc1nnc(NCCc2c[nH]cn2)c2cc3ccccc3cc12
+CHEMBL272641,c1ccc2cc3c(NCCCn4ccnc4)nnc(NCCCn4ccnc4)c3cc2c1
+CHEMBL405899,Clc1nnc(NCCCn2ccnc2)c2cc3ccccc3cc12
+CHEMBL1672028,c1ccc2cc3c(Nc4cc[nH]n4)nnc(Nc4cc[nH]n4)c3cc2c1

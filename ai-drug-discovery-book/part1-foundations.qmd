@@ -1,0 +1,7 @@
+---
+title: "Part I: Foundations"
+---
+
+# Part I: Foundations
+
+This part introduces the essential concepts and tools for AI-driven drug discovery, including cheminformatics, molecular representations, and compound screening.

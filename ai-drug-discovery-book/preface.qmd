@@ -1,0 +1,9 @@
+---
+title: "Preface"
+---
+
+# Preface
+
+Welcome to "AI-Driven Drug Discovery: A Hands-On Guide." This book is designed for data scientists, bioinformaticians, and machine learning engineers who want to apply their skills to the world of drug discovery. Our goal is to provide a practical, code-first approach to modern computational drug discovery, with real-world examples and hands-on exercises throughout.
+
+We hope this book empowers you to make meaningful contributions to the future of medicine.

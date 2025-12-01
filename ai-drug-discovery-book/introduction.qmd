@@ -1,0 +1,9 @@
+---
+title: "Introduction"
+---
+
+# Introduction
+
+Artificial intelligence is revolutionizing drug discovery. This book introduces the key concepts, tools, and workflows that are shaping the future of pharmaceutical research. You will learn how to leverage AI, machine learning, and public biomedical data to accelerate the discovery of new medicines.
+
+We begin with foundational concepts and build up to advanced, real-world applications, ensuring you gain both theoretical understanding and practical skills.

@@ -1,0 +1,37 @@
+project:
+  type: book
+
+book:
+  title: "AI-Driven Drug Discovery: A Hands-On Guide"
+  author: "Justin"
+  date: today
+  chapters:
+    - index.qmd
+    - part: "Part 0: Getting Started"
+      chapters:
+        - preface.qmd
+        - introduction.qmd
+        - chapters/chapter1-genomics-to-molecules.qmd
+        - chapters/chapter2-target-identification.qmd
+    
+    - part: "Part I: Foundations"
+      chapters:
+        - part1-foundations.qmd
+        - chapters/chapter3-cheminformatics-essentials.qmd
+        - chapters/chapter4-compound-screening.qmd
+    
+    - part: "Part II: Machine Learning for Molecules"
+      chapters:
+        - part2-machine-learning.qmd
+        - chapters/chapter5-ml-for-drug-discovery.qmd
+        # Add more chapter files here as you create them
+    
+    # Continue with other parts and chapters as you add files
+    - conclusion.qmd
+    - references.qmd
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: report
