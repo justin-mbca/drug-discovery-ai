@@ -1,3 +1,8 @@
 # Chapter 2: Environment Setup
 
-_Content coming soon._
+This chapter guides you through setting up a reproducible computational environment for AI-driven drug discovery, including Python, Jupyter, and essential libraries.
+
+## 2.1 Installing Python and Conda
+## 2.2 Setting Up Jupyter Notebooks
+## 2.3 Managing Dependencies
+## 2.4 Version Control with Git

@@ -1,3 +1,8 @@
 # Chapter 4: Molecular Fingerprints
 
-_Content coming soon._
+Molecular fingerprints are compact representations of chemical structures used for similarity searching and machine learning. This chapter explains different types of fingerprints and their applications.
+
+## 4.1 What Are Molecular Fingerprints?
+## 4.2 Types: MACCS, Morgan, Topological
+## 4.3 Applications in Virtual Screening
+## 4.4 Fingerprints in Machine Learning

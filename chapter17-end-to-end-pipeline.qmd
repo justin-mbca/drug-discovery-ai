@@ -1,3 +1,8 @@
 # Chapter 17: End-to-End Pipeline
 
-_Content coming soon._
+This chapter presents a complete AI-driven drug discovery pipeline, from data collection to candidate prioritization, integrating methods from previous chapters.
+
+## 17.1 Pipeline Overview
+## 17.2 Data Preparation
+## 17.3 Model Training and Evaluation
+## 17.4 Candidate Selection

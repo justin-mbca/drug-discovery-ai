@@ -1,3 +1,8 @@
 # Chapter 6: Graph Neural Networks
 
-_Content coming soon._
+Graph Neural Networks (GNNs) are powerful tools for learning on molecular graphs. This chapter introduces GNN concepts and their application to molecular property prediction.
+
+## 6.1 Introduction to GNNs
+## 6.2 Molecular Graph Construction
+## 6.3 GNN Architectures for Chemistry
+## 6.4 Case Study: GNN for Solubility

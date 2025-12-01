@@ -1,3 +1,9 @@
 # Chapter 1: Genomics to Molecules
 
-_Content coming soon._
+This chapter introduces the journey from genomics data to actionable molecular targets in drug discovery. It covers how genetic information is translated into protein targets and how these are linked to small molecules for therapeutic intervention.
+
+## 1.1 Introduction to Genomics in Drug Discovery
+## 1.2 From Genes to Proteins
+## 1.3 Target Identification and Validation
+## 1.4 Linking Targets to Molecules
+## 1.5 Case Study: ALS Gene to Ligand

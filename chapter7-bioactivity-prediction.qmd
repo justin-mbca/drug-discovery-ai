@@ -1,3 +1,8 @@
 # Chapter 7: Bioactivity Prediction
 
-_Content coming soon._
+Predicting the biological activity of molecules is central to drug discovery. This chapter covers data sources, machine learning models, and evaluation strategies for bioactivity prediction.
+
+## 7.1 Bioactivity Data Sources
+## 7.2 Feature Engineering for Bioactivity
+## 7.3 ML Models for Activity Prediction
+## 7.4 Model Evaluation and Validation
