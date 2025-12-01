@@ -1,0 +1,206 @@
+pdb_id,entity_id,entity_name,entity_type,comp_id
+2RSQ,2,COPPER (I) ION,non-polymer,CU1
+7WWT,2,ZINC ION,non-polymer,ZN
+7WWT,3,COPPER (II) ION,non-polymer,CU
+7WWY,2,ZINC ION,non-polymer,ZN
+7WWY,3,COPPER (II) ION,non-polymer,CU
+7WX0,3,COPPER (II) ION,non-polymer,CU
+7WX0,2,ZINC ION,non-polymer,ZN
+7WX1,2,ZINC ION,non-polymer,ZN
+7WX1,3,COPPER (II) ION,non-polymer,CU
+6FN8,2,ZINC ION,non-polymer,ZN
+3GTT,2,ZINC ION,non-polymer,ZN
+3LTV,2,ZINC ION,non-polymer,ZN
+3GTV,2,ZINC ION,non-polymer,ZN
+4OJA,2,COPPER (II) ION,non-polymer,CU
+4OJA,3,ZINC ION,non-polymer,ZN
+4OJA,4,SULFATE ION,non-polymer,SO4
+6FLH,2,SULFATE ION,non-polymer,SO4
+6FLH,3,GLYCEROL,non-polymer,GOL
+6Z3V,2,ZINC ION,non-polymer,ZN
+6Z3V,3,5-fluoranyl-~{N}-(3-morpholin-4-ylcarbonylphenyl)-2-selanyl-benzamide,non-polymer,Q6H
+6Z3V,4,SULFATE ION,non-polymer,SO4
+6Z4H,2,ZINC ION,non-polymer,ZN
+6Z4H,3,~{N}-[(4-chlorophenyl)methyl]-2-selanyl-benzamide,non-polymer,LQW
+6Z4H,4,SULFATE ION,non-polymer,SO4
+6Z4J,4,CHLORIDE ION,non-polymer,CL
+6Z4J,3,~{N}-[(3-chlorophenyl)methyl]-2-selanyl-benzamide,non-polymer,Q7W
+6Z4J,2,ZINC ION,non-polymer,ZN
+6Z4K,2,~{N}-[(3-methoxyphenyl)methyl]-2-selanyl-benzamide,non-polymer,Q7N
+6Z4K,3,ZINC ION,non-polymer,ZN
+6Z4K,4,CHLORIDE ION,non-polymer,CL
+6Z4L,4,SULFATE ION,non-polymer,SO4
+6Z4L,3,ZINC ION,non-polymer,ZN
+6Z4L,2,~{N}-(pyridin-3-ylmethyl)-2-selanyl-benzamide,non-polymer,Q8H
+6Z4M,3,ZINC ION,non-polymer,ZN
+6Z4M,4,CHLORIDE ION,non-polymer,CL
+6Z4M,5,SULFATE ION,non-polymer,SO4
+6Z4M,2,~{N}-[(6-methoxypyridin-3-yl)methyl]-2-selanyl-benzamide,non-polymer,Q8E
+6Z4O,2,ZINC ION,non-polymer,ZN
+6Z4O,3,~{N}-(phenylmethyl)-2-selanyl-benzamide,non-polymer,Q7T
+6Z4O,4,SULFATE ION,non-polymer,SO4
+8ZD5,5,COPPER (II) ION,non-polymer,CU
+8ZD5,4,ZINC ION,non-polymer,ZN
+3CE1,4,COPPER (II) ION,non-polymer,CU
+3CE1,3,ACETATE ION,non-polymer,ACT
+3CE1,2,ZINC ION,non-polymer,ZN
+8IMD,4,ZINC ION,non-polymer,ZN
+8IMD,3,COPPER (II) ION,non-polymer,CU
+8IMD,2,2-(N-MORPHOLINO)-ETHANESULFONIC ACID,non-polymer,MES
+6Z4G,2,ZINC ION,non-polymer,ZN
+6Z4G,3,ACETATE ION,non-polymer,ACT
+6Z4G,4,N-phenyl-2-selanylbenzamide,non-polymer,9JT
+6Z4G,5,SULFATE ION,non-polymer,SO4
+6Z4G,6,CHLORIDE ION,non-polymer,CL
+6Z4I,2,ZINC ION,non-polymer,ZN
+6Z4I,3,ACETATE ION,non-polymer,ACT
+6Z4I,4,SULFATE ION,non-polymer,SO4
+6Z4I,5,~{N}-[(4-methoxyphenyl)methyl]-2-selanyl-benzamide,non-polymer,Q85
+8CCX,2,COPPER (II) ION,non-polymer,CU
+8CCX,3,ZINC ION,non-polymer,ZN
+8CCX,4,SULFATE ION,non-polymer,SO4
+8CCX,5,"butane-1,4-dithiol",non-polymer,UDI
+8CCX,6,DIMETHYL SULFOXIDE,non-polymer,DMS
+8Q6M,5,SULFATE ION,non-polymer,SO4
+8Q6M,4,COPPER (II) ION,non-polymer,CU
+8Q6M,3,ZINC ION,non-polymer,ZN
+8Q6M,2,ACETATE ION,non-polymer,ACT
+3G4Z,3,BROMIDE ION,non-polymer,BR
+3G4Z,2,NICKEL (II) ION,non-polymer,NI
+3G50,2,NICKEL (II) ION,non-polymer,NI
+3L9Y,2,ZINC ION,non-polymer,ZN
+3L9Y,3,COPPER (II) ION,non-polymer,CU
+3G4X,2,NICKEL (II) ION,non-polymer,NI
+3G4X,3,CHLORIDE ION,non-polymer,CL
+3GZQ,2,SULFATE ION,non-polymer,SO4
+3HFF,2,ZINC ION,non-polymer,ZN
+5O3Y,2,ZINC ION,non-polymer,ZN
+5O3Y,3,~{N}-phenyl-2-sulfanyl-benzamide,non-polymer,9JK
+5O3Y,4,SULFATE ION,non-polymer,SO4
+5O40,2,ZINC ION,non-polymer,ZN
+5O40,3,N-phenyl-2-selanylbenzamide,non-polymer,9JT
+5O40,4,SULFATE ION,non-polymer,SO4
+8K3A,3,ZINC ION,non-polymer,ZN
+6FON,3,ZINC ION,non-polymer,ZN
+3L9E,2,ZINC ION,non-polymer,ZN
+5K02,3,ZINC ION,non-polymer,ZN
+5K02,2,COPPER (II) ION,non-polymer,CU
+3CQP,2,COPPER (II) ION,non-polymer,CU
+3CQP,3,ZINC ION,non-polymer,ZN
+3CQP,4,MALONATE ION,non-polymer,MLI
+3GQF,2,ZINC ION,non-polymer,ZN
+3GQF,3,CALCIUM ION,non-polymer,CA
+3H2Q,2,ZINC ION,non-polymer,ZN
+3H2Q,3,SULFATE ION,non-polymer,SO4
+3RE0,2,Cisplatin,non-polymer,CPT
+6DTK,2,ZINC ION,non-polymer,ZN
+6DTK,3,COPPER (II) ION,non-polymer,CU
+6DTK,4,MALONATE ION,non-polymer,MLI
+7NXX,3,COPPER (II) ION,non-polymer,CU
+7NXX,4,ZINC ION,non-polymer,ZN
+7XX3,5,DIMETHYL SULFOXIDE,non-polymer,DMS
+7XX3,4,"(2~{E},4~{E},6~{S})-4,6-dimethyldeca-2,4-dienoic acid",non-polymer,I2G
+7XX3,3,GLYCEROL,non-polymer,GOL
+7XX3,2,ZINC ION,non-polymer,ZN
+8K33,3,ZINC ION,non-polymer,ZN
+8K3L,4,ZINC ION,non-polymer,ZN
+8K3L,3,COPPER (II) ION,non-polymer,CU
+8YAF,4,ZINC ION,non-polymer,ZN
+9IYK,2,COPPER (II) ION,non-polymer,CU
+9IYK,3,ZINC ION,non-polymer,ZN
+9IYK,4,ACETATE ION,non-polymer,ACT
+9IYK,5,SULFATE ION,non-polymer,SO4
+3GZO,4,GLYCEROL,non-polymer,GOL
+3GZO,5,MALONATE ION,non-polymer,MLI
+3GZO,3,ZINC ION,non-polymer,ZN
+3GZO,2,COPPER (II) ION,non-polymer,CU
+5YTU,6,GLYCEROL,non-polymer,GOL
+5YTU,5,Dihydrogen tetrasulfide,non-polymer,S4P
+5YTU,4,TRIS(HYDROXYETHYL)AMINOMETHANE,non-polymer,TAM
+5YTU,3,ZINC ION,non-polymer,ZN
+5YTU,2,ISOPRENALINE,non-polymer,5FW
+6A9O,2,ZINC ION,non-polymer,ZN
+6A9O,3,DIMETHYL SULFOXIDE,non-polymer,DMS
+6A9O,4,GLYCEROL,non-polymer,GOL
+6A9O,5,Dihydrogen tetrasulfide,non-polymer,S4P
+6A9O,6,"2'-[(6-oxo-5,6-dihydrophenanthridin-3-yl)carbamoyl][1,1'-biphenyl]-2-carboxylic acid",non-polymer,6B3
+6FOI,3,SULFATE ION,non-polymer,SO4
+6FOI,2,ZINC ION,non-polymer,ZN
+8YAT,5,ZINC ION,non-polymer,ZN
+3CQQ,2,ZINC ION,non-polymer,ZN
+3CQQ,3,ACETYL GROUP,non-polymer,ACE
+3H2P,4,ACETYL GROUP,non-polymer,ACE
+3H2P,3,MALONATE ION,non-polymer,MLI
+3H2P,2,ZINC ION,non-polymer,ZN
+6FP6,3,ZINC ION,non-polymer,ZN
+6FP6,4,PROPANOIC ACID,non-polymer,PPI
+6FP6,5,GLYCEROL,non-polymer,GOL
+2AF2,2,ZINC ION,non-polymer,ZN
+5DLI,2,GLYCEROL,non-polymer,GOL
+5DLI,3,IODIDE ION,non-polymer,IOD
+5WOR,3,GLYCEROL,non-polymer,GOL
+5WOR,2,MALONATE ION,non-polymer,MLI
+6B79,2,"7-hydroxy-8-[(E)-phenyldiazenyl]naphthalene-1,3-disulfonic acid",non-polymer,ORA
+1OZU,2,ZINC ION,non-polymer,ZN
+1OZU,3,SULFATE ION,non-polymer,SO4
+4A7S,2,COPPER (II) ION,non-polymer,CU
+4A7S,3,ZINC ION,non-polymer,ZN
+4A7S,4,SULFATE ION,non-polymer,SO4
+4A7S,5,ACETATE ION,non-polymer,ACT
+4A7S,6,5-FLUOROURIDINE,non-polymer,5UD
+4A7T,2,ISOPRENALINE,non-polymer,5FW
+4A7T,3,SULFATE ION,non-polymer,SO4
+4A7T,4,ACETATE ION,non-polymer,ACT
+4A7T,5,COPPER (II) ION,non-polymer,CU
+4A7T,6,ZINC ION,non-polymer,ZN
+4A7V,2,L-DOPAMINE,non-polymer,LDP
+4A7V,3,SULFATE ION,non-polymer,SO4
+4A7V,4,COPPER (II) ION,non-polymer,CU
+4A7V,5,ZINC ION,non-polymer,ZN
+5J0F,2,GLYCEROL,non-polymer,GOL
+7T8E,2,ZINC ION,non-polymer,ZN
+7T8E,3,ACETATE ION,non-polymer,ACT
+7T8E,4,SULFATE ION,non-polymer,SO4
+7T8F,2,ZINC ION,non-polymer,ZN
+7T8F,3,ACETATE ION,non-polymer,ACT
+7T8F,4,N-phenyl-2-selanylbenzamide,non-polymer,9JT
+7T8G,2,ZINC ION,non-polymer,ZN
+7T8G,3,~{N}-(pyridin-3-ylmethyl)-2-selanyl-benzamide,non-polymer,Q8H
+7T8G,4,ACETATE ION,non-polymer,ACT
+7T8G,5,SULFATE ION,non-polymer,SO4
+7T8G,6,SELENIUM ATOM,non-polymer,SE
+7T8H,2,ZINC ION,non-polymer,ZN
+7T8H,3,ACETATE ION,non-polymer,ACT
+7T8H,4,~{N}-[(6-methoxypyridin-3-yl)methyl]-2-selanyl-benzamide,non-polymer,Q8E
+7T8H,5,SULFATE ION,non-polymer,SO4
+1T6U,2,NICKEL (II) ION,non-polymer,NI
+3QQD,3,ZINC ION,non-polymer,ZN
+3QQD,4,SULFATE ION,non-polymer,SO4
+4A7U,2,L-EPINEPHRINE,non-polymer,ALE
+4A7U,3,SULFATE ION,non-polymer,SO4
+4A7U,4,COPPER (II) ION,non-polymer,CU
+4A7U,5,ZINC ION,non-polymer,ZN
+4A7U,6,ACETATE ION,non-polymer,ACT
+5YTO,5,PENTASULFIDE-SULFUR,non-polymer,PS5
+5YTO,4,"4-[(1~{R})-2-(naphthalen-2-ylmethylamino)-1-oxidanyl-ethyl]benzene-1,2-diol",non-polymer,946
+5YTO,3,GLYCEROL,non-polymer,GOL
+5YTO,2,ZINC ION,non-polymer,ZN
+5YUL,2,ZINC ION,non-polymer,ZN
+5YUL,3,Dihydrogen tetrasulfide,non-polymer,S4P
+5YUL,4,GLYCEROL,non-polymer,GOL
+6SPI,2,~{N}-[(4-chlorophenyl)methyl]-2-selanyl-benzamide,non-polymer,LQW
+6SPI,3,ZINC ION,non-polymer,ZN
+6SPI,4,SULFATE ION,non-polymer,SO4
+6SPJ,2,ZINC ION,non-polymer,ZN
+6SPJ,3,~{N}-pyridin-2-yl-2-selanyl-benzamide,non-polymer,LR2
+6SPJ,4,SULFATE ION,non-polymer,SO4
+6SPJ,5,GLYCEROL,non-polymer,GOL
+6SPJ,6,DIMETHYL SULFOXIDE,non-polymer,DMS
+6SPJ,7,CHLORIDE ION,non-polymer,CL
+6SPK,5,GLYCEROL,non-polymer,GOL
+6SPK,8,SODIUM ION,non-polymer,NA
+6SPK,7,DIMETHYL SULFOXIDE,non-polymer,DMS
+6SPK,6,CHLORIDE ION,non-polymer,CL
+6SPK,4,SULFATE ION,non-polymer,SO4
+6SPK,3,2-selanyl-~{N}-[3-[4-(trifluoromethyl)phenyl]phenyl]benzamide,non-polymer,LQN
+6SPK,2,ZINC ION,non-polymer,ZN
