@@ -1,5 +1,5 @@
-# Preface {.unnumbered}
+---
+title: "Home"
+---
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Welcome to the AI Drug Discovery Book! Use the navigation to explore chapters on drug discovery, machine learning, and computational tools.
