@@ -1,0 +1,130 @@
+---
+title: "Cheminformatics Essentials"
+---
+
+
+# Cheminformatics Essentials
+
+---
+
+## Summary
+
+Cheminformatics is the backbone of computational drug discovery. It enables the digital representation, analysis, and manipulation of molecules, making it possible to apply machine learning and AI to chemical data.
+
+---
+
+## Key Code Snippets
+
+### 1. Calculate Molecular Properties with RDKit
+```python
+from rdkit import Chem
+from rdkit.Chem import Descriptors, Crippen
+smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"  # aspirin
+mol = Chem.MolFromSmiles(smiles)
+mw = Descriptors.MolWt(mol)
+logp = Crippen.MolLogP(mol)
+print(f"MW: {mw:.2f}, LogP: {logp:.2f}")
+```
+
+### 2. Visualize Molecules
+```python
+from rdkit.Chem import Draw
+Draw.MolToImage(mol)
+```
+
+### 3. Filter by Lipinski's Rule of Five
+```python
+def is_druglike(mol):
+    mw = Descriptors.MolWt(mol)
+    logp = Crippen.MolLogP(mol)
+    hbd = Chem.Lipinski.NumHDonors(mol)
+    hba = Chem.Lipinski.NumHAcceptors(mol)
+    return (mw < 500 and logp < 5 and hbd <= 5 and hba <= 10)
+```
+
+---
+
+## Notebook Link
+
+For the full workflow, see the interactive notebook: [chapter3-cheminformatics-essentials.ipynb](../notebooks/chapter3-cheminformatics-essentials.ipynb)
+
+---
+
+## Learning Objectives
+- Understand molecular representations (SMILES, InChI, graphs)
+- Calculate key molecular properties
+- Apply Lipinski's Rule of Five for drug-likeness
+- Use RDKit for molecule manipulation and visualization
+- Build a simple molecular property calculator
+
+## Introduction
+Cheminformatics is the backbone of computational drug discovery. It enables the digital representation, analysis, and manipulation of molecules, making it possible to apply machine learning and AI to chemical data.
+
+## Core Concepts
+- SMILES, InChI, and molecular graphs
+- Lipinski's Rule of Five and drug-likeness
+- Molecular descriptors and property calculations
+- Data formats: SDF, CSV, SMILES lists
+
+## Hands-On Implementation
+```python
+# Install RDKit
+!pip install rdkit-pypi
+
+from rdkit import Chem
+from rdkit.Chem import Descriptors, Draw
+from rdkit.Chem.Draw import IPythonConsole
+from rdkit.Chem import Crippen
+
+# Example: Calculate properties for a list of molecules
+smiles_list = [
+    "CCO",  # ethanol
+    "CC(=O)OC1=CC=CC=C1C(=O)O",  # aspirin
+    "CCN(CC)CCCC(C)NC1=C2C=CC(=CC2=NC=C1)Cl"  # chlorpromazine
+]
+
+for smi in smiles_list:
+    mol = Chem.MolFromSmiles(smi)
+    if mol:
+        mw = Descriptors.MolWt(mol)
+        logp = Crippen.MolLogP(mol)
+        print(f"SMILES: {smi}\tMW: {mw:.2f}\tLogP: {logp:.2f}")
+        display(Draw.MolToImage(mol))
+    else:
+        print(f"Invalid SMILES: {smi}")
+```
+
+## Case Study / Real-World Example
+A pharmaceutical company screened millions of compounds using RDKit to filter for drug-like molecules, dramatically reducing the number of candidates for experimental testing.
+
+## Common Challenges & Solutions
+- Handling invalid or ambiguous SMILES
+- Scaling property calculations to large datasets
+- Interpreting descriptor values in a biological context
+
+## Learning Tasks
+- Write a script to filter molecules by Lipinski's Rule of Five
+- Visualize 5 molecules from ChEMBL using RDKit
+- Calculate and plot the distribution of LogP for a dataset
+
+## Tools & Libraries
+- RDKit
+- pandas
+- matplotlib (for plotting)
+
+Installation:
+```bash
+pip install rdkit-pypi pandas matplotlib
+```
+
+## Summary
+Mastering cheminformatics tools like RDKit is essential for modern drug discovery, enabling efficient analysis and filtering of chemical libraries.
+
+## Further Reading
+- Landrum, G. "RDKit: Open-source cheminformatics" (https://www.rdkit.org/)
+- Lipinski, C.A. et al., "Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings" (Adv Drug Deliv Rev, 2001)
+- ChEMBL: https://www.ebi.ac.uk/chembl/
+
+---
+
+[View the notebook on GitHub](https://github.com/justin-mbca/drug-discovery-ai/blob/main/ai-drug-discovery-book/notebooks/chapter3-cheminformatics-essentials.ipynb)

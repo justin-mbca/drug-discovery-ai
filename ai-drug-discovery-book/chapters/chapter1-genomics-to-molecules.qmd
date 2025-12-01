@@ -9,7 +9,6 @@ This chapter introduces the journey from genomics data to actionable molecular t
 
 This workflow demonstrates how to start from a gene (e.g., SOD1 for ALS), find the corresponding protein (UniProt), retrieve known small-molecule ligands (ChEMBL), and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.
 
----
 
 ## Key Code Snippets
 
@@ -38,6 +37,33 @@ for pdb_id in pdb_ids:
 			chem_comp = entity.get('chem_comp', {})
 			all_results.append({
 				'pdb_id': pdb_id,
+				---
+
+				## Interpretation of Exported Ligands for ALS Drug Discovery
+
+				At the end of this workflow, the notebook exports a file `ligands_for_docking.csv` containing known ligands for the selected ALS target (e.g., SOD1). Here is an example of the exported data:
+
+				| name         | smiles                                                        |
+				|--------------|---------------------------------------------------------------|
+				| CHEMBL273030 | c1ccc2cc3c(NCCc4c[nH]cn4)nnc(NCCc4c[nH]cn4)c3cc2c1           |
+				| CHEMBL272808 | Clc1nnc(NCCc2c[nH]cn2)c2cc3ccccc3cc12                        |
+				| CHEMBL272641 | c1ccc2cc3c(NCCCn4ccnc4)nnc(NCCCn4ccnc4)c3cc2c1               |
+				| CHEMBL405899 | Clc1nnc(NCCCn2ccnc2)c2cc3ccccc3cc12                          |
+				| CHEMBL1672028| c1ccc2cc3c(Nc4cc[nH]n4)nnc(Nc4cc[nH]n4)c3cc2c1               |
+
+				**How to interpret these results:**
+
+				- These ligands are ChEMBL compounds with known bioactivity, retrieved for the ALS target SOD1.
+				- Their structures are consistent with CNS drug-like scaffolds, but further ADMET and blood-brain barrier predictions are needed for ALS relevance.
+				- These molecules are not validated ALS drugs, but are reasonable starting points for hit discovery and virtual screening.
+				- The CSV can be used directly in docking or cheminformatics pipelines to prioritize or design new compounds.
+
+				**Limitations:**
+				- The activity data is typically from in vitro assays, not ALS disease models.
+				- Further experimental validation is required to confirm efficacy and safety in ALS.
+
+				**Summary:**
+				The notebook provides a practical, automated way to go from ALS gene to actionable ligand lists for computational drug discovery, enabling rapid hypothesis generation and screening for ALS research.
 				'entity_id': chem_comp.get('id', ''),
 				'entity_name': chem_comp.get('name', ''),
 				'entity_type': chem_comp.get('type', '')
@@ -58,16 +84,42 @@ for a in list(acts)[:5]:
 	print(a.get('molecule_chembl_id'), a.get('standard_value'))
 ```
 
----
 
 ## Notebook Link
 
 For the full workflow, see the interactive notebook: [chapter1-genomics-to-molecules.ipynb](../notebooks/chapter1-genomics-to-molecules.ipynb)
 
----
 
 ## 1.1 Introduction to Genomics in Drug Discovery
 ## 1.2 From Genes to Proteins
 ## 1.3 Target Identification and Validation
 ## 1.4 Linking Targets to Molecules
 ## 1.5 Case Study: ALS Gene to Ligand
+
+---
+
+## Interpretation of Exported Ligands for ALS Drug Discovery
+
+At the end of this workflow, the notebook exports a file `ligands_for_docking.csv` containing known ligands for the selected ALS target (e.g., SOD1). Here is an example of the exported data:
+
+| name         | smiles                                                        |
+|--------------|---------------------------------------------------------------|
+| CHEMBL273030 | c1ccc2cc3c(NCCc4c[nH]cn4)nnc(NCCc4c[nH]cn4)c3cc2c1           |
+| CHEMBL272808 | Clc1nnc(NCCc2c[nH]cn2)c2cc3ccccc3cc12                        |
+| CHEMBL272641 | c1ccc2cc3c(NCCCn4ccnc4)nnc(NCCCn4ccnc4)c3cc2c1               |
+| CHEMBL405899 | Clc1nnc(NCCCn2ccnc2)c2cc3ccccc3cc12                          |
+| CHEMBL1672028| c1ccc2cc3c(Nc4cc[nH]n4)nnc(Nc4cc[nH]n4)c3cc2c1               |
+
+**How to interpret these results:**
+
+- These ligands are ChEMBL compounds with known bioactivity, retrieved for the ALS target SOD1.
+- Their structures are consistent with CNS drug-like scaffolds, but further ADMET and blood-brain barrier predictions are needed for ALS relevance.
+- These molecules are not validated ALS drugs, but are reasonable starting points for hit discovery and virtual screening.
+- The CSV can be used directly in docking or cheminformatics pipelines to prioritize or design new compounds.
+
+**Limitations:**
+- The activity data is typically from in vitro assays, not ALS disease models.
+- Further experimental validation is required to confirm efficacy and safety in ALS.
+
+**Summary:**
+The notebook provides a practical, automated way to go from ALS gene to actionable ligand lists for computational drug discovery, enabling rapid hypothesis generation and screening for ALS research.

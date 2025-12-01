@@ -1,0 +1,20 @@
+# Chapter 17: Interpretability in AI for Drug Discovery
+
+Interpretability is essential for building trust and extracting insights from AI models in drug discovery. This chapter discusses why interpretability matters, common techniques, and practical examples in cheminformatics and bioinformatics.
+
+## 17.1 Why Interpretability?
+- Regulatory and scientific needs
+- Understanding model predictions
+
+## 17.2 Techniques for Model Interpretation
+- Feature importance (e.g., SHAP, LIME)
+- Visualization of learned representations
+- Case studies: interpreting molecular property models
+
+## 17.3 Challenges and Best Practices
+- Balancing accuracy and interpretability
+- Pitfalls in interpreting complex models
+
+---
+
+This chapter equips readers with the knowledge to critically assess and explain AI-driven results in drug discovery workflows.

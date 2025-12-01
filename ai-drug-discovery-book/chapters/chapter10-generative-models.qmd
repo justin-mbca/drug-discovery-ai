@@ -1,0 +1,23 @@
+# Chapter 10: Generative Models in Drug Discovery
+
+Generative models are revolutionizing drug discovery by enabling the design of novel molecules with desired properties. This chapter introduces the main types of generative models, their applications, and challenges in molecular generation.
+
+## 10.1 Introduction to Generative Models
+- Overview of generative modeling (VAEs, GANs, RNNs)
+- Why generative models matter in drug discovery
+
+## 10.2 SMILES-Based Generative Models
+- Sequence models for molecule generation
+- Example architectures: RNN, Transformer
+
+## 10.3 Graph-Based Generative Models
+- Graph neural networks for molecular graphs
+- Advantages over SMILES-based approaches
+
+## 10.4 Evaluation and Challenges
+- Validity, novelty, and diversity of generated molecules
+- Synthetic accessibility and drug-likeness
+
+---
+
+This chapter provides a foundation for understanding how generative models are applied to create new chemical matter, with practical examples and discussion of current limitations.

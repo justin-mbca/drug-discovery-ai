@@ -1,0 +1,24 @@
+# Chapter 14: Structure-Based Drug Design
+
+Structure-based drug design (SBDD) leverages 3D structural information of biological targets to guide the discovery and optimization of new therapeutics. This chapter covers the principles, methods, and tools used in SBDD.
+
+## 14.1 Principles of SBDD
+- Importance of protein structure in drug design
+- Key concepts: binding sites, ligand fit, and affinity
+
+## 14.2 Experimental and Computational Methods
+- X-ray crystallography, NMR, cryo-EM
+- Molecular docking and scoring
+
+## 14.3 SBDD Workflow
+- Target selection and structure preparation
+- Virtual screening and hit identification
+- Lead optimization
+
+## 14.4 Challenges and Future Directions
+- Protein flexibility, water networks, and allosteric sites
+- Advances in computational power and AI integration
+
+---
+
+This chapter provides a comprehensive overview of how structural information is used to accelerate drug discovery and improve candidate selection.

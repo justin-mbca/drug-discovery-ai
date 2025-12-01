@@ -389,6 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#target-identification-and-validation" id="toc-target-identification-and-validation" class="nav-link" data-scroll-target="#target-identification-and-validation"><span class="header-section-number">3.6</span> 1.3 Target Identification and Validation</a></li>
   <li><a href="#linking-targets-to-molecules" id="toc-linking-targets-to-molecules" class="nav-link" data-scroll-target="#linking-targets-to-molecules"><span class="header-section-number">3.7</span> 1.4 Linking Targets to Molecules</a></li>
   <li><a href="#case-study-als-gene-to-ligand" id="toc-case-study-als-gene-to-ligand" class="nav-link" data-scroll-target="#case-study-als-gene-to-ligand"><span class="header-section-number">3.8</span> 1.5 Case Study: ALS Gene to Ligand</a></li>
+  <li><a href="#interpretation-of-exported-ligands-for-als-drug-discovery" id="toc-interpretation-of-exported-ligands-for-als-drug-discovery" class="nav-link" data-scroll-target="#interpretation-of-exported-ligands-for-als-drug-discovery"><span class="header-section-number">3.9</span> Interpretation of Exported Ligands for ALS Drug Discovery</a></li>
   </ul>
 </nav>
     </div>
@@ -419,7 +420,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
 <p>This workflow demonstrates how to start from a gene (e.g., SOD1 for ALS), find the corresponding protein (UniProt), retrieve known small-molecule ligands (ChEMBL), and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.</p>
-<hr>
 </section>
 <section id="key-code-snippets" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="key-code-snippets"><span class="header-section-number">3.2</span> Key Code Snippets</h2>
@@ -447,11 +447,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            chem_comp <span class="op">=</span> entity.get(<span class="st">'chem_comp'</span>, {})</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            all_results.append({</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">'pdb_id'</span>: pdb_id,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">'entity_id'</span>: chem_comp.get(<span class="st">'id'</span>, <span class="st">''</span>),</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">'entity_name'</span>: chem_comp.get(<span class="st">'name'</span>, <span class="st">''</span>),</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">'entity_type'</span>: chem_comp.get(<span class="st">'type'</span>, <span class="st">''</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            })</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(all_results).to_csv(<span class="st">'batch_als_pdb_entities.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                <span class="op">---</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                <span class="co">## Interpretation of Exported Ligands for ALS Drug Discovery</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                At the end of this workflow, the notebook exports a <span class="bu">file</span> `ligands_for_docking.csv` containing known ligands <span class="cf">for</span> the selected ALS target (e.g., SOD1). Here <span class="kw">is</span> an example of the exported data:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                <span class="op">|</span> name         <span class="op">|</span> smiles                                                        <span class="op">|</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                <span class="op">|--------------|---------------------------------------------------------------|</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                <span class="op">|</span> CHEMBL273030 <span class="op">|</span> c1ccc2cc3c(NCCc4c[nH]cn4)nnc(NCCc4c[nH]cn4)c3cc2c1           <span class="op">|</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                <span class="op">|</span> CHEMBL272808 <span class="op">|</span> Clc1nnc(NCCc2c[nH]cn2)c2cc3ccccc3cc12                        <span class="op">|</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                <span class="op">|</span> CHEMBL272641 <span class="op">|</span> c1ccc2cc3c(NCCCn4ccnc4)nnc(NCCCn4ccnc4)c3cc2c1               <span class="op">|</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                <span class="op">|</span> CHEMBL405899 <span class="op">|</span> Clc1nnc(NCCCn2ccnc2)c2cc3ccccc3cc12                          <span class="op">|</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                <span class="op">|</span> CHEMBL1672028<span class="op">|</span> c1ccc2cc3c(Nc4cc[nH]n4)nnc(Nc4cc[nH]n4)c3cc2c1               <span class="op">|</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                <span class="op">**</span>How to interpret these results:<span class="op">**</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> These ligands are ChEMBL compounds <span class="cf">with</span> known bioactivity, retrieved <span class="cf">for</span> the ALS target SOD1.</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> Their structures are consistent <span class="cf">with</span> CNS drug<span class="op">-</span>like scaffolds, but further ADMET <span class="kw">and</span> blood<span class="op">-</span>brain barrier predictions are needed <span class="cf">for</span> ALS relevance.</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> These molecules are <span class="kw">not</span> validated ALS drugs, but are reasonable starting points <span class="cf">for</span> hit discovery <span class="kw">and</span> virtual screening.</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> The CSV can be used directly <span class="kw">in</span> docking <span class="kw">or</span> cheminformatics pipelines to prioritize <span class="kw">or</span> design new compounds.</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                <span class="op">**</span>Limitations:<span class="op">**</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> The activity data <span class="kw">is</span> typically <span class="im">from</span> <span class="kw">in</span> vitro assays, <span class="kw">not</span> ALS disease models.</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> Further experimental validation <span class="kw">is</span> required to confirm efficacy <span class="kw">and</span> safety <span class="kw">in</span> ALS.</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                <span class="op">**</span>Summary:<span class="op">**</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                The notebook provides a practical, automated way to go <span class="im">from</span> ALS gene to actionable ligand lists <span class="cf">for</span> computational drug discovery, enabling rapid hypothesis generation <span class="kw">and</span> screening <span class="cf">for</span> ALS research.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                <span class="st">'entity_id'</span>: chem_comp.get(<span class="st">'id'</span>, <span class="st">''</span>),</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                <span class="st">'entity_name'</span>: chem_comp.get(<span class="st">'name'</span>, <span class="st">''</span>),</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                <span class="st">'entity_type'</span>: chem_comp.get(<span class="st">'type'</span>, <span class="st">''</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(all_results).to_csv(<span class="st">'batch_als_pdb_entities.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="find-known-ligands-for-a-target-in-chembl" class="level3" data-number="3.2.3">
 <h3 data-number="3.2.3" class="anchored" data-anchor-id="find-known-ligands-for-a-target-in-chembl"><span class="header-section-number">3.2.3</span> 3. Find Known Ligands for a Target in ChEMBL</h3>
@@ -464,13 +491,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>acts <span class="op">=</span> activity.<span class="bu">filter</span>(target_chembl_id<span class="op">=</span>chembl_id, standard_type<span class="op">=</span><span class="st">'IC50'</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> <span class="bu">list</span>(acts)[:<span class="dv">5</span>]:</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a.get(<span class="st">'molecule_chembl_id'</span>), a.get(<span class="st">'standard_value'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
 </section>
 </section>
 <section id="notebook-link" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="notebook-link"><span class="header-section-number">3.3</span> Notebook Link</h2>
 <p>For the full workflow, see the interactive notebook: <a href="../notebooks/chapter1-genomics-to-molecules.ipynb">chapter1-genomics-to-molecules.ipynb</a></p>
-<hr>
 </section>
 <section id="introduction-to-genomics-in-drug-discovery" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="introduction-to-genomics-in-drug-discovery"><span class="header-section-number">3.4</span> 1.1 Introduction to Genomics in Drug Discovery</h2>
@@ -486,6 +511,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="case-study-als-gene-to-ligand" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="case-study-als-gene-to-ligand"><span class="header-section-number">3.8</span> 1.5 Case Study: ALS Gene to Ligand</h2>
+<hr>
+</section>
+<section id="interpretation-of-exported-ligands-for-als-drug-discovery" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="interpretation-of-exported-ligands-for-als-drug-discovery"><span class="header-section-number">3.9</span> Interpretation of Exported Ligands for ALS Drug Discovery</h2>
+<p>At the end of this workflow, the notebook exports a file <code>ligands_for_docking.csv</code> containing known ligands for the selected ALS target (e.g., SOD1). Here is an example of the exported data:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>name</th>
+<th>smiles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CHEMBL273030</td>
+<td>c1ccc2cc3c(NCCc4c[nH]cn4)nnc(NCCc4c[nH]cn4)c3cc2c1</td>
+</tr>
+<tr class="even">
+<td>CHEMBL272808</td>
+<td>Clc1nnc(NCCc2c[nH]cn2)c2cc3ccccc3cc12</td>
+</tr>
+<tr class="odd">
+<td>CHEMBL272641</td>
+<td>c1ccc2cc3c(NCCCn4ccnc4)nnc(NCCCn4ccnc4)c3cc2c1</td>
+</tr>
+<tr class="even">
+<td>CHEMBL405899</td>
+<td>Clc1nnc(NCCCn2ccnc2)c2cc3ccccc3cc12</td>
+</tr>
+<tr class="odd">
+<td>CHEMBL1672028</td>
+<td>c1ccc2cc3c(Nc4cc[nH]n4)nnc(Nc4cc[nH]n4)c3cc2c1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to interpret these results:</strong></p>
+<ul>
+<li>These ligands are ChEMBL compounds with known bioactivity, retrieved for the ALS target SOD1.</li>
+<li>Their structures are consistent with CNS drug-like scaffolds, but further ADMET and blood-brain barrier predictions are needed for ALS relevance.</li>
+<li>These molecules are not validated ALS drugs, but are reasonable starting points for hit discovery and virtual screening.</li>
+<li>The CSV can be used directly in docking or cheminformatics pipelines to prioritize or design new compounds.</li>
+</ul>
+<p><strong>Limitations:</strong> - The activity data is typically from in vitro assays, not ALS disease models. - Further experimental validation is required to confirm efficacy and safety in ALS.</p>
+<p><strong>Summary:</strong> The notebook provides a practical, automated way to go from ALS gene to actionable ligand lists for computational drug discovery, enabling rapid hypothesis generation and screening for ALS research.</p>
 
 
 </section>
