@@ -1,5 +1,9 @@
 # Drug Discovery AI Assistant
 
+## 📖 Read the Book Online
+
+[AI-Driven Drug Discovery Book (Quarto, GitHub Pages)](https://justin-mbca.github.io/drug-discovery-ai/)
+
 ## 🚀 Project Overview
 An end-to-end, modular AI system for drug discovery, integrating biomedical databases, multi-agent orchestration, and domain-specific LLMs. Designed for automation, extensibility, and real-world research impact.
 
