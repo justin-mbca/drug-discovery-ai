@@ -1,4 +1,3 @@
-
 # Drug Discovery AI Assistant
 
 ## 🚀 Project Overview
@@ -513,4 +512,28 @@ curl "http://127.0.0.1:8000/discovery?query=pancreatic cancer"
 You can then use the suggested targets as queries for the full workflow or design endpoints.
 
 **Note:** When a protein structure is needed and not found locally, the app will automatically download the precomputed 3D structure from the AlphaFold EBI database.
+
+---
+
+## 📊 End-to-End Workflow Notebook: Advanced Analysis
+
+The project includes a comprehensive Jupyter notebook (`notebooks/end_to_end_discovery_workflow.ipynb`) that demonstrates the full drug discovery workflow—from target selection and compound retrieval to property calculation, filtering, and advanced post-processing.
+
+**Newly added advanced analysis steps include:**
+- Chemical space visualization (PCA of molecular fingerprints)
+- Clustering of candidate compounds
+- Preparation of 3D structures for docking (SDF export)
+- Advanced property and ADMET visualizations (e.g., pairplots)
+- Experimental planning (top candidate selection)
+
+**Requirements:**
+- All dependencies are installed automatically if you follow the notebook's installation cell, including `rdkit`, `matplotlib`, `networkx`, `torch`, `torch-geometric`, `pandas`, `numpy`, `scikit-learn`, and `seaborn`.
+
+**Usage:**
+- Open and run the notebook step by step to reproduce the full workflow and explore further analysis options for your candidate compounds.
+- Each section is documented with markdown cells explaining the purpose and requirements.
+
+See the notebook for detailed, reproducible examples and visualizations.
+
+---
 
