@@ -1,8 +1,3 @@
-
----
-title: "Conditional Generation"
-format: html
----
 # Chapter 10: Conditional Generation
 
 Conditional generation enables the design of molecules with specific properties or activities. This chapter covers conditional VAEs, GANs, and reinforcement learning for molecular design.
@@ -22,7 +17,7 @@ Conditional generative models are deep learning architectures that generate new 
 By conditioning the generative process, these models can be steered toward producing molecules with user-specified attributes.
 
 ```{mermaid}
-graph LR
+graph TD;
     A[Input: Molecular Dataset + Property Labels] --> B[Train Conditional Generative Model (cVAE / cGAN)]
     B --> C[Sample Latent Space <br/> with Property Condition]
     C --> D[Generate Candidate Molecules]
@@ -75,7 +70,7 @@ generated_smiles = model.decode(z, property_vector)
 
 **Workflow Diagram:**
 ```{mermaid}
-graph LR
+graph TD;
     A[Train Model] --> B[Specify Target Property]
     B --> C[Sample Latent Vector]
     C --> D[Generate New SMILES]
@@ -120,7 +115,7 @@ for episode in range(num_episodes):
 
 **Workflow Diagram:**
 ```{mermaid}
-flowchart TD
+graph TD;
     A[Initialize Agent] --> B[Generate Molecule Step-by-Step]
     B --> C[Evaluate Reward (Property, Activity)]
     C --> D[Update Policy]
