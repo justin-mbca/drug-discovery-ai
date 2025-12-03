@@ -1,8 +1,59 @@
+
 # Chapter 11: Transformers in Chemistry
 
 Transformers have revolutionized sequence modeling and are now applied to chemistry. This chapter explores transformer architectures for SMILES, reaction prediction, and property modeling.
 
 ## 11.1 Introduction to Transformers
+
+Transformers are deep learning models based on self-attention mechanisms, originally developed for natural language processing (NLP). They excel at modeling long-range dependencies in sequential data and have become the foundation for state-of-the-art models in many domains.
+
+- **Key Features:**
+	- Self-attention allows the model to weigh the importance of different parts of the input sequence.
+	- Highly parallelizable and scalable to large datasets.
+	- Examples: BERT, GPT, T5, and their chemistry adaptations.
+
 ## 11.2 SMILES Transformers
+
+SMILES (Simplified Molecular Input Line Entry System) strings are a common way to represent molecules as sequences. Transformers can be trained on SMILES data for various tasks:
+
+- **SMILES Language Modeling:**
+	- Learn the syntax and structure of valid SMILES strings.
+	- Enable generative tasks such as de novo molecule generation.
+
+- **Pretrained Models:**
+	- ChemBERTa, SMILES-BERT, and other transformer models pretrained on large chemical databases.
+	- Can be fine-tuned for downstream tasks like property prediction or reaction classification.
+
+- **Example (Conceptual):**
+	- Tokenize SMILES strings and train a transformer to predict the next token or reconstruct masked tokens.
+
 ## 11.3 Reaction Prediction
+
+Transformers are used to predict the outcomes of chemical reactions by modeling reactants and products as sequences.
+
+- **Sequence-to-Sequence Models:**
+	- Encode reactant SMILES and decode product SMILES.
+	- Trained on large reaction datasets (e.g., USPTO).
+
+- **Applications:**
+	- Forward reaction prediction: Given reactants, predict products.
+	- Retrosynthesis: Given a product, predict possible reactants.
+
+- **Advantages:**
+	- Capture complex reaction patterns and context.
+	- Outperform traditional rule-based systems in many cases.
+
 ## 11.4 Property Prediction
+
+Transformers can be fine-tuned to predict molecular properties from SMILES or graph representations.
+
+- **Approach:**
+	- Pretrain a transformer on large chemical datasets.
+	- Fine-tune on labeled data for specific properties (e.g., solubility, toxicity, activity).
+
+- **Benefits:**
+	- Leverage transfer learning for improved accuracy with limited labeled data.
+	- Capture subtle structure-property relationships.
+
+- **Example (Conceptual):**
+	- Use a pretrained SMILES transformer to predict logP, binding affinity, or ADMET properties.

@@ -1,7 +1,126 @@
+
 # Chapter 10: Conditional Generation
 
 Conditional generation enables the design of molecules with specific properties or activities. This chapter covers conditional VAEs, GANs, and reinforcement learning for molecular design.
 
 ## 10.1 Conditional Generative Models
+
+Conditional generative models are deep learning architectures that generate new molecules based on input conditions, such as desired properties or biological activities.
+
+	- Extend standard VAEs by incorporating property or activity information into both the encoder and decoder.
+	- Enable sampling of molecules with specific characteristics by conditioning on property vectors.
+	- Example: Generating molecules with a target logP or activity value.
+
+	- GANs with both generator and discriminator conditioned on property information.
+	- Used to generate molecules that satisfy certain constraints or exhibit desired features.
+
+**Key Idea:**
+By conditioning the generative process, these models can be steered toward producing molecules with user-specified attributes.
+
+```{mermaid}
+flowchart TD
+    A[Input: Molecular Dataset + Property Labels] --> B[Train Conditional Generative Model (cVAE/cGAN)]
+    B --> C[Sample Latent Space with Property Condition]
+    C --> D[Generate Molecules with Desired Properties]
+```
+
+**Example: Conditional VAE in PyTorch (Conceptual)**
+```python
+# Assume X: molecular features, y: property labels
+class ConditionalVAE(nn.Module):
+	def __init__(self, ...):
+		# ...
+	def encode(self, x, y):
+		# Concatenate x and y, then encode
+	def decode(self, z, y):
+		# Concatenate z and y, then decode
+	def forward(self, x, y):
+		# ...
+# Training: model(X, y)
+# Generation: sample z, specify y_target, model.decode(z, y_target)
+```
+
+**Further Reading:**
+@cvae_arxiv
+@cgan_arxiv
+
 ## 10.2 Property-Conditioned Generation
+
+Property-conditioned generation refers to the process of designing molecules that meet specific property requirements (e.g., solubility, bioactivity, toxicity).
+
+	- Concatenate property vectors with molecular representations during training and generation.
+	- Use property predictors as part of the loss function to guide the model toward desired outputs.
+
+	- Drug design: Generate compounds with high predicted activity and low toxicity.
+	- Material science: Design molecules with specific physical or chemical properties.
+
+**Example (Conceptual):**
+1. Train a cVAE on a dataset of molecules and their properties.
+2. At generation time, specify a target property value (e.g., logP = 2.5).
+3. Sample from the latent space conditioned on this value to generate new molecules.
+
+**Example: Property-Conditioned SMILES Generation**
+```python
+# Pseudocode for property-conditioned generation
+property_vector = torch.tensor([target_logP, target_activity])
+z = torch.randn(latent_dim)
+generated_smiles = model.decode(z, property_vector)
+```
+
+**Workflow Diagram:**
+```{mermaid}
+flowchart LR
+    A[Train Model on (SMILES, Properties)] --> B[Specify Target Property]
+    B --> C[Sample Latent Vector]
+    C --> D[Generate New SMILES]
+    D --> E[Evaluate Properties]
+```
+
+**Further Reading:**
+@molgan_arxiv
+@property_conditioned_review
+
 ## 10.3 Reinforcement Learning Approaches
+
+Reinforcement learning (RL) can be used to optimize molecular generation toward specific objectives by treating molecule design as a sequential decision process.
+
+	- The model (agent) generates molecules step by step (e.g., adding atoms/bonds or SMILES tokens).
+	- Rewards are given based on how well the generated molecule meets the target property or activity.
+
+	- Can include predicted activity, synthetic accessibility, drug-likeness, or other custom criteria.
+
+	- REINVENT (policy gradient for SMILES generation)
+	- Graph-based RL for molecular graphs
+
+**Example (Conceptual):**
+1. Define a reward function based on the desired property (e.g., high binding affinity).
+2. Use RL to train a generative model to maximize the expected reward.
+3. Sample new molecules that are likely to satisfy the design objectives.
+
+**Example: Reinforcement Learning for SMILES Generation**
+```python
+# Pseudocode for RL-based molecular generation
+for episode in range(num_episodes):
+	state = env.reset()
+	done = False
+	while not done:
+		action = agent.select_action(state)
+		next_state, reward, done, _ = env.step(action)
+		agent.update(state, action, reward, next_state)
+		state = next_state
+# Reward = f(predicted_activity, drug_likeness, etc.)
+```
+
+**Workflow Diagram:**
+```{mermaid}
+flowchart TD
+    A[Initialize Agent] --> B[Generate Molecule Step-by-Step]
+    B --> C[Evaluate Reward (Property, Activity)]
+    C --> D[Update Policy]
+    D --> B
+    C --> E[Output Molecule if Reward High]
+```
+
+**Further Reading:**
+@reinvent
+@deep_rl_drug_design

@@ -1,8 +1,81 @@
+
 # Chapter 3: Cheminformatics Essentials
 
 Cheminformatics is the foundation for representing, searching, and analyzing chemical structures computationally. This chapter covers molecular representations, file formats, and basic cheminformatics operations.
 
 ## 3.1 Molecular Representations (SMILES, InChI)
+
+Molecular representations are ways to describe chemical structures in a form that computers can process.
+
+- **SMILES (Simplified Molecular Input Line Entry System):**
+	- A line notation for describing the structure of chemical species using short ASCII strings.
+	- Example: Ethanol = `CCO`, Benzene = `c1ccccc1`
+	- Widely used for database storage and cheminformatics tools.
+
+- **InChI (International Chemical Identifier):**
+	- A textual identifier for chemical substances, designed to be unique and non-proprietary.
+	- Example: Ethanol = `InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3`
+	- Useful for interoperability and linking chemical information across databases.
+
 ## 3.2 Chemical File Formats
+
+Chemical file formats store molecular structures and related data. Common formats include:
+
+- **SDF (Structure Data File):**
+	- Stores multiple molecules with associated data fields.
+	- Used for compound libraries and virtual screening.
+
+- **MOL/MOL2:**
+	- Encodes 2D/3D structure, atom types, and bond information.
+	- MOL2 supports more detailed atom typing and charges.
+
+- **PDB (Protein Data Bank):**
+	- Used for macromolecules (proteins, nucleic acids) and some small molecules.
+	- Contains 3D coordinates and metadata.
+
+- **CSV/TSV:**
+	- Tabular formats often used to store SMILES or InChI strings with associated data.
+
 ## 3.3 Structure Search and Similarity
+
+Cheminformatics enables searching for molecules by structure and comparing their similarity.
+
+- **Exact Structure Search:**
+	- Finds molecules that are identical to a query structure.
+
+- **Substructure Search:**
+	- Finds molecules containing a specific substructure (e.g., a benzene ring).
+
+- **Similarity Search:**
+	- Finds molecules similar to a query, often using fingerprints and Tanimoto similarity.
+	- Example: RDKit can compute molecular fingerprints and similarity scores.
+
+**Example (Python/RDKit):**
+```python
+from rdkit import Chem
+from rdkit.Chem import DataStructs, AllChem
+
+mol1 = Chem.MolFromSmiles('CCO')
+mol2 = Chem.MolFromSmiles('CCN')
+fp1 = AllChem.GetMorganFingerprintAsBitVect(mol1, 2)
+fp2 = AllChem.GetMorganFingerprintAsBitVect(mol2, 2)
+similarity = DataStructs.TanimotoSimilarity(fp1, fp2)
+print(f"Tanimoto similarity: {similarity:.2f}")
+```
+
 ## 3.4 Cheminformatics Toolkits
+
+Several open-source toolkits provide cheminformatics functionality:
+
+- **RDKit:**
+	- Python/C++ library for molecular manipulation, descriptor calculation, and visualization.
+	- [RDKit Documentation](https://www.rdkit.org/docs/)
+
+- **Open Babel:**
+	- Command-line and Python tools for converting between file formats and basic cheminformatics operations.
+	- [Open Babel](https://openbabel.org/)
+
+- **CDK (Chemistry Development Kit):**
+	- Java library for cheminformatics, used in many bioinformatics tools.
+
+These toolkits support reading/writing file formats, structure search, descriptor calculation, and more.

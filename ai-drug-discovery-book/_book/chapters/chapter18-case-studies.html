@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -372,12 +366,78 @@ ul.task-list li input[type="checkbox"] {
 <p>Real-world case studies demonstrate the application of AI and cheminformatics in drug discovery. This chapter presents selected examples and lessons learned.</p>
 <section id="case-study-1-als-drug-discovery" class="level2" data-number="22.1">
 <h2 data-number="22.1" class="anchored" data-anchor-id="case-study-1-als-drug-discovery"><span class="header-section-number">22.1</span> 18.1 Case Study 1: ALS Drug Discovery</h2>
+<p><strong>Background:</strong> Amyotrophic lateral sclerosis (ALS) is a neurodegenerative disease with limited treatment options. AI-driven approaches have been used to identify new therapeutic candidates.</p>
+<ul>
+<li><strong>Data Collection:</strong>
+<ul>
+<li>Integrated omics data, literature mining, and known ALS-related targets.</li>
+<li>Used cheminformatics to curate compound libraries for screening.</li>
+</ul></li>
+<li><strong>Virtual Screening:</strong>
+<ul>
+<li>Applied machine learning models to predict neuroprotective activity.</li>
+<li>Used molecular docking to prioritize compounds for SOD1 and TDP-43 protein targets.</li>
+</ul></li>
+<li><strong>Experimental Validation:</strong>
+<ul>
+<li>Top candidates were tested in cell-based assays for neuroprotection.</li>
+</ul></li>
+<li><strong>Outcome:</strong>
+<ul>
+<li>Identified several promising compounds for further development.</li>
+</ul></li>
+</ul>
 </section>
 <section id="case-study-2-kinase-inhibitors" class="level2" data-number="22.2">
 <h2 data-number="22.2" class="anchored" data-anchor-id="case-study-2-kinase-inhibitors"><span class="header-section-number">22.2</span> 18.2 Case Study 2: Kinase Inhibitors</h2>
+<p><strong>Background:</strong> Kinases are important drug targets in cancer and other diseases. AI and cheminformatics have accelerated the discovery of selective kinase inhibitors.</p>
+<ul>
+<li><strong>Data Integration:</strong>
+<ul>
+<li>Combined chemical structure data, kinase activity profiles, and protein-ligand interaction data.</li>
+</ul></li>
+<li><strong>QSAR Modeling:</strong>
+<ul>
+<li>Built machine learning models to predict kinase inhibition based on molecular fingerprints and descriptors.</li>
+</ul></li>
+<li><strong>Structure-Based Design:</strong>
+<ul>
+<li>Used docking and molecular dynamics to optimize binding affinity and selectivity.</li>
+</ul></li>
+<li><strong>Lead Optimization:</strong>
+<ul>
+<li>Applied multi-parameter optimization to balance potency, selectivity, and ADMET properties.</li>
+</ul></li>
+<li><strong>Outcome:</strong>
+<ul>
+<li>Accelerated identification of novel kinase inhibitors with improved profiles.</li>
+</ul></li>
+</ul>
 </section>
 <section id="lessons-learned" class="level2" data-number="22.3">
 <h2 data-number="22.3" class="anchored" data-anchor-id="lessons-learned"><span class="header-section-number">22.3</span> 18.3 Lessons Learned</h2>
+<ul>
+<li><strong>Data Quality Matters:</strong>
+<ul>
+<li>High-quality, well-curated data is essential for successful AI-driven drug discovery.</li>
+</ul></li>
+<li><strong>Integration is Key:</strong>
+<ul>
+<li>Combining multiple data types and methods yields better results than using a single approach.</li>
+</ul></li>
+<li><strong>Iterative Process:</strong>
+<ul>
+<li>Drug discovery is iterative—models and hypotheses should be refined as new data becomes available.</li>
+</ul></li>
+<li><strong>Collaboration:</strong>
+<ul>
+<li>Success often requires collaboration between computational scientists, chemists, and biologists.</li>
+</ul></li>
+<li><strong>Limitations:</strong>
+<ul>
+<li>AI models are only as good as their training data and may not generalize to novel targets or chemotypes.</li>
+</ul></li>
+</ul>
 
 
 </section>

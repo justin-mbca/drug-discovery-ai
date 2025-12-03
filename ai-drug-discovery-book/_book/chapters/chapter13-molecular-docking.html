@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -373,15 +367,82 @@ ul.task-list li input[type="checkbox"] {
 <p>Molecular docking predicts how small molecules bind to protein targets. This chapter introduces docking theory, software, and practical workflows for virtual screening.</p>
 <section id="docking-theory" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="docking-theory"><span class="header-section-number">17.1</span> 13.1 Docking Theory</h2>
+<p>Docking is a computational technique that predicts the preferred orientation of a small molecule (ligand) when bound to a protein (receptor). The goal is to estimate binding affinity and identify potential drug candidates.</p>
+<ul>
+<li><strong>Key Concepts:</strong>
+<ul>
+<li><strong>Search Algorithm:</strong> Explores possible ligand conformations and orientations in the binding site.</li>
+<li><strong>Scoring Function:</strong> Estimates the strength of the interaction (binding affinity) between ligand and protein.</li>
+<li><strong>Rigid vs.&nbsp;Flexible Docking:</strong> Rigid docking keeps the protein and ligand fixed; flexible docking allows movement in the ligand and/or protein.</li>
+</ul></li>
+</ul>
 </section>
 <section id="docking-software-autodock-vina" class="level2" data-number="17.2">
 <h2 data-number="17.2" class="anchored" data-anchor-id="docking-software-autodock-vina"><span class="header-section-number">17.2</span> 13.2 Docking Software (AutoDock, Vina)</h2>
+<p>Several software packages are widely used for molecular docking:</p>
+<ul>
+<li><strong>AutoDock:</strong>
+<ul>
+<li>One of the most popular open-source docking tools.</li>
+<li>Uses Lamarckian genetic algorithm for conformational search.</li>
+<li>Supports flexible ligand and some flexible side-chain docking.</li>
+</ul></li>
+<li><strong>AutoDock Vina:</strong>
+<ul>
+<li>Improved version of AutoDock with faster performance and better scoring.</li>
+<li>User-friendly and widely adopted for virtual screening.</li>
+</ul></li>
+<li><strong>Other Tools:</strong>
+<ul>
+<li>DOCK, GOLD, Glide, and others are also used in academia and industry.</li>
+</ul></li>
+</ul>
 </section>
 <section id="preparing-structures-for-docking" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="preparing-structures-for-docking"><span class="header-section-number">17.3</span> 13.3 Preparing Structures for Docking</h2>
+<p>Proper preparation of protein and ligand structures is critical for successful docking:</p>
+<ul>
+<li><strong>Protein Preparation:</strong>
+<ul>
+<li>Remove water molecules and irrelevant ligands.</li>
+<li>Add missing atoms and assign correct protonation states.</li>
+<li>Define the binding site (e.g., using known ligand or cavity detection).</li>
+</ul></li>
+<li><strong>Ligand Preparation:</strong>
+<ul>
+<li>Generate 3D conformations.</li>
+<li>Assign correct protonation and tautomeric states.</li>
+<li>Minimize energy to relieve strain.</li>
+</ul></li>
+<li><strong>File Formats:</strong>
+<ul>
+<li>PDBQT (AutoDock/Vina), MOL2, SDF, PDB.</li>
+</ul></li>
+</ul>
 </section>
 <section id="analyzing-docking-results" class="level2" data-number="17.4">
 <h2 data-number="17.4" class="anchored" data-anchor-id="analyzing-docking-results"><span class="header-section-number">17.4</span> 13.4 Analyzing Docking Results</h2>
+<p>After docking, results must be analyzed to identify promising candidates:</p>
+<ul>
+<li><strong>Scoring and Ranking:</strong>
+<ul>
+<li>Docking software provides binding affinity scores for each pose.</li>
+<li>Rank compounds based on scores, but consider limitations of scoring functions.</li>
+</ul></li>
+<li><strong>Visual Inspection:</strong>
+<ul>
+<li>Use molecular visualization tools (e.g., PyMOL, Chimera) to examine binding modes.</li>
+<li>Check for key interactions (hydrogen bonds, hydrophobic contacts) and fit in the binding site.</li>
+</ul></li>
+<li><strong>Post-Processing:</strong>
+<ul>
+<li>Cluster similar poses, filter by interaction criteria, and consider rescoring with more accurate methods if needed.</li>
+</ul></li>
+<li><strong>Experimental Validation:</strong>
+<ul>
+<li>Top candidates should be validated experimentally for biological activity.</li>
+</ul></li>
+</ul>
 
 
 </section>

@@ -1,7 +1,61 @@
+
 # Chapter 19: External Tools
 
 This chapter reviews external tools and databases commonly used in computational drug discovery, including RCSB PDB, ChEMBL, and PubChem.
 
 ## 19.1 Structural Databases
+
+Structural databases provide 3D structures of proteins, nucleic acids, and complexes, which are essential for structure-based drug design.
+
+- **RCSB Protein Data Bank (PDB):**
+	- The primary repository for experimentally determined 3D structures of biological macromolecules.
+	- [rcsb.org](https://www.rcsb.org/)
+	- Structures are available in PDB and mmCIF formats.
+
+- **AlphaFold Protein Structure Database:**
+	- Provides predicted protein structures using deep learning.
+	- [alphafold.ebi.ac.uk](https://alphafold.ebi.ac.uk/)
+
+- **Other Databases:**
+	- PDB-REDO (refined structures), CATH/SCOP (structure classification).
+
 ## 19.2 Bioactivity Databases
+
+Bioactivity databases contain information on small molecules, their biological activities, and targets.
+
+- **ChEMBL:**
+	- A large, open-access database of bioactive molecules with drug-like properties.
+	- Includes activity data (IC50, Ki, etc.), targets, and assay information.
+	- [ebi.ac.uk/chembl](https://www.ebi.ac.uk/chembl/)
+
+- **PubChem:**
+	- Comprehensive resource for chemical structures, properties, and biological activities.
+	- Includes compound, substance, and bioassay databases.
+	- [pubchem.ncbi.nlm.nih.gov](https://pubchem.ncbi.nlm.nih.gov/)
+
+- **BindingDB:**
+	- Focuses on binding affinities for protein-ligand complexes.
+	- [bindingdb.org](https://www.bindingdb.org/)
+
 ## 19.3 Workflow Automation Tools
+
+Workflow automation tools streamline computational drug discovery by integrating multiple steps and tools into reproducible pipelines.
+
+- **KNIME:**
+	- Open-source platform for data analytics and workflow automation.
+	- Widely used for cheminformatics, bioinformatics, and machine learning workflows.
+	- [knime.com](https://www.knime.com/)
+
+- **Pipeline Pilot:**
+	- Commercial workflow automation tool for scientific data processing.
+	- Supports cheminformatics, bioinformatics, and analytics.
+
+- **Galaxy:**
+	- Web-based platform for accessible, reproducible, and transparent computational research.
+	- [usegalaxy.org](https://usegalaxy.org/)
+
+- **Snakemake/Nextflow:**
+	- Workflow management systems for scalable and reproducible data analysis pipelines.
+
+- **Integration with Scripting:**
+	- Python, R, and shell scripts are often used to glue together custom workflows.

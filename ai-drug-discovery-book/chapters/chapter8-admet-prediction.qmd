@@ -39,7 +39,39 @@ For a full workflow, see the interactive notebook: (notebook not available for t
 
 ---
 
+
 ## 8.1 Introduction to ADMET
+ADMET stands for Absorption, Distribution, Metabolism, Excretion, and Toxicity. These properties determine whether a compound is likely to become a safe and effective drug. Poor ADMET characteristics are a major cause of drug candidate failure in clinical trials.
+
+- **Absorption:** How well a drug is taken up into the bloodstream.
+- **Distribution:** How the drug spreads through the body and tissues.
+- **Metabolism:** How the drug is broken down, often by liver enzymes.
+- **Excretion:** How the drug and its metabolites are eliminated.
+- **Toxicity:** Potential for harmful effects.
+
 ## 8.2 Data and Descriptors
+ADMET prediction relies on curated datasets and molecular descriptors that capture relevant chemical and biological properties.
+- **Data sources:**
+	- Public databases: ADMETlab, Tox21, ChEMBL, PubChem.
+	- In-house experimental data.
+- **Descriptors:**
+	- Physicochemical: MW, logP, TPSA, H-bond donors/acceptors.
+	- Structural: molecular fingerprints, substructure counts.
+	- Biological: predicted or measured interactions with enzymes (e.g., CYP450).
+- **Data curation:**
+	- Standardize SMILES, remove duplicates, handle missing values, and balance classes.
+
 ## 8.3 ML Models for ADMET
+Machine learning models are widely used for ADMET property prediction.
+- **Classification models:** Predict binary outcomes (e.g., toxic vs. non-toxic, BBB permeable vs. not).
+- **Regression models:** Predict continuous values (e.g., logD, clearance rate).
+- **Popular algorithms:** Random forests, support vector machines, neural networks, deep learning (e.g., graph neural networks).
+- **Model selection:** Depends on property, data size, and interpretability needs.
+- **Multi-task learning:** Some models predict multiple ADMET endpoints simultaneously.
+
 ## 8.4 Interpreting ADMET Predictions
+Interpreting model predictions is crucial for decision-making in drug discovery.
+- **Performance metrics:** Accuracy, ROC-AUC, precision, recall, RMSE, etc.
+- **Feature importance:** Identify which descriptors most influence predictions (e.g., SHAP values, permutation importance).
+- **Applicability domain:** Assess whether a compound is within the model’s reliable prediction space.
+- **Experimental validation:** Always confirm computational predictions with laboratory assays when possible.

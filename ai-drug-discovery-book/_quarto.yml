@@ -21,7 +21,6 @@ book:
         - chapters/chapter5-molecular-properties.qmd
     - part: "Part II: Machine Learning for Molecules"
       chapters:
-        - part2-machine-learning.qmd
         - chapters/chapter6-graph-neural-networks.qmd
         - chapters/chapter7-bioactivity-prediction.qmd
         - chapters/chapter8-admet-prediction.qmd

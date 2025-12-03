@@ -38,7 +38,48 @@ For a full workflow, see the interactive notebook: (notebook not available for t
 
 ---
 
+
 ## 9.1 Generative Models Overview
+Generative models are machine learning models that can create new data samples similar to those in the training set. In drug discovery, they are used to design novel molecules with desired properties.
+- **Types:**
+	- Variational Autoencoders (VAEs)
+	- Generative Adversarial Networks (GANs)
+	- Recurrent Neural Networks (RNNs)
+	- Diffusion models
+- **Applications:**
+	- De novo drug design
+	- Scaffold hopping
+	- Library expansion
+
 ## 9.2 SMILES-Based Generation
+SMILES-based generative models treat molecules as sequences of characters (SMILES strings).
+- **Approaches:**
+	- RNNs, LSTMs, and Transformers trained to generate valid SMILES.
+	- VAEs and GANs adapted for sequence data.
+- **Advantages:**
+	- Leverage large SMILES datasets.
+	- Simple to implement and evaluate.
+- **Limitations:**
+	- May generate invalid or syntactically incorrect SMILES.
+	- Hard to enforce chemical constraints.
+
 ## 9.3 Graph-Based Generation
+Graph-based models generate molecules as graphs, with atoms as nodes and bonds as edges.
+- **Approaches:**
+	- Graph VAEs, Graph GANs, autoregressive graph models.
+	- Directly model chemical structure and constraints.
+- **Advantages:**
+	- Better chemical validity and diversity.
+	- Can encode domain knowledge (e.g., valence rules).
+- **Limitations:**
+	- More complex architectures and training.
+
 ## 9.4 Evaluating Generated Molecules
+Evaluating generative models requires assessing both the quality and utility of generated molecules.
+- **Metrics:**
+	- Validity: Fraction of chemically valid molecules.
+	- Uniqueness: Fraction of unique molecules generated.
+	- Novelty: Fraction not present in the training set.
+	- Property distribution: Compare properties (e.g., MW, logP) to real molecules.
+- **Practical evaluation:**
+	- Visual inspection, property prediction, and virtual screening of generated compounds.

@@ -1,7 +1,41 @@
 
 # Chapter 1: Genomics to Molecules
 
+
 This chapter introduces the journey from genomics data to actionable molecular targets in drug discovery. It covers how genetic information is translated into protein targets and how these are linked to small molecules for therapeutic intervention.
+
+---
+
+
+
+## Workflow Overview
+The following diagram illustrates the overall process from genomics data to actionable molecules in drug discovery:
+
+```{mermaid}
+graph TD;
+	classDef light fill:#f9f9f9,stroke:#333,stroke-width:1px;
+	Main[main.py]:::light
+	Crew[agents/multi_agent.py]:::light
+	PubMedTool[tools/pubmed.py]:::light
+	PubChemTool[tools/pubchem.py]:::light
+	DB[db/mongodb.py]:::light
+	DataRaw[data/raw/]:::light
+	DataProcessed[data/processed/]:::light
+	UtilsNode[app/utils/]:::light
+
+	Main --> Crew
+	Crew --> PubMedTool
+	Crew --> PubChemTool
+	PubMedTool -->|fetches| DataRaw
+	PubChemTool -->|fetches| DataRaw
+	Crew --> DB
+	Main --> UtilsNode
+	Crew --> UtilsNode
+	Main -->|returns| Main
+```
+
+---
+
 
 ---
 
@@ -10,7 +44,14 @@ This chapter introduces the journey from genomics data to actionable molecular t
 This workflow demonstrates how to start from a gene (e.g., SOD1 for ALS), find the corresponding protein (UniProt), retrieve known small-molecule ligands (ChEMBL), and analyze their molecular properties. This bridges genomics and cheminformatics, enabling rational drug discovery starting from genetic information.
 
 
+
 ## Key Code Snippets
+## Further Reading
+
+@opentargets
+@uniprot
+@chembl
+@pdb
 
 ### 1. Retrieve ALS Target Genes from Open Targets
 ```python
@@ -90,11 +131,27 @@ for a in list(acts)[:5]:
 For the full workflow, see the interactive notebook: [chapter1-genomics-to-molecules.ipynb](../notebooks/chapter1-genomics-to-molecules.ipynb)
 
 
+
 ## 1.1 Introduction to Genomics in Drug Discovery
+Genomics provides the foundation for modern drug discovery by identifying genes associated with diseases. Advances in sequencing technologies and bioinformatics enable researchers to pinpoint genetic variants and pathways involved in disease mechanisms, offering new opportunities for therapeutic intervention.
+
 ## 1.2 From Genes to Proteins
+Genes encode proteins, which are the functional molecules in cells. Understanding how genetic information is translated into protein structure and function is crucial for identifying druggable targets. Databases like UniProt provide comprehensive information on protein sequences, structures, and functions.
+
 ## 1.3 Target Identification and Validation
+Target identification involves linking disease-associated genes to specific proteins that can be modulated by drugs. Validation ensures that modulating the target will have a therapeutic effect. This process uses data from genomics, proteomics, and functional studies, and often leverages resources like Open Targets and experimental validation.
+
 ## 1.4 Linking Targets to Molecules
+Once a target protein is identified and validated, the next step is to find small molecules that interact with it. This involves searching bioactivity databases (e.g., ChEMBL) for known ligands, using structure-based methods to identify binding sites, and applying cheminformatics tools to analyze and prioritize compounds.
+
 ## 1.5 Case Study: ALS Gene to Ligand
+Amyotrophic lateral sclerosis (ALS) is a neurodegenerative disease with several known genetic risk factors, such as mutations in the SOD1 gene. In this case study, we:
+- Identify ALS-associated genes using Open Targets.
+- Retrieve the corresponding protein (e.g., SOD1) from UniProt.
+- Find known ligands for SOD1 in ChEMBL.
+- Analyze ligand properties and prepare them for virtual screening or further optimization.
+
+This workflow demonstrates how to bridge genomics and cheminformatics for rational drug discovery, starting from a disease gene and ending with actionable small molecules.
 
 ---
 

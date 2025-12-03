@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -373,15 +367,94 @@ ul.task-list li input[type="checkbox"] {
 <p>Retrosynthesis planning is essential for proposing synthetic routes to molecules. This chapter covers rule-based and AI-driven retrosynthesis tools and strategies.</p>
 <section id="introduction-to-retrosynthesis" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="introduction-to-retrosynthesis"><span class="header-section-number">19.1</span> 15.1 Introduction to Retrosynthesis</h2>
+<p>Retrosynthesis is the process of deconstructing a target molecule into simpler precursor structures, working backward from the product to available starting materials. It is a key strategy in organic synthesis and drug development.</p>
+<ul>
+<li><strong>Key Concepts:</strong>
+<ul>
+<li>Identify strategic bonds to break (disconnections).</li>
+<li>Propose sequences of reactions to build the target molecule from simpler compounds.</li>
+<li>Use chemical knowledge, reaction databases, and computational tools.</li>
+</ul></li>
+</ul>
 </section>
 <section id="rule-based-approaches" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="rule-based-approaches"><span class="header-section-number">19.2</span> 15.2 Rule-Based Approaches</h2>
+<p>Rule-based retrosynthesis uses encoded chemical rules and reaction templates to suggest possible disconnections and synthetic routes.</p>
+<ul>
+<li><strong>How It Works:</strong>
+<ul>
+<li>Reaction rules are derived from known chemical transformations.</li>
+<li>The system applies these rules recursively to break down the target molecule.</li>
+</ul></li>
+<li><strong>Popular Tools:</strong>
+<ul>
+<li><strong>LHASA:</strong> One of the earliest expert systems for retrosynthesis.</li>
+<li><strong>Chematica (Synthia):</strong> Commercial platform with a large rule database.</li>
+<li><strong>RDKit:</strong> Open-source cheminformatics toolkit with basic retrosynthesis capabilities.</li>
+</ul></li>
+<li><strong>Advantages:</strong>
+<ul>
+<li>Transparent and interpretable routes.</li>
+<li>Leverages established chemical knowledge.</li>
+</ul></li>
+<li><strong>Limitations:</strong>
+<ul>
+<li>Limited by the coverage of encoded rules.</li>
+<li>May miss novel or unconventional pathways.</li>
+</ul></li>
+</ul>
 </section>
 <section id="ai-driven-retrosynthesis" class="level2" data-number="19.3">
 <h2 data-number="19.3" class="anchored" data-anchor-id="ai-driven-retrosynthesis"><span class="header-section-number">19.3</span> 15.3 AI-Driven Retrosynthesis</h2>
+<p>AI-driven retrosynthesis uses machine learning and deep learning to predict synthetic routes, often learning directly from reaction databases.</p>
+<ul>
+<li><strong>Template-Based Models:</strong>
+<ul>
+<li>Use reaction templates extracted from data, similar to rule-based systems but with automated extraction and ranking.</li>
+</ul></li>
+<li><strong>Template-Free Models:</strong>
+<ul>
+<li>Sequence-to-sequence (seq2seq) models treat retrosynthesis as a translation problem (product to reactants).</li>
+<li>Graph neural networks (GNNs) model molecular graphs for reaction prediction.</li>
+</ul></li>
+<li><strong>Popular AI Tools:</strong>
+<ul>
+<li><strong>ASKCOS:</strong> Open-source platform using neural networks for retrosynthesis.</li>
+<li><strong>IBM RXN:</strong> Cloud-based AI retrosynthesis tool.</li>
+<li><strong>AiZynthFinder:</strong> Open-source tool for automated retrosynthetic planning.</li>
+</ul></li>
+<li><strong>Advantages:</strong>
+<ul>
+<li>Can generalize to novel reactions and pathways.</li>
+<li>Continuously improve with more data.</li>
+</ul></li>
+<li><strong>Limitations:</strong>
+<ul>
+<li>May generate less interpretable routes.</li>
+<li>Dependent on quality and diversity of training data.</li>
+</ul></li>
+</ul>
 </section>
 <section id="evaluating-synthetic-routes" class="level2" data-number="19.4">
 <h2 data-number="19.4" class="anchored" data-anchor-id="evaluating-synthetic-routes"><span class="header-section-number">19.4</span> 15.4 Evaluating Synthetic Routes</h2>
+<p>Evaluating proposed synthetic routes is crucial for practical application:</p>
+<ul>
+<li><strong>Criteria:</strong>
+<ul>
+<li>Number of steps (shorter is often better).</li>
+<li>Availability and cost of starting materials.</li>
+<li>Feasibility and reliability of each reaction step.</li>
+<li>Overall yield and scalability.</li>
+</ul></li>
+<li><strong>Scoring and Ranking:</strong>
+<ul>
+<li>Many tools provide scores based on route length, confidence, or synthetic accessibility.</li>
+</ul></li>
+<li><strong>Experimental Validation:</strong>
+<ul>
+<li>Ultimately, routes must be tested in the lab to confirm feasibility.</li>
+</ul></li>
+</ul>
 
 
 </section>

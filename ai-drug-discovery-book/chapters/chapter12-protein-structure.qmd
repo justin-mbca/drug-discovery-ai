@@ -1,8 +1,74 @@
+
 # Chapter 12: Protein Structure
 
 Understanding protein structure is key to structure-based drug design. This chapter covers protein structure basics, experimental methods, and computational prediction (e.g., AlphaFold).
 
 ## 12.1 Protein Structure Levels
+
+Proteins have a hierarchical structure, each level contributing to their function:
+
+- **Primary Structure:**
+	- Linear sequence of amino acids in a polypeptide chain.
+	- Determines all higher levels of structure.
+
+- **Secondary Structure:**
+	- Local folding patterns stabilized by hydrogen bonds.
+	- Common motifs: α-helices and β-sheets.
+
+- **Tertiary Structure:**
+	- 3D arrangement of a single polypeptide chain, including side-chain interactions.
+	- Stabilized by hydrophobic interactions, disulfide bonds, and ionic interactions.
+
+- **Quaternary Structure:**
+	- Assembly of multiple polypeptide chains (subunits) into a functional protein complex.
+
 ## 12.2 Experimental Determination
+
+Experimental methods for determining protein structures include:
+
+- **X-ray Crystallography:**
+	- Most common method for high-resolution structures.
+	- Requires crystallization of the protein.
+
+- **Nuclear Magnetic Resonance (NMR) Spectroscopy:**
+	- Used for small to medium-sized proteins in solution.
+	- Provides information on protein dynamics.
+
+- **Cryo-Electron Microscopy (Cryo-EM):**
+	- Suitable for large complexes and membrane proteins.
+	- Does not require crystallization; recent advances have improved resolution.
+
 ## 12.3 Structure Prediction Tools
+
+Computational tools can predict protein structures when experimental data is unavailable:
+
+- **Homology Modeling:**
+	- Builds models based on similarity to known structures (templates).
+	- Tools: SWISS-MODEL, MODELLER.
+
+- **Ab Initio Prediction:**
+	- Predicts structure from sequence alone, without templates.
+	- Computationally intensive; used for small proteins.
+
+- **AlphaFold:**
+	- Deep learning-based tool from DeepMind.
+	- Achieves near-experimental accuracy for many proteins.
+	- [AlphaFold Protein Structure Database](https://alphafold.ebi.ac.uk/)
+
 ## 12.4 Protein-Ligand Interactions
+
+Understanding how proteins interact with small molecules (ligands) is crucial for drug design:
+
+- **Binding Sites:**
+	- Specific regions on the protein where ligands bind.
+	- Often located in pockets or grooves on the protein surface.
+
+- **Interaction Types:**
+	- Hydrogen bonds, hydrophobic interactions, ionic bonds, van der Waals forces.
+
+- **Docking and Scoring:**
+	- Computational docking predicts how ligands fit into binding sites.
+	- Scoring functions estimate binding affinity.
+
+- **Applications:**
+	- Lead discovery, optimization, and understanding mechanism of action.

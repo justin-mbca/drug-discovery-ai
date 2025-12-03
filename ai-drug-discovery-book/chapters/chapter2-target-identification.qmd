@@ -114,8 +114,8 @@ pip install transformers biopython
 AI-powered literature mining accelerates target identification, but careful validation and prioritization are essential for success in drug discovery.
 
 ## Further Reading
-- Lee et al., "BioBERT: a pre-trained biomedical language representation model for biomedical text mining" (Bioinformatics, 2020)
-- UniProt: https://www.uniprot.org/
-- Open Targets: https://www.opentargets.org/
+@lee2020biobert
+@uniprot
+@opentargets
 
 [View the notebook on GitHub](https://github.com/justin-mbca/drug-discovery-ai/blob/main/ai-drug-discovery-book/notebooks/chapter2-target-identification.ipynb)

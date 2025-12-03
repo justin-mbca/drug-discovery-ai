@@ -121,9 +121,9 @@ pip install rdkit-pypi pandas matplotlib
 Mastering cheminformatics tools like RDKit is essential for modern drug discovery, enabling efficient analysis and filtering of chemical libraries.
 
 ## Further Reading
-- Landrum, G. "RDKit: Open-source cheminformatics" (https://www.rdkit.org/)
-- Lipinski, C.A. et al., "Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings" (Adv Drug Deliv Rev, 2001)
-- ChEMBL: https://www.ebi.ac.uk/chembl/
+@landrum_rdkit
+@lipinski2001
+@chembl
 
 ---
 

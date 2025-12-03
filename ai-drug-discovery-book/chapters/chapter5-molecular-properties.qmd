@@ -1,8 +1,79 @@
+
 # Chapter 5: Molecular Properties
 
 This chapter explores key physicochemical properties of molecules (e.g., logP, MW, H-bond donors/acceptors) and their importance in drug design and ADMET prediction.
 
 ## 5.1 Physicochemical Descriptors
+
+Physicochemical descriptors are numerical values that capture important chemical and physical properties of molecules. These descriptors are crucial for understanding drug-likeness, solubility, permeability, and ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties.
+
+- **Common Descriptors:**
+	- **Molecular Weight (MW):** Total mass of a molecule.
+	- **LogP:** Partition coefficient between octanol and water, indicating hydrophobicity.
+	- **Hydrogen Bond Donors (HBD):** Number of hydrogen atoms attached to electronegative atoms (e.g., N-H, O-H).
+	- **Hydrogen Bond Acceptors (HBA):** Number of electronegative atoms with lone pairs (e.g., N, O).
+	- **Topological Polar Surface Area (TPSA):** Surface area contributed by polar atoms, related to absorption and permeability.
+
 ## 5.2 Calculating Properties with RDKit
+
+RDKit is a popular cheminformatics toolkit for calculating molecular properties in Python.
+
+**Example (Python/RDKit):**
+```python
+from rdkit import Chem
+from rdkit.Chem import Descriptors
+
+smiles = 'CCO'  # Ethanol
+mol = Chem.MolFromSmiles(smiles)
+mw = Descriptors.MolWt(mol)
+logp = Descriptors.MolLogP(mol)
+hbd = Descriptors.NumHDonors(mol)
+hba = Descriptors.NumHAcceptors(mol)
+tpsa = Descriptors.TPSA(mol)
+
+print(f"MW: {mw:.2f}, LogP: {logp:.2f}, HBD: {hbd}, HBA: {hba}, TPSA: {tpsa:.2f}")
+```
+
 ## 5.3 Lipinski’s Rule of Five
+
+Lipinski’s Rule of Five is a set of guidelines to evaluate drug-likeness and oral bioavailability:
+
+- **Rules:**
+	- MW ≤ 500 Da
+	- LogP ≤ 5
+	- HBD ≤ 5
+	- HBA ≤ 10
+
+Compounds that violate more than one rule are less likely to be orally active drugs.
+
+**Application:**
+Use these rules to filter compound libraries for drug discovery projects.
+
 ## 5.4 Property-Based Filtering
+
+Property-based filtering is used to select compounds with desirable physicochemical properties for further study.
+
+- **Filtering Strategies:**
+	- Remove compounds with poor solubility or permeability.
+	- Apply Lipinski’s rules and other property thresholds (e.g., TPSA, rotatable bonds).
+
+- **Example (Python/RDKit):**
+```python
+from rdkit import Chem
+from rdkit.Chem import Descriptors
+
+def passes_lipinski(mol):
+		mw = Descriptors.MolWt(mol)
+		logp = Descriptors.MolLogP(mol)
+		hbd = Descriptors.NumHDonors(mol)
+		hba = Descriptors.NumHAcceptors(mol)
+		return (mw <= 500 and logp <= 5 and hbd <= 5 and hba <= 10)
+
+smiles_list = ['CCO', 'CCN(CC)CC', 'CCCCCCCCCCCCCCCC(=O)O']
+for smi in smiles_list:
+		mol = Chem.MolFromSmiles(smi)
+		if passes_lipinski(mol):
+				print(f"{smi} passes Lipinski's rules")
+		else:
+				print(f"{smi} fails Lipinski's rules")
+```

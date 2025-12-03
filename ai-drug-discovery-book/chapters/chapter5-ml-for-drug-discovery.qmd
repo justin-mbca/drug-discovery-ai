@@ -121,8 +121,8 @@ pip install scikit-learn rdkit-pypi pandas
 ```
 
 ## Further Reading
-- Chen, H. et al., "The rise of deep learning in drug discovery" (Drug Discov Today, 2018)
-- scikit-learn documentation: https://scikit-learn.org/
+@chen2018
+@scikit-learn
 
 ---
 

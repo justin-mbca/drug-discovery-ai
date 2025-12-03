@@ -40,7 +40,32 @@ For a full workflow, see the interactive notebook: (notebook not available for t
 
 ---
 
+
 ## 7.1 Bioactivity Data Sources
+Bioactivity data links chemical structures to their effects on biological targets. Key public sources include:
+- **ChEMBL:** Large database of bioactive molecules with activity data (IC50, Ki, etc.) and assay details.
+- **PubChem BioAssay:** Repository of biological assay results for small molecules.
+- **BindingDB:** Focuses on binding affinities for protein-ligand complexes.
+- **Other sources:** In-house screening data, literature mining, and collaborative consortia.
+
 ## 7.2 Feature Engineering for Bioactivity
+Feature engineering transforms raw molecular data into numerical representations suitable for machine learning.
+- **Molecular fingerprints:** ECFP (Morgan), MACCS, topological fingerprints.
+- **Descriptors:** Physicochemical properties (e.g., MW, logP, H-bond donors/acceptors, TPSA).
+- **Target features:** Protein sequence descriptors, structural features, or target class labels.
+- **Data preprocessing:** Standardize SMILES, remove duplicates, handle missing values, and balance classes.
+
 ## 7.3 ML Models for Activity Prediction
+Various machine learning models are used to predict bioactivity:
+- **Random Forests:** Robust to noisy data, handle high-dimensional features well.
+- **Support Vector Machines (SVM):** Effective for binary classification with clear margins.
+- **Neural Networks:** Capture complex, non-linear relationships; can be used for regression or classification.
+- **Deep Learning:** Graph neural networks (GNNs), convolutional networks for molecular graphs or SMILES.
+- **Model selection:** Depends on data size, feature type, and interpretability needs.
+
 ## 7.4 Model Evaluation and Validation
+Evaluating model performance is critical for reliable predictions.
+- **Metrics:** Accuracy, ROC-AUC, precision, recall, F1-score for classification; RMSE, R2 for regression.
+- **Cross-validation:** Use k-fold or stratified cross-validation to assess generalizability.
+- **External validation:** Test on independent datasets or prospective experiments.
+- **Interpretability:** Analyze feature importance, SHAP values, or model explanations to understand predictions.

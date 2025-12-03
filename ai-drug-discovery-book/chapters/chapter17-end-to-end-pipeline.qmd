@@ -1,8 +1,68 @@
+
 # Chapter 17: End-to-End Pipeline
 
 This chapter presents a complete AI-driven drug discovery pipeline, from data collection to candidate prioritization, integrating methods from previous chapters.
 
 ## 17.1 Pipeline Overview
+
+An end-to-end AI-driven drug discovery pipeline integrates cheminformatics, machine learning, and structure-based methods to accelerate the identification of promising drug candidates.
+
+- **Key Stages:**
+	1. Data collection and curation
+	2. Feature extraction and data preprocessing
+	3. Model training and validation
+	4. Virtual screening and candidate prioritization
+
 ## 17.2 Data Preparation
+
+High-quality data is the foundation of any successful pipeline.
+
+- **Data Sources:**
+	- Public databases (e.g., ChEMBL, PubChem, PDB)
+	- In-house experimental data
+
+- **Data Curation:**
+	- Remove duplicates, standardize chemical structures, and handle missing values.
+	- Annotate data with relevant properties (e.g., activity, ADMET, target information).
+
+- **Feature Engineering:**
+	- Generate molecular fingerprints, descriptors, and graph representations.
+	- Integrate multi-modal data (e.g., chemical, biological, clinical).
+
 ## 17.3 Model Training and Evaluation
+
+Machine learning models are trained to predict properties such as bioactivity, ADMET, or binding affinity.
+
+- **Model Selection:**
+	- Choose appropriate algorithms (e.g., random forests, deep neural networks, graph neural networks, transformers).
+
+- **Training:**
+	- Split data into training, validation, and test sets.
+	- Optimize hyperparameters and prevent overfitting.
+
+- **Evaluation:**
+	- Use metrics such as ROC-AUC, RMSE, accuracy, and F1-score.
+	- Perform cross-validation and external validation if possible.
+
+- **Interpretability:**
+	- Analyze feature importance and model explanations to gain insights.
+
 ## 17.4 Candidate Selection
+
+The final stage is to prioritize candidates for experimental validation.
+
+- **Virtual Screening:**
+	- Screen large compound libraries using trained models and/or docking.
+	- Rank compounds based on predicted activity, ADMET, and synthetic accessibility.
+
+- **Filtering:**
+	- Apply property-based and rule-based filters (e.g., Lipinski’s rules, toxicity filters).
+
+- **Multi-Parameter Optimization:**
+	- Balance potency, selectivity, safety, and developability.
+
+- **Experimental Validation:**
+	- Select top candidates for synthesis and biological testing.
+
+- **Iterative Improvement:**
+	- Incorporate new data and feedback to refine models and repeat the pipeline.

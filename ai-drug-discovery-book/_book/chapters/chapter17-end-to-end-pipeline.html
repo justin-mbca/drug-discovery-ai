@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -373,15 +367,88 @@ ul.task-list li input[type="checkbox"] {
 <p>This chapter presents a complete AI-driven drug discovery pipeline, from data collection to candidate prioritization, integrating methods from previous chapters.</p>
 <section id="pipeline-overview" class="level2" data-number="21.1">
 <h2 data-number="21.1" class="anchored" data-anchor-id="pipeline-overview"><span class="header-section-number">21.1</span> 17.1 Pipeline Overview</h2>
+<p>An end-to-end AI-driven drug discovery pipeline integrates cheminformatics, machine learning, and structure-based methods to accelerate the identification of promising drug candidates.</p>
+<ul>
+<li><strong>Key Stages:</strong>
+<ol type="1">
+<li>Data collection and curation</li>
+<li>Feature extraction and data preprocessing</li>
+<li>Model training and validation</li>
+<li>Virtual screening and candidate prioritization</li>
+</ol></li>
+</ul>
 </section>
 <section id="data-preparation" class="level2" data-number="21.2">
 <h2 data-number="21.2" class="anchored" data-anchor-id="data-preparation"><span class="header-section-number">21.2</span> 17.2 Data Preparation</h2>
+<p>High-quality data is the foundation of any successful pipeline.</p>
+<ul>
+<li><strong>Data Sources:</strong>
+<ul>
+<li>Public databases (e.g., ChEMBL, PubChem, PDB)</li>
+<li>In-house experimental data</li>
+</ul></li>
+<li><strong>Data Curation:</strong>
+<ul>
+<li>Remove duplicates, standardize chemical structures, and handle missing values.</li>
+<li>Annotate data with relevant properties (e.g., activity, ADMET, target information).</li>
+</ul></li>
+<li><strong>Feature Engineering:</strong>
+<ul>
+<li>Generate molecular fingerprints, descriptors, and graph representations.</li>
+<li>Integrate multi-modal data (e.g., chemical, biological, clinical).</li>
+</ul></li>
+</ul>
 </section>
 <section id="model-training-and-evaluation" class="level2" data-number="21.3">
 <h2 data-number="21.3" class="anchored" data-anchor-id="model-training-and-evaluation"><span class="header-section-number">21.3</span> 17.3 Model Training and Evaluation</h2>
+<p>Machine learning models are trained to predict properties such as bioactivity, ADMET, or binding affinity.</p>
+<ul>
+<li><strong>Model Selection:</strong>
+<ul>
+<li>Choose appropriate algorithms (e.g., random forests, deep neural networks, graph neural networks, transformers).</li>
+</ul></li>
+<li><strong>Training:</strong>
+<ul>
+<li>Split data into training, validation, and test sets.</li>
+<li>Optimize hyperparameters and prevent overfitting.</li>
+</ul></li>
+<li><strong>Evaluation:</strong>
+<ul>
+<li>Use metrics such as ROC-AUC, RMSE, accuracy, and F1-score.</li>
+<li>Perform cross-validation and external validation if possible.</li>
+</ul></li>
+<li><strong>Interpretability:</strong>
+<ul>
+<li>Analyze feature importance and model explanations to gain insights.</li>
+</ul></li>
+</ul>
 </section>
 <section id="candidate-selection" class="level2" data-number="21.4">
 <h2 data-number="21.4" class="anchored" data-anchor-id="candidate-selection"><span class="header-section-number">21.4</span> 17.4 Candidate Selection</h2>
+<p>The final stage is to prioritize candidates for experimental validation.</p>
+<ul>
+<li><strong>Virtual Screening:</strong>
+<ul>
+<li>Screen large compound libraries using trained models and/or docking.</li>
+<li>Rank compounds based on predicted activity, ADMET, and synthetic accessibility.</li>
+</ul></li>
+<li><strong>Filtering:</strong>
+<ul>
+<li>Apply property-based and rule-based filters (e.g., Lipinski’s rules, toxicity filters).</li>
+</ul></li>
+<li><strong>Multi-Parameter Optimization:</strong>
+<ul>
+<li>Balance potency, selectivity, safety, and developability.</li>
+</ul></li>
+<li><strong>Experimental Validation:</strong>
+<ul>
+<li>Select top candidates for synthesis and biological testing.</li>
+</ul></li>
+<li><strong>Iterative Improvement:</strong>
+<ul>
+<li>Incorporate new data and feedback to refine models and repeat the pipeline.</li>
+</ul></li>
+</ul>
 
 
 </section>

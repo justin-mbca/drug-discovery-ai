@@ -1,8 +1,74 @@
+
 # Chapter 15: Retrosynthesis
 
 Retrosynthesis planning is essential for proposing synthetic routes to molecules. This chapter covers rule-based and AI-driven retrosynthesis tools and strategies.
 
 ## 15.1 Introduction to Retrosynthesis
+
+Retrosynthesis is the process of deconstructing a target molecule into simpler precursor structures, working backward from the product to available starting materials. It is a key strategy in organic synthesis and drug development.
+
+- **Key Concepts:**
+	- Identify strategic bonds to break (disconnections).
+	- Propose sequences of reactions to build the target molecule from simpler compounds.
+	- Use chemical knowledge, reaction databases, and computational tools.
+
 ## 15.2 Rule-Based Approaches
+
+Rule-based retrosynthesis uses encoded chemical rules and reaction templates to suggest possible disconnections and synthetic routes.
+
+- **How It Works:**
+	- Reaction rules are derived from known chemical transformations.
+	- The system applies these rules recursively to break down the target molecule.
+
+- **Popular Tools:**
+	- **LHASA:** One of the earliest expert systems for retrosynthesis.
+	- **Chematica (Synthia):** Commercial platform with a large rule database.
+	- **RDKit:** Open-source cheminformatics toolkit with basic retrosynthesis capabilities.
+
+- **Advantages:**
+	- Transparent and interpretable routes.
+	- Leverages established chemical knowledge.
+
+- **Limitations:**
+	- Limited by the coverage of encoded rules.
+	- May miss novel or unconventional pathways.
+
 ## 15.3 AI-Driven Retrosynthesis
+
+AI-driven retrosynthesis uses machine learning and deep learning to predict synthetic routes, often learning directly from reaction databases.
+
+- **Template-Based Models:**
+	- Use reaction templates extracted from data, similar to rule-based systems but with automated extraction and ranking.
+
+- **Template-Free Models:**
+	- Sequence-to-sequence (seq2seq) models treat retrosynthesis as a translation problem (product to reactants).
+	- Graph neural networks (GNNs) model molecular graphs for reaction prediction.
+
+- **Popular AI Tools:**
+	- **ASKCOS:** Open-source platform using neural networks for retrosynthesis.
+	- **IBM RXN:** Cloud-based AI retrosynthesis tool.
+	- **AiZynthFinder:** Open-source tool for automated retrosynthetic planning.
+
+- **Advantages:**
+	- Can generalize to novel reactions and pathways.
+	- Continuously improve with more data.
+
+- **Limitations:**
+	- May generate less interpretable routes.
+	- Dependent on quality and diversity of training data.
+
 ## 15.4 Evaluating Synthetic Routes
+
+Evaluating proposed synthetic routes is crucial for practical application:
+
+- **Criteria:**
+	- Number of steps (shorter is often better).
+	- Availability and cost of starting materials.
+	- Feasibility and reliability of each reaction step.
+	- Overall yield and scalability.
+
+- **Scoring and Ranking:**
+	- Many tools provide scores based on route length, confidence, or synthetic accessibility.
+
+- **Experimental Validation:**
+	- Ultimately, routes must be tested in the lab to confirm feasibility.

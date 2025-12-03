@@ -1,7 +1,60 @@
+
 # Chapter 18: Case Studies
 
 Real-world case studies demonstrate the application of AI and cheminformatics in drug discovery. This chapter presents selected examples and lessons learned.
 
 ## 18.1 Case Study 1: ALS Drug Discovery
+
+**Background:**
+Amyotrophic lateral sclerosis (ALS) is a neurodegenerative disease with limited treatment options. AI-driven approaches have been used to identify new therapeutic candidates.
+
+- **Data Collection:**
+	- Integrated omics data, literature mining, and known ALS-related targets.
+	- Used cheminformatics to curate compound libraries for screening.
+
+- **Virtual Screening:**
+	- Applied machine learning models to predict neuroprotective activity.
+	- Used molecular docking to prioritize compounds for SOD1 and TDP-43 protein targets.
+
+- **Experimental Validation:**
+	- Top candidates were tested in cell-based assays for neuroprotection.
+
+- **Outcome:**
+	- Identified several promising compounds for further development.
+
 ## 18.2 Case Study 2: Kinase Inhibitors
+
+**Background:**
+Kinases are important drug targets in cancer and other diseases. AI and cheminformatics have accelerated the discovery of selective kinase inhibitors.
+
+- **Data Integration:**
+	- Combined chemical structure data, kinase activity profiles, and protein-ligand interaction data.
+
+- **QSAR Modeling:**
+	- Built machine learning models to predict kinase inhibition based on molecular fingerprints and descriptors.
+
+- **Structure-Based Design:**
+	- Used docking and molecular dynamics to optimize binding affinity and selectivity.
+
+- **Lead Optimization:**
+	- Applied multi-parameter optimization to balance potency, selectivity, and ADMET properties.
+
+- **Outcome:**
+	- Accelerated identification of novel kinase inhibitors with improved profiles.
+
 ## 18.3 Lessons Learned
+
+- **Data Quality Matters:**
+	- High-quality, well-curated data is essential for successful AI-driven drug discovery.
+
+- **Integration is Key:**
+	- Combining multiple data types and methods yields better results than using a single approach.
+
+- **Iterative Process:**
+	- Drug discovery is iterative—models and hypotheses should be refined as new data becomes available.
+
+- **Collaboration:**
+	- Success often requires collaboration between computational scientists, chemists, and biologists.
+
+- **Limitations:**
+	- AI models are only as good as their training data and may not generalize to novel targets or chemotypes.

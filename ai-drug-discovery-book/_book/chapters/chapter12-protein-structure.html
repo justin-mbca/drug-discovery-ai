@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -373,15 +367,95 @@ ul.task-list li input[type="checkbox"] {
 <p>Understanding protein structure is key to structure-based drug design. This chapter covers protein structure basics, experimental methods, and computational prediction (e.g., AlphaFold).</p>
 <section id="protein-structure-levels" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="protein-structure-levels"><span class="header-section-number">16.1</span> 12.1 Protein Structure Levels</h2>
+<p>Proteins have a hierarchical structure, each level contributing to their function:</p>
+<ul>
+<li><strong>Primary Structure:</strong>
+<ul>
+<li>Linear sequence of amino acids in a polypeptide chain.</li>
+<li>Determines all higher levels of structure.</li>
+</ul></li>
+<li><strong>Secondary Structure:</strong>
+<ul>
+<li>Local folding patterns stabilized by hydrogen bonds.</li>
+<li>Common motifs: α-helices and β-sheets.</li>
+</ul></li>
+<li><strong>Tertiary Structure:</strong>
+<ul>
+<li>3D arrangement of a single polypeptide chain, including side-chain interactions.</li>
+<li>Stabilized by hydrophobic interactions, disulfide bonds, and ionic interactions.</li>
+</ul></li>
+<li><strong>Quaternary Structure:</strong>
+<ul>
+<li>Assembly of multiple polypeptide chains (subunits) into a functional protein complex.</li>
+</ul></li>
+</ul>
 </section>
 <section id="experimental-determination" class="level2" data-number="16.2">
 <h2 data-number="16.2" class="anchored" data-anchor-id="experimental-determination"><span class="header-section-number">16.2</span> 12.2 Experimental Determination</h2>
+<p>Experimental methods for determining protein structures include:</p>
+<ul>
+<li><strong>X-ray Crystallography:</strong>
+<ul>
+<li>Most common method for high-resolution structures.</li>
+<li>Requires crystallization of the protein.</li>
+</ul></li>
+<li><strong>Nuclear Magnetic Resonance (NMR) Spectroscopy:</strong>
+<ul>
+<li>Used for small to medium-sized proteins in solution.</li>
+<li>Provides information on protein dynamics.</li>
+</ul></li>
+<li><strong>Cryo-Electron Microscopy (Cryo-EM):</strong>
+<ul>
+<li>Suitable for large complexes and membrane proteins.</li>
+<li>Does not require crystallization; recent advances have improved resolution.</li>
+</ul></li>
+</ul>
 </section>
 <section id="structure-prediction-tools" class="level2" data-number="16.3">
 <h2 data-number="16.3" class="anchored" data-anchor-id="structure-prediction-tools"><span class="header-section-number">16.3</span> 12.3 Structure Prediction Tools</h2>
+<p>Computational tools can predict protein structures when experimental data is unavailable:</p>
+<ul>
+<li><strong>Homology Modeling:</strong>
+<ul>
+<li>Builds models based on similarity to known structures (templates).</li>
+<li>Tools: SWISS-MODEL, MODELLER.</li>
+</ul></li>
+<li><strong>Ab Initio Prediction:</strong>
+<ul>
+<li>Predicts structure from sequence alone, without templates.</li>
+<li>Computationally intensive; used for small proteins.</li>
+</ul></li>
+<li><strong>AlphaFold:</strong>
+<ul>
+<li>Deep learning-based tool from DeepMind.</li>
+<li>Achieves near-experimental accuracy for many proteins.</li>
+<li><a href="https://alphafold.ebi.ac.uk/">AlphaFold Protein Structure Database</a></li>
+</ul></li>
+</ul>
 </section>
 <section id="protein-ligand-interactions" class="level2" data-number="16.4">
 <h2 data-number="16.4" class="anchored" data-anchor-id="protein-ligand-interactions"><span class="header-section-number">16.4</span> 12.4 Protein-Ligand Interactions</h2>
+<p>Understanding how proteins interact with small molecules (ligands) is crucial for drug design:</p>
+<ul>
+<li><strong>Binding Sites:</strong>
+<ul>
+<li>Specific regions on the protein where ligands bind.</li>
+<li>Often located in pockets or grooves on the protein surface.</li>
+</ul></li>
+<li><strong>Interaction Types:</strong>
+<ul>
+<li>Hydrogen bonds, hydrophobic interactions, ionic bonds, van der Waals forces.</li>
+</ul></li>
+<li><strong>Docking and Scoring:</strong>
+<ul>
+<li>Computational docking predicts how ligands fit into binding sites.</li>
+<li>Scoring functions estimate binding affinity.</li>
+</ul></li>
+<li><strong>Applications:</strong>
+<ul>
+<li>Lead discovery, optimization, and understanding mechanism of action.</li>
+</ul></li>
+</ul>
 
 
 </section>

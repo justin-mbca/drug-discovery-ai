@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -372,12 +366,68 @@ ul.task-list li input[type="checkbox"] {
 <p>Machine learning can improve docking accuracy and speed. This chapter discusses ML scoring functions, pose prediction, and integration with docking pipelines.</p>
 <section id="ml-scoring-functions" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="ml-scoring-functions"><span class="header-section-number">18.1</span> 14.1 ML Scoring Functions</h2>
+<p>Traditional docking scoring functions are based on physics or empirical rules. Machine learning (ML) scoring functions use data-driven models to predict binding affinity more accurately.</p>
+<ul>
+<li><strong>Types of ML Scoring Functions:</strong>
+<ul>
+<li><strong>Regression Models:</strong> Predict binding affinity from features (e.g., random forests, gradient boosting, neural networks).</li>
+<li><strong>Deep Learning Models:</strong> Use 3D protein-ligand structures as input (e.g., convolutional neural networks, graph neural networks).</li>
+</ul></li>
+<li><strong>Popular ML Scoring Tools:</strong>
+<ul>
+<li><strong>RF-Score:</strong> Random forest model using atom pair features.</li>
+<li><strong>DeltaVina:</strong> Combines ML with traditional Vina scoring.</li>
+<li><strong>DeepDock, GNINA:</strong> Deep learning-based scoring using 3D grids or graphs.</li>
+</ul></li>
+<li><strong>Advantages:</strong>
+<ul>
+<li>Capture complex, non-linear interactions.</li>
+<li>Can be retrained on new data for specific targets.</li>
+</ul></li>
+</ul>
 </section>
 <section id="pose-prediction" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="pose-prediction"><span class="header-section-number">18.2</span> 14.2 Pose Prediction</h2>
+<p>ML models can also predict the correct binding pose of a ligand in a protein binding site.</p>
+<ul>
+<li><strong>Pose Ranking:</strong>
+<ul>
+<li>ML models can re-rank docking poses generated by traditional software, improving the selection of the most likely binding mode.</li>
+</ul></li>
+<li><strong>End-to-End Pose Prediction:</strong>
+<ul>
+<li>Some deep learning models directly predict ligand poses from protein and ligand structures (e.g., EquiBind, DeepDock).</li>
+</ul></li>
+<li><strong>Evaluation:</strong>
+<ul>
+<li>Root-mean-square deviation (RMSD) is used to assess pose accuracy compared to experimental structures.</li>
+</ul></li>
+</ul>
 </section>
 <section id="integrating-ml-with-docking" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="integrating-ml-with-docking"><span class="header-section-number">18.3</span> 14.3 Integrating ML with Docking</h2>
+<p>ML can be integrated into docking pipelines to enhance virtual screening and lead optimization:</p>
+<ul>
+<li><strong>Hybrid Workflows:</strong>
+<ul>
+<li>Use traditional docking to generate poses, then apply ML scoring for more accurate ranking.</li>
+<li>Filter large libraries with fast ML models before detailed docking.</li>
+</ul></li>
+<li><strong>Active Learning:</strong>
+<ul>
+<li>Iteratively improve ML models by incorporating feedback from new docking or experimental results.</li>
+</ul></li>
+<li><strong>Automation:</strong>
+<ul>
+<li>ML models can automate hit selection, pose filtering, and prioritization in large-scale screens.</li>
+</ul></li>
+<li><strong>Example Workflow:</strong>
+<ol type="1">
+<li>Dock a library of compounds using AutoDock Vina.</li>
+<li>Score top poses with a deep learning model (e.g., GNINA).</li>
+<li>Select candidates for experimental validation based on ML scores.</li>
+</ol></li>
+</ul>
 
 
 </section>

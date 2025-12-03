@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -372,12 +366,71 @@ ul.task-list li input[type="checkbox"] {
 <p>Multi-modal learning combines data types (e.g., chemical, biological, clinical) for improved predictions. This chapter explores architectures and applications in drug discovery.</p>
 <section id="what-is-multi-modal-learning" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="what-is-multi-modal-learning"><span class="header-section-number">20.1</span> 16.1 What is Multi-Modal Learning?</h2>
+<p>Multi-modal learning is a machine learning paradigm that integrates information from multiple data sources or modalities. In drug discovery, these modalities can include chemical structures, gene expression profiles, protein sequences, clinical data, and more.</p>
+<ul>
+<li><strong>Motivation:</strong>
+<ul>
+<li>Single data types may not capture the full complexity of biological systems.</li>
+<li>Combining modalities can improve prediction accuracy and provide deeper insights.</li>
+</ul></li>
+<li><strong>Examples of Modalities:</strong>
+<ul>
+<li>Chemical: SMILES, molecular graphs, descriptors</li>
+<li>Biological: gene expression, protein sequences, omics data</li>
+<li>Clinical: patient records, trial outcomes</li>
+</ul></li>
+</ul>
 </section>
 <section id="data-integration-strategies" class="level2" data-number="20.2">
 <h2 data-number="20.2" class="anchored" data-anchor-id="data-integration-strategies"><span class="header-section-number">20.2</span> 16.2 Data Integration Strategies</h2>
+<p>Integrating diverse data types requires careful design of model architectures and data processing pipelines.</p>
+<ul>
+<li><strong>Early Fusion:</strong>
+<ul>
+<li>Concatenate features from all modalities at the input layer.</li>
+<li>Simple but may not capture complex relationships.</li>
+</ul></li>
+<li><strong>Late Fusion:</strong>
+<ul>
+<li>Train separate models for each modality, then combine predictions (e.g., averaging, stacking).</li>
+<li>Useful when modalities are very different in scale or type.</li>
+</ul></li>
+<li><strong>Hybrid/Intermediate Fusion:</strong>
+<ul>
+<li>Combine intermediate representations from each modality within the model (e.g., via attention mechanisms or shared layers).</li>
+<li>Allows learning of cross-modal interactions.</li>
+</ul></li>
+<li><strong>Deep Learning Architectures:</strong>
+<ul>
+<li>Multi-branch neural networks, attention-based models, and graph neural networks can all be adapted for multi-modal integration.</li>
+</ul></li>
+</ul>
 </section>
 <section id="applications-in-drug-discovery" class="level2" data-number="20.3">
 <h2 data-number="20.3" class="anchored" data-anchor-id="applications-in-drug-discovery"><span class="header-section-number">20.3</span> 16.3 Applications in Drug Discovery</h2>
+<p>Multi-modal learning is increasingly used in drug discovery to leverage the wealth of available data:</p>
+<ul>
+<li><strong>Drug Response Prediction:</strong>
+<ul>
+<li>Combine chemical structure and gene expression data to predict how cell lines or patients will respond to drugs.</li>
+</ul></li>
+<li><strong>Target Identification:</strong>
+<ul>
+<li>Integrate omics data, protein-protein interactions, and chemical information to identify new drug targets.</li>
+</ul></li>
+<li><strong>Adverse Event Prediction:</strong>
+<ul>
+<li>Use clinical records, molecular properties, and biological data to predict side effects or toxicity.</li>
+</ul></li>
+<li><strong>Precision Medicine:</strong>
+<ul>
+<li>Tailor drug recommendations by integrating patient-specific clinical and molecular data.</li>
+</ul></li>
+<li><strong>Example (Conceptual):</strong>
+<ul>
+<li>A multi-modal neural network takes SMILES strings, gene expression profiles, and patient data as input to predict drug efficacy for personalized treatment.</li>
+</ul></li>
+</ul>
 
 
 </section>

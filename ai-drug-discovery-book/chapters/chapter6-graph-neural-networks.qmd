@@ -42,7 +42,62 @@ For a full workflow, see the interactive notebook: (notebook not available for t
 
 ---
 
+
 ## 6.1 Introduction to GNNs
+Graph Neural Networks (GNNs) are a class of deep learning models designed to operate on graph-structured data. In chemistry, molecules are naturally represented as graphs, with atoms as nodes and bonds as edges. GNNs can learn to predict molecular properties by aggregating information from neighboring atoms and bonds, capturing both local and global structure.
+
+**Key Concepts:**
+- Message passing: Nodes exchange information with neighbors to update their representations.
+- Permutation invariance: GNNs produce the same output regardless of node ordering.
+- Applications: Property prediction, molecular generation, reaction prediction.
+
 ## 6.2 Molecular Graph Construction
+To use GNNs, molecules must be converted into graph representations. Each atom becomes a node, and each bond becomes an edge. Node and edge features can include atom types, hybridization, bond order, and more.
+
+**Example (Python/RDKit + NetworkX):**
+```python
+from rdkit import Chem
+import networkx as nx
+smiles = "CCO"
+mol = Chem.MolFromSmiles(smiles)
+G = nx.Graph()
+for atom in mol.GetAtoms():
+	G.add_node(atom.GetIdx(), label=atom.GetSymbol())
+for bond in mol.GetBonds():
+	G.add_edge(bond.GetBeginAtomIdx(), bond.GetEndAtomIdx(), type=bond.GetBondType())
+```
+
 ## 6.3 GNN Architectures for Chemistry
+Several GNN architectures are used in molecular modeling:
+- **Graph Convolutional Networks (GCN):** Aggregate features from neighbors using weighted sums.
+- **Message Passing Neural Networks (MPNN):** General framework for message passing and update functions.
+- **Graph Attention Networks (GAT):** Use attention mechanisms to weigh neighbor contributions.
+- **Graph Isomorphism Networks (GIN):** Designed for maximum discriminative power.
+
+**Popular Libraries:** PyTorch Geometric, DGL, DeepChem.
+
 ## 6.4 Case Study: GNN for Solubility
+In this case study, a GNN is trained to predict aqueous solubility (logS) of small molecules.
+
+**Workflow:**
+1. Prepare a dataset of molecules with known solubility values (e.g., ESOL dataset).
+2. Convert SMILES to molecular graphs with atom and bond features.
+3. Train a GNN (e.g., MPNN or GCN) to predict logS from graph representations.
+4. Evaluate model performance using RMSE or R2 metrics.
+
+**Example (Conceptual):**
+```python
+# Pseudocode for GNN solubility prediction
+from torch_geometric.nn import GCNConv
+import torch
+class GNN(torch.nn.Module):
+	def __init__(self):
+		super().__init__()
+		self.conv1 = GCNConv(in_channels, hidden)
+		self.conv2 = GCNConv(hidden, 1)
+	def forward(self, x, edge_index):
+		x = self.conv1(x, edge_index).relu()
+		x = self.conv2(x, edge_index)
+		return x
+# Train on molecular graphs and solubility labels
+```

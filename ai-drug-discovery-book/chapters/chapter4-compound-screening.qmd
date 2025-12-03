@@ -113,9 +113,9 @@ pip install pubchempy chembl_webresource_client pandas
 Virtual compound screening is a powerful tool for narrowing down chemical space, but requires careful filtering and integration with biological data.
 
 ## Further Reading
-- PubChem: https://pubchem.ncbi.nlm.nih.gov/
-- ChEMBL: https://www.ebi.ac.uk/chembl/
-- Walters, W.P. et al., "Virtual screening—an overview" (Drug Discov Today, 1998)
+@pubchem
+@chembl
+@walters1998virtual
 
 ---
 

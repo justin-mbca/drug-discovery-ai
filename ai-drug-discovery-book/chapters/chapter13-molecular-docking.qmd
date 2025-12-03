@@ -1,8 +1,64 @@
+
 # Chapter 13: Molecular Docking
 
 Molecular docking predicts how small molecules bind to protein targets. This chapter introduces docking theory, software, and practical workflows for virtual screening.
 
 ## 13.1 Docking Theory
+
+Docking is a computational technique that predicts the preferred orientation of a small molecule (ligand) when bound to a protein (receptor). The goal is to estimate binding affinity and identify potential drug candidates.
+
+- **Key Concepts:**
+	- **Search Algorithm:** Explores possible ligand conformations and orientations in the binding site.
+	- **Scoring Function:** Estimates the strength of the interaction (binding affinity) between ligand and protein.
+	- **Rigid vs. Flexible Docking:** Rigid docking keeps the protein and ligand fixed; flexible docking allows movement in the ligand and/or protein.
+
 ## 13.2 Docking Software (AutoDock, Vina)
+
+Several software packages are widely used for molecular docking:
+
+- **AutoDock:**
+	- One of the most popular open-source docking tools.
+	- Uses Lamarckian genetic algorithm for conformational search.
+	- Supports flexible ligand and some flexible side-chain docking.
+
+- **AutoDock Vina:**
+	- Improved version of AutoDock with faster performance and better scoring.
+	- User-friendly and widely adopted for virtual screening.
+
+- **Other Tools:**
+	- DOCK, GOLD, Glide, and others are also used in academia and industry.
+
 ## 13.3 Preparing Structures for Docking
+
+Proper preparation of protein and ligand structures is critical for successful docking:
+
+- **Protein Preparation:**
+	- Remove water molecules and irrelevant ligands.
+	- Add missing atoms and assign correct protonation states.
+	- Define the binding site (e.g., using known ligand or cavity detection).
+
+- **Ligand Preparation:**
+	- Generate 3D conformations.
+	- Assign correct protonation and tautomeric states.
+	- Minimize energy to relieve strain.
+
+- **File Formats:**
+	- PDBQT (AutoDock/Vina), MOL2, SDF, PDB.
+
 ## 13.4 Analyzing Docking Results
+
+After docking, results must be analyzed to identify promising candidates:
+
+- **Scoring and Ranking:**
+	- Docking software provides binding affinity scores for each pose.
+	- Rank compounds based on scores, but consider limitations of scoring functions.
+
+- **Visual Inspection:**
+	- Use molecular visualization tools (e.g., PyMOL, Chimera) to examine binding modes.
+	- Check for key interactions (hydrogen bonds, hydrophobic contacts) and fit in the binding site.
+
+- **Post-Processing:**
+	- Cluster similar poses, filter by interaction criteria, and consider rescoring with more accurate methods if needed.
+
+- **Experimental Validation:**
+	- Top candidates should be validated experimentally for biological activity.

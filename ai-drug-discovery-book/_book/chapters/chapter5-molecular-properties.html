@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Chapter 5: Molecular Properties – AI-Driven Drug Discovery: A Hands-On Guide</title>
+<title>9&nbsp; Chapter 5: Molecular Properties – AI-Driven Drug Discovery: A Hands-On Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../part2-machine-learning.html" rel="next">
+<link href="../chapters/chapter6-graph-neural-networks.html" rel="next">
 <link href="../chapters/chapter4-molecular-fingerprints.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter5-molecular-properties.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter5-molecular-properties.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +196,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +228,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -341,19 +370,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#physicochemical-descriptors" id="toc-physicochemical-descriptors" class="nav-link active" data-scroll-target="#physicochemical-descriptors"><span class="header-section-number">8.1</span> 5.1 Physicochemical Descriptors</a></li>
-  <li><a href="#calculating-properties-with-rdkit" id="toc-calculating-properties-with-rdkit" class="nav-link" data-scroll-target="#calculating-properties-with-rdkit"><span class="header-section-number">8.2</span> 5.2 Calculating Properties with RDKit</a></li>
-  <li><a href="#lipinskis-rule-of-five" id="toc-lipinskis-rule-of-five" class="nav-link" data-scroll-target="#lipinskis-rule-of-five"><span class="header-section-number">8.3</span> 5.3 Lipinski’s Rule of Five</a></li>
-  <li><a href="#property-based-filtering" id="toc-property-based-filtering" class="nav-link" data-scroll-target="#property-based-filtering"><span class="header-section-number">8.4</span> 5.4 Property-Based Filtering</a></li>
+  <li><a href="#physicochemical-descriptors" id="toc-physicochemical-descriptors" class="nav-link active" data-scroll-target="#physicochemical-descriptors"><span class="header-section-number">9.1</span> 5.1 Physicochemical Descriptors</a></li>
+  <li><a href="#calculating-properties-with-rdkit" id="toc-calculating-properties-with-rdkit" class="nav-link" data-scroll-target="#calculating-properties-with-rdkit"><span class="header-section-number">9.2</span> 5.2 Calculating Properties with RDKit</a></li>
+  <li><a href="#lipinskis-rule-of-five" id="toc-lipinskis-rule-of-five" class="nav-link" data-scroll-target="#lipinskis-rule-of-five"><span class="header-section-number">9.3</span> 5.3 Lipinski’s Rule of Five</a></li>
+  <li><a href="#property-based-filtering" id="toc-property-based-filtering" class="nav-link" data-scroll-target="#property-based-filtering"><span class="header-section-number">9.4</span> 5.4 Property-Based Filtering</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter5-molecular-properties.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter5-molecular-properties.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></h1>
 </div>
 
 
@@ -371,17 +400,80 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This chapter explores key physicochemical properties of molecules (e.g., logP, MW, H-bond donors/acceptors) and their importance in drug design and ADMET prediction.</p>
-<section id="physicochemical-descriptors" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="physicochemical-descriptors"><span class="header-section-number">8.1</span> 5.1 Physicochemical Descriptors</h2>
+<section id="physicochemical-descriptors" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="physicochemical-descriptors"><span class="header-section-number">9.1</span> 5.1 Physicochemical Descriptors</h2>
+<p>Physicochemical descriptors are numerical values that capture important chemical and physical properties of molecules. These descriptors are crucial for understanding drug-likeness, solubility, permeability, and ADMET (Absorption, Distribution, Metabolism, Excretion, Toxicity) properties.</p>
+<ul>
+<li><strong>Common Descriptors:</strong>
+<ul>
+<li><strong>Molecular Weight (MW):</strong> Total mass of a molecule.</li>
+<li><strong>LogP:</strong> Partition coefficient between octanol and water, indicating hydrophobicity.</li>
+<li><strong>Hydrogen Bond Donors (HBD):</strong> Number of hydrogen atoms attached to electronegative atoms (e.g., N-H, O-H).</li>
+<li><strong>Hydrogen Bond Acceptors (HBA):</strong> Number of electronegative atoms with lone pairs (e.g., N, O).</li>
+<li><strong>Topological Polar Surface Area (TPSA):</strong> Surface area contributed by polar atoms, related to absorption and permeability.</li>
+</ul></li>
+</ul>
 </section>
-<section id="calculating-properties-with-rdkit" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="calculating-properties-with-rdkit"><span class="header-section-number">8.2</span> 5.2 Calculating Properties with RDKit</h2>
+<section id="calculating-properties-with-rdkit" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="calculating-properties-with-rdkit"><span class="header-section-number">9.2</span> 5.2 Calculating Properties with RDKit</h2>
+<p>RDKit is a popular cheminformatics toolkit for calculating molecular properties in Python.</p>
+<p><strong>Example (Python/RDKit):</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Descriptors</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>smiles <span class="op">=</span> <span class="st">'CCO'</span>  <span class="co"># Ethanol</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>mol <span class="op">=</span> Chem.MolFromSmiles(smiles)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>mw <span class="op">=</span> Descriptors.MolWt(mol)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>logp <span class="op">=</span> Descriptors.MolLogP(mol)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>hbd <span class="op">=</span> Descriptors.NumHDonors(mol)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>hba <span class="op">=</span> Descriptors.NumHAcceptors(mol)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>tpsa <span class="op">=</span> Descriptors.TPSA(mol)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"MW: </span><span class="sc">{</span>mw<span class="sc">:.2f}</span><span class="ss">, LogP: </span><span class="sc">{</span>logp<span class="sc">:.2f}</span><span class="ss">, HBD: </span><span class="sc">{</span>hbd<span class="sc">}</span><span class="ss">, HBA: </span><span class="sc">{</span>hba<span class="sc">}</span><span class="ss">, TPSA: </span><span class="sc">{</span>tpsa<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="lipinskis-rule-of-five" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="lipinskis-rule-of-five"><span class="header-section-number">8.3</span> 5.3 Lipinski’s Rule of Five</h2>
+<section id="lipinskis-rule-of-five" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="lipinskis-rule-of-five"><span class="header-section-number">9.3</span> 5.3 Lipinski’s Rule of Five</h2>
+<p>Lipinski’s Rule of Five is a set of guidelines to evaluate drug-likeness and oral bioavailability:</p>
+<ul>
+<li><strong>Rules:</strong>
+<ul>
+<li>MW ≤ 500 Da</li>
+<li>LogP ≤ 5</li>
+<li>HBD ≤ 5</li>
+<li>HBA ≤ 10</li>
+</ul></li>
+</ul>
+<p>Compounds that violate more than one rule are less likely to be orally active drugs.</p>
+<p><strong>Application:</strong> Use these rules to filter compound libraries for drug discovery projects.</p>
 </section>
-<section id="property-based-filtering" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="property-based-filtering"><span class="header-section-number">8.4</span> 5.4 Property-Based Filtering</h2>
+<section id="property-based-filtering" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="property-based-filtering"><span class="header-section-number">9.4</span> 5.4 Property-Based Filtering</h2>
+<p>Property-based filtering is used to select compounds with desirable physicochemical properties for further study.</p>
+<ul>
+<li><strong>Filtering Strategies:</strong>
+<ul>
+<li>Remove compounds with poor solubility or permeability.</li>
+<li>Apply Lipinski’s rules and other property thresholds (e.g., TPSA, rotatable bonds).</li>
+</ul></li>
+<li><strong>Example (Python/RDKit):</strong></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> Descriptors</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> passes_lipinski(mol):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        mw <span class="op">=</span> Descriptors.MolWt(mol)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        logp <span class="op">=</span> Descriptors.MolLogP(mol)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        hbd <span class="op">=</span> Descriptors.NumHDonors(mol)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        hba <span class="op">=</span> Descriptors.NumHAcceptors(mol)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (mw <span class="op">&lt;=</span> <span class="dv">500</span> <span class="kw">and</span> logp <span class="op">&lt;=</span> <span class="dv">5</span> <span class="kw">and</span> hbd <span class="op">&lt;=</span> <span class="dv">5</span> <span class="kw">and</span> hba <span class="op">&lt;=</span> <span class="dv">10</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>smiles_list <span class="op">=</span> [<span class="st">'CCO'</span>, <span class="st">'CCN(CC)CC'</span>, <span class="st">'CCCCCCCCCCCCCCCC(=O)O'</span>]</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> smi <span class="kw">in</span> smiles_list:</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        mol <span class="op">=</span> Chem.MolFromSmiles(smi)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> passes_lipinski(mol):</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>smi<span class="sc">}</span><span class="ss"> passes Lipinski's rules"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>smi<span class="sc">}</span><span class="ss"> fails Lipinski's rules"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -790,12 +882,12 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter4-molecular-fingerprints.html" class="pagination-link" aria-label="Chapter 4: Molecular Fingerprints">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../part2-machine-learning.html" class="pagination-link" aria-label="Part II: Machine Learning for Molecules">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/chapter6-graph-neural-networks.html" class="pagination-link" aria-label="Chapter 6: Graph Neural Networks">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 6: Graph Neural Networks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

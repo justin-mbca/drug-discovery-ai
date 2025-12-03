@@ -1,8 +1,96 @@
+
 # Chapter 2: Environment Setup
 
 This chapter guides you through setting up a reproducible computational environment for AI-driven drug discovery, including Python, Jupyter, and essential libraries.
 
 ## 2.1 Installing Python and Conda
+
+To get started, you need Python and a package manager. Conda is recommended for managing environments and dependencies.
+
+**Steps:**
+
+1. **Download and Install Miniconda:**
+	- Go to [Miniconda Downloads](https://docs.conda.io/en/latest/miniconda.html) and download the installer for your OS.
+	- Run the installer and follow the prompts.
+
+2. **Verify Installation:**
+	- Open a terminal and run:
+	  ```bash
+	  conda --version
+	  ```
+	- You should see the conda version printed.
+
+3. **Create a New Environment:**
+	- Example for Python 3.10:
+	  ```bash
+	  conda create -n drug-discovery python=3.10
+	  conda activate drug-discovery
+	  ```
+
 ## 2.2 Setting Up Jupyter Notebooks
+
+Jupyter Notebooks are essential for interactive coding and documentation.
+
+**Steps:**
+
+1. **Install Jupyter:**
+	```bash
+	conda install jupyterlab
+	```
+
+2. **Launch JupyterLab:**
+	```bash
+	jupyter lab
+	```
+	- This will open JupyterLab in your browser.
+
+3. **Create a New Notebook:**
+	- In JupyterLab, click "Python 3" under the Notebook section to start a new notebook.
+
 ## 2.3 Managing Dependencies
+
+Managing dependencies ensures reproducibility and avoids conflicts.
+
+**Best Practices:**
+
+- Use `conda` or `pip` to install packages:
+  ```bash
+  conda install numpy pandas scikit-learn
+  pip install rdkit matplotlib
+  ```
+- Export your environment for sharing:
+  ```bash
+  conda env export > environment.yml
+  ```
+- Recreate an environment from a file:
+  ```bash
+  conda env create -f environment.yml
+  ```
+
 ## 2.4 Version Control with Git
+
+Version control is critical for tracking changes and collaborating.
+
+**Steps:**
+
+1. **Install Git:**
+	- Download from [git-scm.com](https://git-scm.com/) and follow installation instructions for your OS.
+
+2. **Configure Git:**
+	```bash
+	git config --global user.name "Your Name"
+	git config --global user.email "you@example.com"
+	```
+
+3. **Initialize a Repository:**
+	```bash
+	git init
+	```
+
+4. **Basic Workflow:**
+	```bash
+	git add .
+	git commit -m "Initial commit"
+	git remote add origin <your-repo-url>
+	git push -u origin main
+	```

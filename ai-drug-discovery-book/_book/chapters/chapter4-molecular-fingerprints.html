@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Chapter 4: Molecular Fingerprints – AI-Driven Drug Discovery: A Hands-On Guide</title>
+<title>8&nbsp; Chapter 4: Molecular Fingerprints – AI-Driven Drug Discovery: A Hands-On Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter4-molecular-fingerprints.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter4-molecular-fingerprints.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +196,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +228,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -341,19 +370,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-are-molecular-fingerprints" id="toc-what-are-molecular-fingerprints" class="nav-link active" data-scroll-target="#what-are-molecular-fingerprints"><span class="header-section-number">7.1</span> 4.1 What Are Molecular Fingerprints?</a></li>
-  <li><a href="#types-maccs-morgan-topological" id="toc-types-maccs-morgan-topological" class="nav-link" data-scroll-target="#types-maccs-morgan-topological"><span class="header-section-number">7.2</span> 4.2 Types: MACCS, Morgan, Topological</a></li>
-  <li><a href="#applications-in-virtual-screening" id="toc-applications-in-virtual-screening" class="nav-link" data-scroll-target="#applications-in-virtual-screening"><span class="header-section-number">7.3</span> 4.3 Applications in Virtual Screening</a></li>
-  <li><a href="#fingerprints-in-machine-learning" id="toc-fingerprints-in-machine-learning" class="nav-link" data-scroll-target="#fingerprints-in-machine-learning"><span class="header-section-number">7.4</span> 4.4 Fingerprints in Machine Learning</a></li>
+  <li><a href="#what-are-molecular-fingerprints" id="toc-what-are-molecular-fingerprints" class="nav-link active" data-scroll-target="#what-are-molecular-fingerprints"><span class="header-section-number">8.1</span> 4.1 What Are Molecular Fingerprints?</a></li>
+  <li><a href="#types-maccs-morgan-topological" id="toc-types-maccs-morgan-topological" class="nav-link" data-scroll-target="#types-maccs-morgan-topological"><span class="header-section-number">8.2</span> 4.2 Types: MACCS, Morgan, Topological</a></li>
+  <li><a href="#applications-in-virtual-screening" id="toc-applications-in-virtual-screening" class="nav-link" data-scroll-target="#applications-in-virtual-screening"><span class="header-section-number">8.3</span> 4.3 Applications in Virtual Screening</a></li>
+  <li><a href="#fingerprints-in-machine-learning" id="toc-fingerprints-in-machine-learning" class="nav-link" data-scroll-target="#fingerprints-in-machine-learning"><span class="header-section-number">8.4</span> 4.4 Fingerprints in Machine Learning</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter4-molecular-fingerprints.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part1-foundations.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="../chapters/chapter4-molecular-fingerprints.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></h1>
 </div>
 
 
@@ -371,17 +400,94 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Molecular fingerprints are compact representations of chemical structures used for similarity searching and machine learning. This chapter explains different types of fingerprints and their applications.</p>
-<section id="what-are-molecular-fingerprints" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="what-are-molecular-fingerprints"><span class="header-section-number">7.1</span> 4.1 What Are Molecular Fingerprints?</h2>
+<section id="what-are-molecular-fingerprints" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="what-are-molecular-fingerprints"><span class="header-section-number">8.1</span> 4.1 What Are Molecular Fingerprints?</h2>
+<p>Molecular fingerprints are binary or integer vectors that encode the presence or absence of particular substructures or features in a molecule. They allow rapid comparison of molecules for similarity searching, clustering, and as input features for machine learning models.</p>
+<ul>
+<li><strong>Purpose:</strong>
+<ul>
+<li>Enable fast similarity searches in large chemical databases.</li>
+<li>Provide a standardized input for cheminformatics and AI tasks.</li>
+</ul></li>
+<li><strong>How They Work:</strong>
+<ul>
+<li>Each bit or value in the fingerprint corresponds to a specific structural feature or pattern.</li>
+<li>The fingerprint is generated by analyzing the molecule’s structure and mapping features to bits.</li>
+</ul></li>
+</ul>
 </section>
-<section id="types-maccs-morgan-topological" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="types-maccs-morgan-topological"><span class="header-section-number">7.2</span> 4.2 Types: MACCS, Morgan, Topological</h2>
+<section id="types-maccs-morgan-topological" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="types-maccs-morgan-topological"><span class="header-section-number">8.2</span> 4.2 Types: MACCS, Morgan, Topological</h2>
+<p>There are several types of molecular fingerprints, each with different algorithms and applications:</p>
+<ul>
+<li><strong>MACCS Keys:</strong>
+<ul>
+<li>166-bit fingerprint where each bit represents a predefined substructure (e.g., aromatic ring, carboxyl group).</li>
+<li>Simple and interpretable, commonly used for basic similarity searches.</li>
+</ul></li>
+<li><strong>Morgan (Circular) Fingerprints:</strong>
+<ul>
+<li>Also known as ECFP (Extended-Connectivity Fingerprints).</li>
+<li>Encodes atom environments up to a certain radius (e.g., ECFP4 uses radius 2).</li>
+<li>Widely used in machine learning and virtual screening.</li>
+<li>Example (Python/RDKit): <code>python       from rdkit import Chem       from rdkit.Chem import AllChem       mol = Chem.MolFromSmiles('CCO')       fp = AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=1024)       print(list(fp))</code></li>
+</ul></li>
+<li><strong>Topological (Path-Based) Fingerprints:</strong>
+<ul>
+<li>Encodes the presence of linear paths of atoms (e.g., Daylight fingerprints).</li>
+<li>Good for capturing connectivity and substructure patterns.</li>
+</ul></li>
+</ul>
 </section>
-<section id="applications-in-virtual-screening" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="applications-in-virtual-screening"><span class="header-section-number">7.3</span> 4.3 Applications in Virtual Screening</h2>
+<section id="applications-in-virtual-screening" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="applications-in-virtual-screening"><span class="header-section-number">8.3</span> 4.3 Applications in Virtual Screening</h2>
+<p>Fingerprints are essential for virtual screening, where large libraries of compounds are searched for molecules similar to a known active compound.</p>
+<ul>
+<li><strong>Similarity Searching:</strong>
+<ul>
+<li>Compare fingerprints using metrics like Tanimoto similarity to find similar molecules.</li>
+</ul></li>
+<li><strong>Substructure Searching:</strong>
+<ul>
+<li>Identify compounds containing specific structural motifs.</li>
+</ul></li>
+<li><strong>Library Design:</strong>
+<ul>
+<li>Cluster compounds based on fingerprint similarity to ensure chemical diversity.</li>
+</ul></li>
+</ul>
 </section>
-<section id="fingerprints-in-machine-learning" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="fingerprints-in-machine-learning"><span class="header-section-number">7.4</span> 4.4 Fingerprints in Machine Learning</h2>
+<section id="fingerprints-in-machine-learning" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="fingerprints-in-machine-learning"><span class="header-section-number">8.4</span> 4.4 Fingerprints in Machine Learning</h2>
+<p>Fingerprints are widely used as input features for machine learning models in cheminformatics.</p>
+<ul>
+<li><strong>Feature Vectors:</strong>
+<ul>
+<li>Each molecule is represented by its fingerprint vector, which can be used as input to algorithms like random forests, SVMs, or neural networks.</li>
+</ul></li>
+<li><strong>QSAR Modeling:</strong>
+<ul>
+<li>Quantitative Structure-Activity Relationship (QSAR) models use fingerprints to predict biological activity or properties.</li>
+</ul></li>
+<li><strong>Deep Learning:</strong>
+<ul>
+<li>Fingerprints can be combined with other descriptors or used as input to deep learning models for property prediction, classification, or regression tasks.</li>
+</ul></li>
+</ul>
+<p><strong>Example (Python/Scikit-learn):</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit <span class="im">import</span> Chem</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdkit.Chem <span class="im">import</span> AllChem</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Example molecules and labels</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>smiles <span class="op">=</span> [<span class="st">'CCO'</span>, <span class="st">'CCN'</span>, <span class="st">'CCC'</span>, <span class="st">'CCCl'</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>fps <span class="op">=</span> [AllChem.GetMorganFingerprintAsBitVect(Chem.MolFromSmiles(s), <span class="dv">2</span>, nBits<span class="op">=</span><span class="dv">1024</span>) <span class="cf">for</span> s <span class="kw">in</span> smiles]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.array([<span class="bu">list</span>(fp) <span class="cf">for</span> fp <span class="kw">in</span> fps])</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> RandomForestClassifier()</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>clf.fit(X, labels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -790,12 +896,12 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/chapter3-cheminformatics.html" class="pagination-link" aria-label="Chapter 3: Cheminformatics Essentials">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/chapter5-molecular-properties.html" class="pagination-link" aria-label="Chapter 5: Molecular Properties">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

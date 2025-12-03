@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,25 +126,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../preface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter1-genomics-to-molecules.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 1: Genomics to Molecules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter2-environment-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 2: Environment Setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,25 +161,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../part1-foundations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Part I: Foundations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter3-cheminformatics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 3: Cheminformatics Essentials</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter4-molecular-fingerprints.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 4: Molecular Fingerprints</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter5-molecular-properties.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 5: Molecular Properties</span></span></a>
   </div>
 </li>
       </ul>
@@ -193,12 +193,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-machine-learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Part II: Machine Learning for Molecules</span></span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter6-graph-neural-networks.html" class="sidebar-item-text sidebar-link">
@@ -372,12 +366,77 @@ ul.task-list li input[type="checkbox"] {
 <p>This chapter reviews external tools and databases commonly used in computational drug discovery, including RCSB PDB, ChEMBL, and PubChem.</p>
 <section id="structural-databases" class="level2" data-number="23.1">
 <h2 data-number="23.1" class="anchored" data-anchor-id="structural-databases"><span class="header-section-number">23.1</span> 19.1 Structural Databases</h2>
+<p>Structural databases provide 3D structures of proteins, nucleic acids, and complexes, which are essential for structure-based drug design.</p>
+<ul>
+<li><strong>RCSB Protein Data Bank (PDB):</strong>
+<ul>
+<li>The primary repository for experimentally determined 3D structures of biological macromolecules.</li>
+<li><a href="https://www.rcsb.org/">rcsb.org</a></li>
+<li>Structures are available in PDB and mmCIF formats.</li>
+</ul></li>
+<li><strong>AlphaFold Protein Structure Database:</strong>
+<ul>
+<li>Provides predicted protein structures using deep learning.</li>
+<li><a href="https://alphafold.ebi.ac.uk/">alphafold.ebi.ac.uk</a></li>
+</ul></li>
+<li><strong>Other Databases:</strong>
+<ul>
+<li>PDB-REDO (refined structures), CATH/SCOP (structure classification).</li>
+</ul></li>
+</ul>
 </section>
 <section id="bioactivity-databases" class="level2" data-number="23.2">
 <h2 data-number="23.2" class="anchored" data-anchor-id="bioactivity-databases"><span class="header-section-number">23.2</span> 19.2 Bioactivity Databases</h2>
+<p>Bioactivity databases contain information on small molecules, their biological activities, and targets.</p>
+<ul>
+<li><strong>ChEMBL:</strong>
+<ul>
+<li>A large, open-access database of bioactive molecules with drug-like properties.</li>
+<li>Includes activity data (IC50, Ki, etc.), targets, and assay information.</li>
+<li><a href="https://www.ebi.ac.uk/chembl/">ebi.ac.uk/chembl</a></li>
+</ul></li>
+<li><strong>PubChem:</strong>
+<ul>
+<li>Comprehensive resource for chemical structures, properties, and biological activities.</li>
+<li>Includes compound, substance, and bioassay databases.</li>
+<li><a href="https://pubchem.ncbi.nlm.nih.gov/">pubchem.ncbi.nlm.nih.gov</a></li>
+</ul></li>
+<li><strong>BindingDB:</strong>
+<ul>
+<li>Focuses on binding affinities for protein-ligand complexes.</li>
+<li><a href="https://www.bindingdb.org/">bindingdb.org</a></li>
+</ul></li>
+</ul>
 </section>
 <section id="workflow-automation-tools" class="level2" data-number="23.3">
 <h2 data-number="23.3" class="anchored" data-anchor-id="workflow-automation-tools"><span class="header-section-number">23.3</span> 19.3 Workflow Automation Tools</h2>
+<p>Workflow automation tools streamline computational drug discovery by integrating multiple steps and tools into reproducible pipelines.</p>
+<ul>
+<li><strong>KNIME:</strong>
+<ul>
+<li>Open-source platform for data analytics and workflow automation.</li>
+<li>Widely used for cheminformatics, bioinformatics, and machine learning workflows.</li>
+<li><a href="https://www.knime.com/">knime.com</a></li>
+</ul></li>
+<li><strong>Pipeline Pilot:</strong>
+<ul>
+<li>Commercial workflow automation tool for scientific data processing.</li>
+<li>Supports cheminformatics, bioinformatics, and analytics.</li>
+</ul></li>
+<li><strong>Galaxy:</strong>
+<ul>
+<li>Web-based platform for accessible, reproducible, and transparent computational research.</li>
+<li><a href="https://usegalaxy.org/">usegalaxy.org</a></li>
+</ul></li>
+<li><strong>Snakemake/Nextflow:</strong>
+<ul>
+<li>Workflow management systems for scalable and reproducible data analysis pipelines.</li>
+</ul></li>
+<li><strong>Integration with Scripting:</strong>
+<ul>
+<li>Python, R, and shell scripts are often used to glue together custom workflows.</li>
+</ul></li>
+</ul>
 
 
 </section>
