@@ -58,6 +58,24 @@ An end-to-end, modular AI system for drug discovery, integrating biomedical data
 ## 🧠 System Architecture & Agents
 ![Architecture Diagram](assets/architecture_diagram.png)
 
+---
+
+## 🌐 Network-Driven Drug Discovery Workflow
+
+This workflow leverages biomedical networks and graph neural networks (GNNs) to analyze disease-gene-compound relationships. It integrates multi-agent orchestration (Design, Validation, Approval) and domain-specific LLMs to rank candidate compounds for a selected disease.
+
+**Key Steps:**
+- Select a disease and gene/protein targets
+- Build the disease network and analyze with GNNs
+- Query compound databases for candidate molecules
+- Run multi-agent workflow to rank candidates
+- Visualize results and export ranked candidates
+
+**Demonstration Notebook:**
+- [Demo: Network-Driven Workflow for Parkinson Disease](demo_workflow.ipynb)
+
+The notebook provides a step-by-step demonstration, including network visualization, candidate ranking, and export functionality.
+
 **Layered Workflow:**
 - API Layer: Handles incoming requests and responses
 - Agent Layer: Orchestrates agent logic and task delegation
