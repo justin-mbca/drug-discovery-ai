@@ -1,3 +1,5 @@
+# Ignore Quarto and book output
+_book/
 
 .env/
 __pycache__/
