@@ -1,4 +1,8 @@
 
+---
+title: "Conditional Generation"
+format: html
+---
 # Chapter 10: Conditional Generation
 
 Conditional generation enables the design of molecules with specific properties or activities. This chapter covers conditional VAEs, GANs, and reinforcement learning for molecular design.
