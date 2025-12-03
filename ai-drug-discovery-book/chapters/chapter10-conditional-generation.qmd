@@ -22,7 +22,7 @@ Conditional generative models are deep learning architectures that generate new 
 By conditioning the generative process, these models can be steered toward producing molecules with user-specified attributes.
 
 ```{mermaid}
-flowchart TD
+graph LR
     A[Input: Molecular Dataset + Property Labels] --> B[Train Conditional Generative Model (cVAE / cGAN)]
     B --> C[Sample Latent Space <br/> with Property Condition]
     C --> D[Generate Candidate Molecules]
@@ -75,7 +75,7 @@ generated_smiles = model.decode(z, property_vector)
 
 **Workflow Diagram:**
 ```{mermaid}
-flowchart LR
+graph LR
     A[Train Model] --> B[Specify Target Property]
     B --> C[Sample Latent Vector]
     C --> D[Generate New SMILES]
