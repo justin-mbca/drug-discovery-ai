@@ -418,9 +418,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    A[Input: Molecular Dataset + Property Labels] --&gt; B[Train Conditional Generative Model (cVAE/cGAN)]
-    B --&gt; C[Sample Latent Space with Property Condition]
-    C --&gt; D[Generate Molecules with Desired Properties]
+    A[Input: Molecular Dataset + Property Labels] --&gt; B[Train Conditional Generative Model (cVAE / cGAN)]
+    B --&gt; C[Sample Latent Space &lt;br/&gt; with Property Condition]
+    C --&gt; D[Generate Candidate Molecules]
+    D --&gt; E[Predict / Evaluate Properties]
+    E --&gt;|Iterate / Refine| C
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -463,10 +465,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
-    A[Train Model on (SMILES, Properties)] --&gt; B[Specify Target Property]
+    A[Train Model] --&gt; B[Specify Target Property]
     B --&gt; C[Sample Latent Vector]
     C --&gt; D[Generate New SMILES]
     D --&gt; E[Evaluate Properties]
+    E --&gt;|Refine| B
 </pre>
 </div>
 <p></p></figure><p></p>
