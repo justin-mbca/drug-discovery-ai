@@ -29,6 +29,28 @@ The following references are cited throughout this book:
 
 ---
 
+# Further Reading
+
+- [Drug Discovery AI Assistant (GitHub)](https://github.com/justin-mbca/drug-discovery-ai)
+- [RDKit: Open-source cheminformatics](https://www.rdkit.org)
+- [Lipinski, C. A. et al. (2001)](https://doi.org/10.1016/S0169-409X(00)00129-0)
+- [Chen, H. et al. (2018)](https://doi.org/10.1016/j.drudis.2018.01.039)
+- [Lee, J. et al. (2020) BioBERT](https://doi.org/10.1093/bioinformatics/btz682)
+- [Walters, W. P. et al. (1998)](https://doi.org/10.1016/S1359-6446(98)01202-2)
+- [Open Targets Platform](https://www.targetvalidation.org)
+- [UniProt](https://www.uniprot.org)
+- [ChEMBL](https://www.ebi.ac.uk/chembl/)
+- [Protein Data Bank](https://www.rcsb.org)
+- [PubChem](https://pubchem.ncbi.nlm.nih.gov)
+- [Scikit-learn](https://scikit-learn.org)
+- [Polykovskiy, D. et al. (2018) MOSES](https://arxiv.org/abs/1811.12823)
+- [De Cao, N., Kipf, T. (2018) MolGAN](https://arxiv.org/abs/1805.11973)
+- [Sanchez-Lengeling, B. et al. (2017) ORGAN](https://doi.org/10.1021/acs.jcim.7b00690)
+- [Olivecrona, M. et al. (2017) REINVENT](https://doi.org/10.1186/s13321-017-0235-x)
+- [Zhou, Z. et al. (2019) Deep RL Drug Design](https://doi.org/10.1038/s41598-019-47148-x)
+
+---
+
 @drugdiscoveryai2025: Justin MBCA et al. "Drug Discovery AI Assistant: End-to-End Modular System for Biomedical Research." GitHub, 2025. https://github.com/justin-mbca/drug-discovery-ai
 @landrum_rdkit: Landrum, G. "RDKit: Open-source cheminformatics." https://www.rdkit.org
 @lipinski2001: Lipinski, C. A., et al. "Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings." Adv Drug Deliv Rev, 2001.
