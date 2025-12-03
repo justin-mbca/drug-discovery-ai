@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Conditional Generation – AI-Driven Drug Discovery: A Hands-On Guide</title>
+<title>14&nbsp; Chapter 10: Conditional Generation – AI-Driven Drug Discovery: A Hands-On Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter6-graph-neural-networks.html">Part II: Machine Learning for Molecules</a></li><li class="breadcrumb-item"><a href="../chapters/chapter10-conditional-generation.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conditional Generation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter6-graph-neural-networks.html">Part II: Machine Learning for Molecules</a></li><li class="breadcrumb-item"><a href="../chapters/chapter10-conditional-generation.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chapter 10: Conditional Generation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/chapter10-conditional-generation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conditional Generation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chapter 10: Conditional Generation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -373,21 +373,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#chapter-10-conditional-generation" id="toc-chapter-10-conditional-generation" class="nav-link active" data-scroll-target="#chapter-10-conditional-generation"><span class="header-section-number">15</span> Chapter 10: Conditional Generation</a>
-  <ul class="collapse">
-  <li><a href="#conditional-generative-models" id="toc-conditional-generative-models" class="nav-link" data-scroll-target="#conditional-generative-models"><span class="header-section-number">15.1</span> 10.1 Conditional Generative Models</a></li>
-  <li><a href="#property-conditioned-generation" id="toc-property-conditioned-generation" class="nav-link" data-scroll-target="#property-conditioned-generation"><span class="header-section-number">15.2</span> 10.2 Property-Conditioned Generation</a></li>
-  <li><a href="#reinforcement-learning-approaches" id="toc-reinforcement-learning-approaches" class="nav-link" data-scroll-target="#reinforcement-learning-approaches"><span class="header-section-number">15.3</span> 10.3 Reinforcement Learning Approaches</a></li>
-  </ul></li>
+  <li><a href="#conditional-generative-models" id="toc-conditional-generative-models" class="nav-link active" data-scroll-target="#conditional-generative-models"><span class="header-section-number">14.1</span> 10.1 Conditional Generative Models</a></li>
+  <li><a href="#property-conditioned-generation" id="toc-property-conditioned-generation" class="nav-link" data-scroll-target="#property-conditioned-generation"><span class="header-section-number">14.2</span> 10.2 Property-Conditioned Generation</a></li>
+  <li><a href="#reinforcement-learning-approaches" id="toc-reinforcement-learning-approaches" class="nav-link" data-scroll-target="#reinforcement-learning-approaches"><span class="header-section-number">14.3</span> 10.3 Reinforcement Learning Approaches</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter6-graph-neural-networks.html">Part II: Machine Learning for Molecules</a></li><li class="breadcrumb-item"><a href="../chapters/chapter10-conditional-generation.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conditional Generation</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter6-graph-neural-networks.html">Part II: Machine Learning for Molecules</a></li><li class="breadcrumb-item"><a href="../chapters/chapter10-conditional-generation.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chapter 10: Conditional Generation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conditional Generation</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chapter 10: Conditional Generation</span></h1>
 </div>
 
 
@@ -404,11 +401,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="chapter-10-conditional-generation" class="level1" data-number="15">
-<h1 data-number="15"><span class="header-section-number">15</span> Chapter 10: Conditional Generation</h1>
 <p>Conditional generation enables the design of molecules with specific properties or activities. This chapter covers conditional VAEs, GANs, and reinforcement learning for molecular design.</p>
-<section id="conditional-generative-models" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="conditional-generative-models"><span class="header-section-number">15.1</span> 10.1 Conditional Generative Models</h2>
+<section id="conditional-generative-models" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="conditional-generative-models"><span class="header-section-number">14.1</span> 10.1 Conditional Generative Models</h2>
 <p>Conditional generative models are deep learning architectures that generate new molecules based on input conditions, such as desired properties or biological activities.</p>
 <pre><code>- Extend standard VAEs by incorporating property or activity information into both the encoder and decoder.
 - Enable sampling of molecules with specific characteristics by conditioning on property vectors.
@@ -422,7 +417,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">graph LR
+<pre class="mermaid mermaid-js">graph TD;
     A[Input: Molecular Dataset + Property Labels] --&gt; B[Train Conditional Generative Model (cVAE / cGAN)]
     B --&gt; C[Sample Latent Space &lt;br/&gt; with Property Condition]
     C --&gt; D[Generate Candidate Molecules]
@@ -449,8 +444,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generation: sample z, specify y_target, model.decode(z, y_target)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Further Reading:</strong> <span class="citation" data-cites="cvae_arxiv">@cvae_arxiv</span> <span class="citation" data-cites="cgan_arxiv">@cgan_arxiv</span></p>
 </section>
-<section id="property-conditioned-generation" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="property-conditioned-generation"><span class="header-section-number">15.2</span> 10.2 Property-Conditioned Generation</h2>
+<section id="property-conditioned-generation" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="property-conditioned-generation"><span class="header-section-number">14.2</span> 10.2 Property-Conditioned Generation</h2>
 <p>Property-conditioned generation refers to the process of designing molecules that meet specific property requirements (e.g., solubility, bioactivity, toxicity).</p>
 <pre><code>- Concatenate property vectors with molecular representations during training and generation.
 - Use property predictors as part of the loss function to guide the model toward desired outputs.
@@ -469,7 +464,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">graph LR
+<pre class="mermaid mermaid-js">graph TD;
     A[Train Model] --&gt; B[Specify Target Property]
     B --&gt; C[Sample Latent Vector]
     C --&gt; D[Generate New SMILES]
@@ -483,8 +478,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Further Reading:</strong> <span class="citation" data-cites="molgan_arxiv">@molgan_arxiv</span> <span class="citation" data-cites="property_conditioned_review">@property_conditioned_review</span></p>
 </section>
-<section id="reinforcement-learning-approaches" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="reinforcement-learning-approaches"><span class="header-section-number">15.3</span> 10.3 Reinforcement Learning Approaches</h2>
+<section id="reinforcement-learning-approaches" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="reinforcement-learning-approaches"><span class="header-section-number">14.3</span> 10.3 Reinforcement Learning Approaches</h2>
 <p>Reinforcement learning (RL) can be used to optimize molecular generation toward specific objectives by treating molecule design as a sequential decision process.</p>
 <pre><code>- The model (agent) generates molecules step by step (e.g., adding atoms/bonds or SMILES tokens).
 - Rewards are given based on how well the generated molecule meets the target property or activity.
@@ -511,7 +506,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
+<pre class="mermaid mermaid-js">graph TD;
     A[Initialize Agent] --&gt; B[Generate Molecule Step-by-Step]
     B --&gt; C[Evaluate Reward (Property, Activity)]
     C --&gt; D[Update Policy]
@@ -526,7 +521,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Further Reading:</strong> <span class="citation" data-cites="reinvent">@reinvent</span> <span class="citation" data-cites="deep_rl_drug_design">@deep_rl_drug_design</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
