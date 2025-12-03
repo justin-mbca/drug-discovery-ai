@@ -19,9 +19,11 @@ By conditioning the generative process, these models can be steered toward produ
 
 ```{mermaid}
 flowchart TD
-    A[Input: Molecular Dataset + Property Labels] --> B[Train Conditional Generative Model (cVAE/cGAN)]
-    B --> C[Sample Latent Space with Property Condition]
-    C --> D[Generate Molecules with Desired Properties]
+    A[Input: Molecular Dataset + Property Labels] --> B[Train Conditional Generative Model (cVAE / cGAN)]
+    B --> C[Sample Latent Space <br/> with Property Condition]
+    C --> D[Generate Candidate Molecules]
+    D --> E[Predict / Evaluate Properties]
+    E -->|Iterate / Refine| C
 ```
 
 **Example: Conditional VAE in PyTorch (Conceptual)**
@@ -70,10 +72,11 @@ generated_smiles = model.decode(z, property_vector)
 **Workflow Diagram:**
 ```{mermaid}
 flowchart LR
-    A[Train Model on (SMILES, Properties)] --> B[Specify Target Property]
+    A[Train Model] --> B[Specify Target Property]
     B --> C[Sample Latent Vector]
     C --> D[Generate New SMILES]
     D --> E[Evaluate Properties]
+    E -->|Refine| B
 ```
 
 **Further Reading:**
