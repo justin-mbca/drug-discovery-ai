@@ -422,7 +422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
+<pre class="mermaid mermaid-js">graph LR
     A[Input: Molecular Dataset + Property Labels] --&gt; B[Train Conditional Generative Model (cVAE / cGAN)]
     B --&gt; C[Sample Latent Space &lt;br/&gt; with Property Condition]
     C --&gt; D[Generate Candidate Molecules]
@@ -469,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid mermaid-js">graph LR
     A[Train Model] --&gt; B[Specify Target Property]
     B --&gt; C[Sample Latent Vector]
     C --&gt; D[Generate New SMILES]
