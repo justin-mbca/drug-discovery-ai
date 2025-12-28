@@ -108,7 +108,7 @@ class PDBAnalyzer:
         Returns:
             Dictionary with sequence information
         """
-        if not BIOPYTHON_AVAILABLE:
+        if not self.available:
             return {"error": "Biopython not available"}
         
         structure = self.parse_pdb(pdb_file)

@@ -10,7 +10,12 @@ from torch_geometric.data import Data, Batch
 from rdkit import Chem
 from rdkit.Chem import Descriptors, AllChem
 import numpy as np
+import logging
 from typing import List, Dict, Optional, Tuple
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class MolecularGNN(torch.nn.Module):
@@ -63,6 +68,7 @@ def smiles_to_graph(smiles: str) -> Optional[Data]:
     try:
         mol = Chem.MolFromSmiles(smiles)
         if mol is None:
+            logger.warning(f"Failed to parse SMILES: {smiles}")
             return None
         
         # Get atom features
@@ -104,7 +110,7 @@ def smiles_to_graph(smiles: str) -> Optional[Data]:
         return data
         
     except Exception as e:
-        print(f"Error converting SMILES {smiles} to graph: {e}")
+        logger.error(f"Error converting SMILES {smiles} to graph: {e}")
         return None
 
 
