@@ -93,6 +93,91 @@ The notebook provides a step-by-step demonstration, including network visualizat
 
 ---
 
+## 🎯 Drug Target Discovery Pipeline
+
+This system includes an **automated target identification workflow** that extracts potential drug targets from biomedical literature using state-of-the-art NLP and network analysis. 
+
+### **Key Capabilities:**
+
+#### **1. Disease-to-Target Extraction**
+- **Input:** Disease name (e.g., "Parkinson's disease", "Alzheimer's disease")
+- **Process:**
+  - Query PubMed for recent literature (top N abstracts)
+  - Apply **BioBERT Named Entity Recognition (NER)** to extract gene/protein entities
+  - Filter and rank by frequency and relevance
+  - Cross-reference with canonical disease-gene databases (KEGG, OMIM)
+- **Output:** Ranked list of target genes/proteins with confidence scores
+
+#### **2. Network-Based Target Prioritization**
+- Build disease-gene-compound interaction networks from **KEGG pathways** and **ChEMBL**
+- Apply **Graph Neural Networks (GNNs)** to identify critical nodes
+- Score targets by:
+  - Network centrality (betweenness, degree)
+  - Pathway vulnerability
+  - Druggability (existence of known compounds)
+
+#### **3. Automated Compound Retrieval**
+- For each identified target, query **ChEMBL** for known bioactive compounds
+- Retrieve compound structures, activity data, and molecular properties
+- Rank compounds by predicted efficacy and drug-likeness
+
+### **Demonstrated Examples:**
+
+| Disease | Extracted Targets | Notebook |
+|---------|-------------------|----------|
+| Parkinson's disease | SNCA, LRRK2, PARK2, PINK1 | [demo_workflow.ipynb](demo_workflow.ipynb) |
+| Alzheimer's disease | BACE1, APP, MAPT, PSEN1, PSEN2 | [Example in README](#-disease-sample-queries) |
+| ALS | SOD1, C9orf72, FUS, TARDBP | [ALS_ligand_integration_demo.ipynb](ALS_ligand_integration_demo.ipynb) |
+| Pancreatic cancer | KRAS, TP53, CDKN2A, SMAD4 | API `/discovery` endpoint |
+
+### **Try It Yourself:**
+
+```bash
+# Extract targets for a disease
+curl "http://127.0.0.1:8000/discovery?query=Parkinson's disease"
+
+# Or use Python directly
+from agents.discovery_agent import DiscoveryAgent
+result = DiscoveryAgent().run('Alzheimer disease')
+print(result['suggested_targets'])
+```
+
+**Sample Output:**
+```json
+{
+  "literature": ["40886227", "40881622", "40881157"],
+  "suggested_targets": ["BACE1", "APP", "MAPT", "PSEN1", "PSEN2"],
+  "llm_summary": "Alzheimer disease is associated with amyloid-beta accumulation.. .",
+  "network_scores": {
+    "BACE1": 0.87,
+    "APP": 0.82,
+    "MAPT":  0.76
+  }
+}
+```
+
+### **Technologies Used:**
+- **BioBERT** (dmis-lab/biobert-v1.1): Biomedical NER for target extraction
+- **PubMedBERT** (microsoft/BiomedNLP-PubMedBERT): Literature summarization
+- **PyTorch Geometric**:  Graph Neural Networks for network analysis
+- **KEGG API**:  Pathway data integration
+- **ChEMBL WebResource Client**: Target-compound relationship queries
+
+### **Architecture:**
+```
+Disease Input → PubMed Query → BioBERT NER → Target Candidates
+                                                    ↓
+                                            Network Construction (KEGG)
+                                                    ↓
+                                            GNN Analysis & Ranking
+                                                    ↓
+                                            ChEMBL Compound Retrieval
+                                                    ↓
+                                            Multi-Agent Evaluation
+```
+
+---
+
 ## 🛠️ API Endpoints
 The FastAPI backend exposes the following endpoints (see `app/example_main.py`):
 
