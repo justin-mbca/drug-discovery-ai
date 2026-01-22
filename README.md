@@ -49,7 +49,9 @@ An end-to-end, modular AI system for drug discovery, integrating biomedical data
    ```bash
    streamlit run frontend.py
    ```
-4. Try the API:
+4. Then open http://localhost:8501 in your browser.
+   
+5. Try the API:
    ```bash
    curl "http://127.0.0.1:8000/full_workflow?query=aspirin"
    ```
