@@ -1,3 +1,26 @@
+---
+
+## 🧬 Disease Monitor Dashboard
+
+### Goal
+The Disease Monitor Dashboard provides researchers and clinicians with a real-time, interactive view of the latest biomedical literature and clinical trials for major neurodegenerative diseases. It is designed to accelerate hypothesis generation, target validation, and translational research by integrating up-to-date data from PubMed and ClinicalTrials.gov.
+
+### Features
+- **Multi-disease support:** Select from a dropdown of major neurodegenerative diseases (e.g., Parkinson's, Alzheimer's, ALS, Huntington's, Multiple Sclerosis, and more).
+- **Live PubMed integration:** Instantly fetches and displays the latest research articles for the selected disease and date range.
+- **ClinicalTrials.gov integration:** Shows current and recent clinical trials for the selected disease, filterable by start date.
+- **Gene extraction:** Automatically highlights gene mentions in articles using the HGNC gene symbol set.
+- **Top gene targets visualization:** Interactive bar chart of the most frequently mentioned genes in recent literature.
+- **Date filtering:** Easily filter both articles and trials by publication/start date.
+- **Simple web interface:** Launch with a single command and access via your browser.
+
+### How to Run
+```bash
+python parkinson_monitor_backup.py --mode dashboard --port 5050
+```
+Then open [http://localhost:5050](http://localhost:5050) in your browser.
+
+---
 
 ---
 
