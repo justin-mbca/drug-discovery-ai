@@ -16,7 +16,7 @@ The Disease Monitor Dashboard provides researchers and clinicians with a real-ti
 
 ### How to Run
 ```bash
-python parkinson_monitor_backup.py --mode dashboard --port 5050
+python disease_monitor.py --mode dashboard --port 5050
 ```
 Then open [http://localhost:5050](http://localhost:5050) in your browser.
 
