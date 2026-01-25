@@ -65,6 +65,10 @@ An end-to-end, modular AI system for drug discovery, integrating biomedical data
 - **LangChain, CrewAI** (agent orchestration)
 - **MongoDB** (vector/document storage)
 - **Hugging Face Transformers** (BioGPT, PubMedBERT, BioBERT)
+- **PyTorch & PyTorch Geometric** (Graph Neural Networks)
+- **DeepChem** (molecular property prediction)
+- **RDKit** (cheminformatics and molecular descriptors)
+- **Biopython** (protein structure analysis)
 - **Docker** (optional, for deployment)
 
 ---
@@ -73,6 +77,10 @@ An end-to-end, modular AI system for drug discovery, integrating biomedical data
 - Modular, multi-agent architecture (Discovery, Design, Validation, Approval)
 - Real-world biomedical data integration (PubMed, PubChem, AlphaFold)
 - LLM-based summarization and knowledge extraction (BioGPT, PubMedBERT, BioBERT)
+- **Geometric Deep Learning**: Graph Neural Networks (GNNs) for molecular property prediction
+- **Molecular Property Predictor**: GNN-based prediction of solubility, toxicity, and binding affinity
+- **Protein Structure Analysis**: Enhanced PDB file parsing and structural bioinformatics
+- **Network Analysis**: Real GNN-based disease network analysis with centrality measures
 - Target-to-compound lookup and multi-compound analysis
 - Robust, extensible Python code with clear documentation and error handling
 - Interactive Streamlit frontend and production-ready FastAPI backend
@@ -245,6 +253,113 @@ Sample response:
 
 ---
 
+## 🧬 Geometric Deep Learning & Molecular Property Prediction
+
+This project now includes **Graph Neural Networks (GNNs)** for advanced molecular property prediction using geometric deep learning.
+
+### 🎯 Features
+
+#### 1. GNN-Based Molecular Property Predictor (`tools/molecular_gnn.py`)
+- **Graph Convolutional Networks (GCN)** architecture with 3 layers
+- Converts SMILES strings to molecular graphs with atomic features
+- Predicts molecular properties: solubility, toxicity, binding affinity
+- Calculates drug-likeness metrics (Lipinski's Rule of Five, Veber's rules)
+- Batch prediction and molecule ranking capabilities
+
+**Example Usage:**
+```python
+from tools.molecular_gnn import MolecularPropertyPredictor
+
+predictor = MolecularPropertyPredictor()
+smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"  # Aspirin
+properties = predictor.predict_property(smiles)
+
+print(f"Molecular Weight: {properties['molecular_weight']:.2f}")
+print(f"LogP: {properties['logp']:.2f}")
+print(f"Lipinski Pass: {properties['lipinski_pass']}")
+```
+
+#### 2. DeepChem Integration (`tools/deepchem_predictor.py`)
+- Molecular property prediction using DeepChem library (optional)
+- ADMET properties: Absorption, Distribution, Metabolism, Excretion, Toxicity
+- Molecular fingerprints (Morgan/Circular) for similarity analysis
+- Tanimoto and Dice similarity coefficients
+- Drug-likeness assessment
+
+**Example Usage:**
+```python
+from tools.deepchem_predictor import DeepChemPredictor
+
+predictor = DeepChemPredictor()
+smiles = "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"  # Caffeine
+result = predictor.predict_admet_properties(smiles)
+print(f"Bioavailability Score: {result['bioavailability_score']:.2f}")
+```
+
+#### 3. Enhanced Protein Structure Analysis (`tools/pdb_analysis.py`)
+- Comprehensive PDB file parsing and analysis
+- Sequence extraction from protein structures
+- Binding site identification and ligand detection
+- Center of mass and distance calculations
+- Structure quality metrics and completeness assessment
+- Integration with AlphaFold database
+
+**Example Usage:**
+```python
+from tools.pdb_analysis import EnhancedAlphaFoldTool
+
+tool = EnhancedAlphaFoldTool()
+results = tool.analyze_structure("P12345")  # UniProt ID
+print(f"Structure Quality: {results['quality_metrics']['quality_assessment']}")
+print(f"Number of Ligands: {results['binding_sites']['num_ligands']}")
+```
+
+#### 4. Real GNN-Based Network Analysis (`tools/network.py`)
+- **Replaced placeholder with actual GNN implementation**
+- Network centrality measures: degree, betweenness, closeness, PageRank
+- Hub gene identification based on network topology
+- Critical pathway discovery
+- Comprehensive network topology analysis
+
+**Example Usage:**
+```python
+from tools.network import build_disease_network, run_gnn_analysis
+
+pathways = ["Alzheimer_pathway", "Apoptosis_pathway"]
+targets = ["APP", "BACE1", "MAPT"]
+
+network = build_disease_network(pathways, targets)
+insights = run_gnn_analysis(network)
+
+for gene, score in insights.items():
+    print(f"{gene}: {score:.3f}")
+```
+
+### 📊 What This Adds to Your Portfolio
+
+This implementation demonstrates expertise in:
+- **Geometric Deep Learning**: Applying GNNs to molecular graphs
+- **Drug Discovery AI**: End-to-end molecular property prediction pipeline
+- **Structural Bioinformatics**: PDB file analysis and protein structure work
+- **Graph Neural Networks**: Real network analysis with centrality measures
+- **Modern ML Stack**: PyTorch Geometric, DeepChem, RDKit integration
+
+### 🧪 Testing
+
+Run the test suites to validate functionality:
+```bash
+# Test molecular GNN
+python test_molecular_gnn.py
+
+# Test DeepChem predictor
+python test_deepchem_predictor.py
+
+# Test network analysis
+python test_network_analysis.py
+```
+
+---
+
 ## 📓 End-to-End Workflow Notebook
 The project includes a comprehensive Jupyter notebook (`notebooks/end_to_end_discovery_workflow.ipynb`) that demonstrates the full drug discovery workflow—from target selection and compound retrieval to property calculation, filtering, and advanced post-processing.
 
@@ -255,10 +370,13 @@ The project includes a comprehensive Jupyter notebook (`notebooks/end_to_end_dis
 ---
 
 ## 🌱 Future Work
-- Add more ML/DL modeling (e.g., biomarker → drug response prediction)
+- ~~Add more ML/DL modeling (e.g., biomarker → drug response prediction)~~ ✅ **Implemented: GNN-based molecular property prediction**
+- Fine-tune GNN models on real drug discovery datasets (e.g., MoleculeNet)
+- Add transfer learning from pre-trained molecular models
 - Expand ETL pipelines for omics/clinical data
 - Integrate experiment tracking (MLflow)
 - Deploy with Docker for reproducibility
+- Add docking score prediction using GNNs
 - Write a LinkedIn/Medium post about the project
 
 ---
