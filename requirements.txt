@@ -8,7 +8,6 @@ fastapi
 uvicorn
 crewai
 python-dotenv
-unsloth
 pytest
 transformers
 torch
