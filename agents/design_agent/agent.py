@@ -41,7 +41,14 @@ class DesignAgent:
         if os.path.exists(self.memory_file):
             try:
                 with open(self.memory_file, 'r') as f:
-                    self.memory = json.load(f)
+                    loaded = json.load(f)
+                    # Ensure all required keys exist
+                    self.memory = {
+                        "successes": loaded.get("successes", []),
+                        "failures": loaded.get("failures", []),
+                        "analyzed": loaded.get("analyzed", []),
+                        "generation_count": loaded.get("generation_count", 0)
+                    }
             except Exception as e:
                 print(f"Could not load memory: {e}")
                 self._init_memory()
