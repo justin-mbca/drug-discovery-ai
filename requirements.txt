@@ -1,4 +1,7 @@
 langchain
+langgraph
+langchain-openai
+langchain-core
 pymongo
 rdkit
 fastapi
@@ -10,11 +13,3 @@ pytest
 transformers
 torch
 streamlit
-pymongo
-rdkit
-fastapi
-uvicorn
-crewai
-python-dotenv
-unsloth
-pytest
