@@ -380,12 +380,12 @@ def decision_node(state: AgentState) -> AgentState:
 # CONDITIONAL EDGES (ROUTING LOGIC)
 # =============================================================================
 
-def route_after_decision(state: AgentState) -> Literal["end", "initialize"]:
+def route_after_decision(state: AgentState) -> str:
     """Route based on decision node outcome"""
     next_action = state.get("next_action", "end")
     if next_action == "continue":
         return "initialize"
-    return "end"
+    return END
 
 
 def route_after_design(state: AgentState) -> str:
