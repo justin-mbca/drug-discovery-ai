@@ -1,0 +1,51 @@
+================================================================================
+PARKINSON'S DISEASE DRUG TARGET GENE ANALYSIS REPORT
+================================================================================
+Total articles analyzed: 5
+
+
+PMID: 41557715
+Title: The effect of Apolipoprotein E4 on cognitive function in Parkinson's disease: A structural MRI study...
+Publication Date: 2026
+Authors: Angenelle Eve Rosal, Edgardo Torres-Carmona, Sarah...
+Potential Gene Targets: APOE4, ARE, BEEN, BOTH, COHORT, COMMON, CTH, E4, EFFECT, FACTOR, FOUND, GMV, GRAY, HAS, IMPACT, IN, IS, ITS, MAINLY, MATTER, MOTOR, MRI, NEED, NON, OF, ON, PD, POORLY, PPMI, REMAIN, RISK, ROLE, STUDY, THEIR, THESE, VOLUME, YET
+------------------------------------------------------------
+
+PMID: 41557565
+Title: Limited diagnostic performance of cerebrospinal fluid glial fibrillary acidic protein in dementia....
+Publication Date: 2026
+Authors: Pontus Erickson, Tobias Borgh Skillbäck, Silke Ker...
+Potential Gene Targets: ACIDIC, AIMED, CSF, FLUID, GFAP, GLIAL, IN, IS, ITS, MARKER, OF, STUDY, TO
+------------------------------------------------------------
+
+PMID: 41557560
+Title: Local Field Potentials in Movement Disorders: A Narrative Review....
+Publication Date: 2026
+Authors: Renato P Munhoz, Gustavo da Cunha Ribas, Nathalia ...
+Potential Gene Targets: ACROSS, AS, BRAIN, DBS, DEEP, FIELD, IN, INTO, LFPS, LOCAL, OF, RECENT, REVIEW, SUMMED, WINDOW
+------------------------------------------------------------
+
+PMID: 41557086
+Title: GBA1 as a predictive biomarker for impulse control behaviors in parkinson's disease: promise and cha...
+Publication Date: 2026
+Authors: Talha Khan, Maryam Zehra, Haniah Mahboob, Ayesha T...
+Potential Gene Targets: AS, GBA1, IN
+------------------------------------------------------------
+
+PMID: 41557055
+Title: Neuroprotective effect of sinomenine on parkinson's disease through NLRP3/Caspase-1/GSDMD pathway-me...
+Publication Date: 2026
+Authors: Xi Bao, JingCai Xu, Jia Zhou, Lin Huang, HaiChang ...
+Potential Gene Targets: EFFECT, GSDMD, NLRP3, OF, ON
+Keywords: NLRP3, Neuroprotective effect, Parkinson’s disease, Pyroptosis, Sinomenine
+------------------------------------------------------------
+
+================================================================================
+SUMMARY OF IDENTIFIED GENES
+================================================================================
+Total unique genes identified: 61
+Genes: ACIDIC, ACROSS, AIMED, APOE4, ARE, AS, BEEN, BOTH, BRAIN, COHORT, COMMON, CSF, CTH, DBS, DEEP, E4, EFFECT, FACTOR, FIELD, FLUID, FOUND, GBA1, GFAP, GLIAL, GMV, GRAY, GSDMD, HAS, IMPACT, IN, INTO, IS, ITS, LFPS, LOCAL, MAINLY, MARKER, MATTER, MOTOR, MRI, NEED, NLRP3, NON, OF, ON, PD, POORLY, PPMI, RECENT, REMAIN, REVIEW, RISK, ROLE, STUDY, SUMMED, THEIR, THESE, TO, VOLUME, WINDOW, YET
+
+Known PD-related genes found: NLRP3
+
+Potential novel/emerging genes: ACIDIC, ACROSS, AIMED, APOE4, ARE, AS, BEEN, BOTH, BRAIN, COHORT, COMMON, CSF, CTH, DBS, DEEP, E4, EFFECT, FACTOR, FIELD, FLUID, FOUND, GBA1, GFAP, GLIAL, GMV, GRAY, GSDMD, HAS, IMPACT, IN, INTO, IS, ITS, LFPS, LOCAL, MAINLY, MARKER, MATTER, MOTOR, MRI, NEED, NON, OF, ON, PD, POORLY, PPMI, RECENT, REMAIN, REVIEW, RISK, ROLE, STUDY, SUMMED, THEIR, THESE, TO, VOLUME, WINDOW, YET

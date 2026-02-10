@@ -1,0 +1,166 @@
+[
+  {
+    "pmid": "41557715",
+    "title": "The effect of Apolipoprotein E4 on cognitive function in Parkinson's disease: A structural MRI study in the PPMI cohort.",
+    "abstract": "Cognitive impairment is a common non-motor symptom of Parkinson's disease (PD), yet its underlying mechanisms remain poorly understood. Apolipoprotein E4 (APOE4), a genetic risk factor of Alzheimer's Disease, has been associated with PD-related cognitive impairment. However, findings are inconsistent, highlighting the need for further investigation. Neuroimaging studies have found gray matter abnormalities, mainly reductions in gray matter volume (GMV) and cortical thickness (CTh), in both cognitively impaired PD patients and APOE4 carriers. Yet, APOE4's role in these structural changes and their cognitive impact in PD is underexplored.",
+    "genes": [
+      "OF",
+      "COMMON",
+      "THESE",
+      "COHORT",
+      "PPMI",
+      "PD",
+      "GRAY",
+      "APOE4",
+      "IMPACT",
+      "ROLE",
+      "POORLY",
+      "STUDY",
+      "RISK",
+      "FACTOR",
+      "ARE",
+      "CTH",
+      "MAINLY",
+      "THEIR",
+      "NON",
+      "ON",
+      "IN",
+      "MRI",
+      "E4",
+      "MOTOR",
+      "BOTH",
+      "ITS",
+      "YET",
+      "FOUND",
+      "NEED",
+      "IS",
+      "BEEN",
+      "EFFECT",
+      "HAS",
+      "GMV",
+      "VOLUME",
+      "REMAIN",
+      "MATTER"
+    ],
+    "keywords": [],
+    "publication_date": "2026",
+    "authors": [
+      "Angenelle Eve Rosal",
+      "Edgardo Torres-Carmona",
+      "Sarah L Martin",
+      "Isabelle Boileau",
+      "Ariel Graff-Guerrero",
+      "Antonio P Strafella"
+    ]
+  },
+  {
+    "pmid": "41557565",
+    "title": "Limited diagnostic performance of cerebrospinal fluid glial fibrillary acidic protein in dementia.",
+    "abstract": "Cerebrospinal fluid (CSF) glial fibrillary acidic protein (GFAP) is a neuroinflammatory marker reflecting reactive astrogliosis and is measured regularly in clinical practice. However, its diagnostic utility in differentiating dementia subtypes remains unclear. This study aimed to evaluate differences in CSF GFAP concentrations and its associations with markers of disease severity and amyloid pathology.",
+    "genes": [
+      "OF",
+      "IS",
+      "STUDY",
+      "TO",
+      "IN",
+      "GFAP",
+      "ACIDIC",
+      "FLUID",
+      "ITS",
+      "MARKER",
+      "GLIAL",
+      "CSF",
+      "AIMED"
+    ],
+    "keywords": [],
+    "publication_date": "2026",
+    "authors": [
+      "Pontus Erickson",
+      "Tobias Borgh Skillb\u00e4ck",
+      "Silke Kern",
+      "Ingmar Skoog",
+      "Linus J\u00f6nsson",
+      "Ulf Andreasson",
+      "Kaj Blennow",
+      "Maria Eriksdotter",
+      "Henrik Zetterberg"
+    ]
+  },
+  {
+    "pmid": "41557560",
+    "title": "Local Field Potentials in Movement Disorders: A Narrative Review.",
+    "abstract": "Local field potentials (LFPs) represent the summed electrical activity of neuronal populations and provide a critical window into synaptic and oscillatory dynamics across brain networks. In recent decades, advances in deep brain stimulation (DBS) and chronic sensing technology have established LFPs as essential biomarkers for understanding movement disorders and optimizing neuromodulation therapies.",
+    "genes": [
+      "SUMMED",
+      "OF",
+      "FIELD",
+      "DEEP",
+      "LOCAL",
+      "WINDOW",
+      "IN",
+      "INTO",
+      "DBS",
+      "LFPS",
+      "BRAIN",
+      "RECENT",
+      "AS",
+      "ACROSS",
+      "REVIEW"
+    ],
+    "keywords": [],
+    "publication_date": "2026",
+    "authors": [
+      "Renato P Munhoz",
+      "Gustavo da Cunha Ribas",
+      "Nathalia C B Tortato",
+      "Marina Farah"
+    ]
+  },
+  {
+    "pmid": "41557086",
+    "title": "GBA1 as a predictive biomarker for impulse control behaviors in parkinson's disease: promise and challenges.",
+    "abstract": "",
+    "genes": [
+      "AS",
+      "IN",
+      "GBA1"
+    ],
+    "keywords": [],
+    "publication_date": "2026",
+    "authors": [
+      "Talha Khan",
+      "Maryam Zehra",
+      "Haniah Mahboob",
+      "Ayesha Tariq",
+      "Tazeem Hayat"
+    ]
+  },
+  {
+    "pmid": "41557055",
+    "title": "Neuroprotective effect of sinomenine on parkinson's disease through NLRP3/Caspase-1/GSDMD pathway-mediated pyroptosis inhibition.",
+    "abstract": "",
+    "genes": [
+      "OF",
+      "EFFECT",
+      "ON",
+      "NLRP3",
+      "GSDMD"
+    ],
+    "keywords": [
+      "NLRP3",
+      "Neuroprotective effect",
+      "Parkinson\u2019s disease",
+      "Pyroptosis",
+      "Sinomenine"
+    ],
+    "publication_date": "2026",
+    "authors": [
+      "Xi Bao",
+      "JingCai Xu",
+      "Jia Zhou",
+      "Lin Huang",
+      "HaiChang Li",
+      "Yun Huang"
+    ]
+  }
+]

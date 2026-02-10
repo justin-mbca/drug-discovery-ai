@@ -49,9 +49,9 @@ class DiscoveryAgent:
         return "\n".join(lines)
 
     def run(self, query):
-        literature = self.pubmed.search(query)
+        literature = self.pubmed.run(query=query)
         structure = self.alphafold.predict(query)
-        pubchem_info = self.pubchem.lookup(query)
+        pubchem_info = self.pubchem.run(compound=query)
         pubchem_str = self._format_pubchem_info(pubchem_info)
         lit_str = ", ".join(literature) if literature else "None"
 
@@ -91,9 +91,19 @@ class DiscoveryAgent:
 
         compounds_for_target = []
         chembl_compounds_for_target = []
-        if is_target_like(query):
-            compounds_for_target = get_compounds_for_target(query)
-            chembl_compounds_for_target = get_chembl_compounds_for_target(query)
+        # Try to extract UniProt ID from query if present (e.g., if passed as 'SYMBOL (UNIPROT)')
+        uniprot_id = None
+        if '(' in query and ')' in query:
+            # e.g., 'SNCA (P37840)'
+            try:
+                uniprot_id = query.split('(')[-1].replace(')','').strip()
+            except Exception:
+                uniprot_id = None
+        # If session_state or API passes UniProt ID, prefer it for PubChem queries
+        pubchem_query = uniprot_id if uniprot_id else query
+        if is_target_like(query) or uniprot_id:
+            compounds_for_target = get_compounds_for_target(pubchem_query)
+            chembl_compounds_for_target = get_chembl_compounds_for_target(pubchem_query)
 
         if not pubchem_info or pubchem_info == {} or pubchem_str == "No PubChem info available.":
             # Use BioBERT for protein/gene summarization

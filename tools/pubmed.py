@@ -1,25 +1,11 @@
-
-def pubmed_search(query: str) -> str:
-    base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
-    params = {
-        "db": "pubmed",
-        "term": query,
-        "retmode": "json",
-        "retmax": 3
-    }
-    response = requests.get(base_url, params=params)
-    return response.json()
-
-
-# Add PubMedTool class for agent compatibility
-
 import requests
+from crewai.tools.base_tool import BaseTool
 
-class PubMedTool:
-    def search(self, query, retmax=3):
-        """
-        Search PubMed for the query and return a list of PubMed IDs (PMIDs).
-        """
+class PubMedTool(BaseTool):
+    name: str = "PubMed Search"
+    description: str = "Search PubMed for studies related to a compound. Returns a list of PubMed IDs."
+
+    def _run(self, query: str, retmax: int = 3):
         base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
         params = {
             "db": "pubmed",

@@ -1,16 +1,11 @@
-
-
-# Add PubChemTool class for agent compatibility
-
 import requests
+from crewai.tools.base_tool import BaseTool
 
-class PubChemTool:
-    def lookup(self, compound):
-        """
-        Look up compound information from PubChem using the PUG REST API.
-        Supports both compound names and numeric CIDs.
-        Returns a dictionary with compound info or an error message.
-        """
+class PubChemTool(BaseTool):
+    name: str = "PubChem Fetch"
+    description: str = "Fetch compound data from PubChem. Returns molecular weight, formula, and IUPAC name."
+
+    def _run(self, compound: str):
         # If input is all digits, treat as CID
         if str(compound).isdigit():
             base_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{compound}/property/MolecularWeight,MolecularFormula,IUPACName/JSON"
@@ -32,18 +27,3 @@ class PubChemTool:
             }
         except (requests.RequestException, KeyError, IndexError) as e:
             return {"error": f"PubChem API error: {e}"}
-
-def fetch_compound_data(compound: str) -> dict:
-    """
-    Placeholder function for fetching compound data from PubChem or similar service.
-    Returns mock data for development/testing.
-    """
-    return {
-        "compound": compound,
-        "properties": {
-            "molecular_weight": 123.45,
-            "formula": "C6H12O6",
-            "iupac_name": "glucose"
-        },
-        "source": "mock"
-    }

@@ -1,4 +1,6 @@
+
 import requests
+from tools.uniprot_to_entrez import uniprot_to_entrez
 
 def get_compounds_for_target(target, max_results=5):
     """
@@ -6,13 +8,26 @@ def get_compounds_for_target(target, max_results=5):
     Returns a list of compound names/IDs.
     Fallback: If gene/assay endpoint fails, try compound name search for CIDs.
     """
-    # First try the gene/assay endpoint
-    url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/target/gene/{target}/aids/JSON"
+    # If target looks like a UniProt ID, map to Entrez Gene ID
+    entrez_id = uniprot_to_entrez.get(target)
+    if entrez_id:
+        url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/target/geneid/{entrez_id}/aids/JSON"
+    elif target.isalpha() and target.isupper() and len(target) <= 10:
+        # Likely a gene symbol, try genesymbol endpoint
+        url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/target/genesymbol/{target}/aids/JSON"
+    else:
+        url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/target/gene/{target}/aids/JSON"
     try:
         resp = requests.get(url, timeout=10)
         resp.raise_for_status()
         data = resp.json()
-        aids = data.get("InformationList", {}).get("Information", [{}])[0].get("AID", [])
+        # Handle both /geneid/ and /genesymbol/ endpoints
+        if "InformationList" in data:
+            aids = data.get("InformationList", {}).get("Information", [{}])[0].get("AID", [])
+        elif "IdentifierList" in data:
+            aids = data.get("IdentifierList", {}).get("AID", [])
+        else:
+            aids = []
         compounds = set()
         for aid in aids[:max_results]:
             assay_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/aid/{aid}/cids/JSON"

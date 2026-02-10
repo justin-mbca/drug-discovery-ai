@@ -1,16 +1,143 @@
+
 import streamlit as st
 import requests
 import re
 
+# Disease to protein mapping for AlphaFold queries (symbol, UniProt ID)
+disease_to_protein = {
+    "Alzheimer's disease": [
+        ("APP", "P05067"),
+        ("MAPT", "P10636"),
+        ("PSEN1", "P49768"),
+        ("BACE1", "P56817")
+    ],
+    "Parkinson's disease": [
+        ("SNCA", "P37840"),
+        ("LRRK2", "Q5S007"),
+        ("PARK7", "Q99497"),
+        ("PINK1", "Q9BXM7")
+    ],
+    "Amyotrophic lateral sclerosis (ALS)": [
+        ("SOD1", "P00441"),
+        ("C9orf72", "O14776"),
+        ("FUS", "P35637"),
+        ("TARDBP", "Q13148")
+    ],
+    "Pancreatic cancer": [
+        ("KRAS", "P01116"),
+        ("TP53", "P04637"),
+        ("CDKN2A", "P42771"),
+        ("SMAD4", "Q13485")
+    ],
+    "Breast cancer": [
+        ("BRCA1", "P38398"),
+        ("BRCA2", "P51587"),
+        ("ESR1", "P03372"),
+        ("HER2", "P04626")
+    ],
+    "Lung cancer": [
+        ("EGFR", "P00533"),
+        ("ALK", "Q9UM73"),
+        ("KRAS", "P01116"),
+        ("TP53", "P04637")
+    ],
+    "Diabetes mellitus": [
+        ("INS", "P01308"),
+        ("GCK", "P35557"),
+        ("HNF1A", "P20823"),
+        ("PPARG", "P37231")
+    ],
+    "COVID-19": [
+        ("ACE2", "Q9BYF1"),
+        ("TMPRSS2", "O15393")
+        # S and N are viral proteins, not in UniProt human
+    ],
+    "Rheumatoid arthritis": [
+        ("TNF", "P01375"),
+        ("IL6", "P05231"),
+        ("PTPN22", "Q9Y2R2"),
+        ("STAT4", "Q14765")
+    ],
+    "Multiple sclerosis": [
+        ("HLA-DRB1", "P04229"),
+        ("IL2RA", "P60568"),
+        ("IL7R", "P16871"),
+        ("CD6", "P30203")
+    ],
+    "Huntington's disease": [
+        ("HTT", "P42858")
+    ],
+    "Ovarian cancer": [
+        ("BRCA1", "P38398"),
+        ("BRCA2", "P51587"),
+        ("TP53", "P04637"),
+        ("PTEN", "P60484")
+    ],
+    "Glioblastoma": [
+        ("EGFR", "P00533"),
+        ("PTEN", "P60484"),
+        ("TP53", "P04637"),
+        ("IDH1", "O75874")
+    ],
+    "Leukemia": [
+        ("BCR", "P11274"),
+        ("ABL1", "P00519"),
+        ("FLT3", "P36888"),
+        ("NPM1", "P06748")
+    ],
+    "Prostate cancer": [
+        ("AR", "P10275"),
+        ("TP53", "P04637"),
+        ("PTEN", "P60484"),
+        ("NKX3-1", "Q99801")
+    ]
+}
+
+
 st.title("Drug Discovery AI Assistant")
+
+# Information about PubChem and ChEMBL
+with st.expander("ℹ️ About PubChem and ChEMBL", expanded=True):
+    st.markdown("""
+**PubChem** is a free chemistry database maintained by the NIH, providing information on the biological activities of small molecules. When you search for compounds by target, PubChem returns compounds that have been experimentally tested against the selected protein or gene.
+
+**ChEMBL** is a manually curated database of bioactive molecules with drug-like properties, maintained by EMBL-EBI. ChEMBL provides compounds and their activities against biological targets, often including more curated and literature-derived data than PubChem.
+
+**How are they linked?**
+- PubChem and ChEMBL are separate databases. The same compound may appear in both, but with different IDs (PubChem CID vs. ChEMBL ID).
+- In this app, you can select compounds from either source for further analysis. If you want to cross-reference a compound, you can search for its name or structure (SMILES) in the other database.
+    """)
+
+# User guidance for workflow steps
+with st.expander("🧭 How to Use This App (Step-by-Step Guide)", expanded=True):
+    st.markdown("""
+**1. Disease-Driven Discovery**
+   - Select or enter a disease of interest.
+   - The app will suggest protein/gene targets and show links to AlphaFold structures.
+   - Select a target to proceed to target-driven discovery.
+
+**2. Target-Driven Discovery**
+   - Enter or select a protein/gene target (e.g., BACE1, TP53).
+   - The app will search PubChem and ChEMBL for compounds known to interact with this target.
+   - Review the suggested compounds from both sources.
+   - Select a compound from either PubChem or ChEMBL to proceed to compound-driven discovery.
+
+**3. Compound-Driven Discovery**
+   - Enter or select a compound (name, SMILES, or ID).
+   - The app will analyze the compound’s properties and suggest possible new uses or effects.
+
+**Tips:**
+- PubChem and ChEMBL results are independent; you can use compounds from either for the next step.
+- If no compounds are found in one database, try the other or select a different target.
+    """)
 
 # Step 1: Select entry type
 
 # Step 2: Show relevant input and steps
 
 # Step 3: Show procedure steps
-def extract_alphafold_url(structure_msg):
-    match = re.search(r"https://alphafold.ebi.ac.uk/entry/[^\s]+", structure_msg)
+def extract_alphafold_url(structure_message):
+    match = re.search(r"https://alphafold.ebi.ac.uk/entry/[^\s]+", structure_message)
     return match.group(0) if match else None
 
 def is_pdb_content(text):
@@ -121,27 +248,55 @@ if 'target_output' not in st.session_state:
 if 'compound_output' not in st.session_state:
     st.session_state['compound_output'] = None
 
+
 # Disease section submit
 if st.button("Submit Disease Query"):
     if not is_valid_disease(disease_input):
         st.warning("Please enter a valid disease name (e.g., Alzheimer's disease, pancreatic cancer).")
     else:
-        try:
-            response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={disease_input}")
-            if response.status_code == 200:
-                result = response.json()
-                st.session_state['disease_output'] = (result, disease_input)
-            else:
-                st.session_state['disease_output'] = (f"API error: {response.status_code}", None)
-        except Exception as e:
-            st.session_state['disease_output'] = (f"Request failed: {e}", None)
+        # If disease is in mapping, show mapped protein targets and allow user to select one for AlphaFold structure
+        mapped_targets = disease_to_protein.get(disease_input)
+        if mapped_targets:
+            st.session_state['disease_output'] = (None, disease_input)
+            st.session_state['mapped_targets'] = mapped_targets
+        else:
+            try:
+                response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={disease_input}", timeout=15)
+                if response.status_code == 200:
+                    result = response.json()
+                    st.session_state['disease_output'] = (result, disease_input)
+                else:
+                    st.session_state['disease_output'] = (f"API error: {response.status_code}", None)
+            except requests.RequestException as e:
+                st.session_state['disease_output'] = (f"Request failed: {e}", None)
 
-# Display disease output
+
+# Display disease output or mapped targets
 if st.session_state['disease_output']:
     result, input_val = st.session_state['disease_output']
     st.markdown("**Disease Query Output:**")
-    suggested_targets = None
-    if isinstance(result, dict):
+    # If mapped_targets is set in session_state, show mapped protein targets for AlphaFold
+    mapped_targets = st.session_state.get('mapped_targets')
+    if mapped_targets:
+        st.success("Mapped protein targets for this disease (for AlphaFold structure queries):")
+        # Show both symbol and UniProt in dropdown, but use UniProt for AlphaFold
+        display_options = [f"{symbol} ({uniprot})" for symbol, uniprot in mapped_targets]
+        selected_idx = st.selectbox(
+            "Select a protein target to view AlphaFold structure:",
+            range(len(display_options)),
+            format_func=lambda i: display_options[i],
+            key="alphafold_target_select"
+        )
+        selected_symbol, selected_uniprot = mapped_targets[selected_idx]
+        if st.button("Get AlphaFold Structure for Selected Target"):
+            alphafold_url = f"https://alphafold.ebi.ac.uk/entry/{selected_uniprot}"
+            st.markdown(f"[View AlphaFold Structure for {selected_symbol} ({selected_uniprot})]({alphafold_url})")
+            st.info(f"AlphaFold structure for {selected_symbol} ({selected_uniprot}) can be viewed or downloaded from the above link.")
+        if st.button("Use selected protein as input for Target-Driven Discovery"):
+            st.session_state["target_input"] = selected_symbol
+            st.session_state["target_uniprot"] = selected_uniprot
+            st.success(f"Target input set to: {selected_symbol} (UniProt: {selected_uniprot})")
+    elif isinstance(result, dict):
         # Try both /full_workflow and /discovery output structures
         if "discovery" in result and isinstance(result["discovery"], dict):
             structure_msg = result["discovery"].get("structure", "")
@@ -214,13 +369,13 @@ if st.button("Submit Target Query"):
         st.warning("Please enter a valid gene/protein target (e.g., BACE1, APP, MAPT). Do not use PMIDs, DOIs, or numbers.")
     else:
         try:
-            response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={target_input}")
+            response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={target_input}", timeout=15)
             if response.status_code == 200:
                 result = response.json()
                 st.session_state['target_output'] = (result, target_input)
             else:
                 st.session_state['target_output'] = (f"API error: {response.status_code}", None)
-        except Exception as e:
+        except requests.RequestException as e:
             st.session_state['target_output'] = (f"Request failed: {e}", None)
 
 # Display target output
@@ -305,7 +460,7 @@ if st.session_state['target_output']:
                         if mol_resp.status_code == 200:
                             mol_data = mol_resp.json()
                             smiles = mol_data.get("molecule_structures", {}).get("canonical_smiles")
-                    except Exception as e:
+                    except requests.RequestException:
                         smiles = None
                     if smiles:
                         st.session_state["compound_input"] = smiles
@@ -324,13 +479,13 @@ if st.button("Submit Compound Query"):
         st.warning("Please enter a valid compound name (e.g., aspirin, ibuprofen).")
     else:
         try:
-            response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={compound_input}")
+            response = requests.get(f"http://127.0.0.1:8000/full_workflow?query={compound_input}", timeout=15)
             if response.status_code == 200:
                 result = response.json()
                 st.session_state['compound_output'] = (result, compound_input)
             else:
                 st.session_state['compound_output'] = (f"API error: {response.status_code}", None)
-        except Exception as e:
+        except requests.RequestException as e:
             st.session_state['compound_output'] = (f"Request failed: {e}", None)
 
 # Display compound output
