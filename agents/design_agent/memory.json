@@ -1,3 +1,27 @@
 {
-  "memory": {}
+  "successes": [
+    {
+      "compound": "TestMol1",
+      "score": 0.9,
+      "timestamp": "2026-02-09T23:09:07.155447"
+    },
+    {
+      "compound": "TestMol2",
+      "score": 0.85,
+      "timestamp": "2026-02-09T23:09:07.155449"
+    },
+    {
+      "compound": "TestMol1",
+      "score": 0.9,
+      "timestamp": "2026-02-09T23:10:24.513385"
+    },
+    {
+      "compound": "TestMol2",
+      "score": 0.85,
+      "timestamp": "2026-02-09T23:10:24.513387"
+    }
+  ],
+  "failures": [],
+  "analyzed": [],
+  "generation_count": 0
 }
